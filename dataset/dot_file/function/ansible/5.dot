@@ -1,0 +1,192 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_166b5284 [label="39: test_play_iterator()" name="test.executor.test_play_iterator::TestPlayIterator.test_play_iterator" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8e8b758a [label="28: __init__()" name="test.mock.loader::DictDataLoader.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_89450576 [label="50: _add_known_directory()" name="test.mock.loader::DictDataLoader._add_known_directory" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_665116a9 [label="54: _build_known_directories()" name="test.mock.loader::DictDataLoader._build_known_directories" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_2a3de3bd [label="36: load_from_file()" name="test.mock.loader::DictDataLoader.load_from_file" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c2b7965c [label="72: pop()" name="test.mock.loader::DictDataLoader.pop" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aabaabc0 [label="62: push()" name="test.mock.loader::DictDataLoader.push" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aa1dd229 [label="41: test_parse_json_from_file()" name="test.parsing.test_data_loader::TestDataLoader.test_parse_json_from_file" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_36faa11d [label="47: test_parse_yaml_from_file()" name="test.parsing.test_data_loader::TestDataLoader.test_parse_yaml_from_file" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c535869c [label="36: _debug()" name="test.parsing.test_mod_args::TestModArgsDwim._debug" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_67fa4a6d [label="94: test_action_with_complex()" name="test.parsing.test_mod_args::TestModArgsDwim.test_action_with_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_419c9184 [label="102: test_action_with_complex_and_complex_args()" name="test.parsing.test_mod_args::TestModArgsDwim.test_action_with_complex_and_complex_args" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_02c3393e [label="55: test_basic_command()" name="test.parsing.test_mod_args::TestModArgsDwim.test_basic_command" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f1177e87 [label="44: test_basic_shell()" name="test.parsing.test_mod_args::TestModArgsDwim.test_basic_shell" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_be7d6253 [label="86: test_complex_args()" name="test.parsing.test_mod_args::TestModArgsDwim.test_complex_args" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_70197246 [label="110: test_local_action_string()" name="test.parsing.test_mod_args::TestModArgsDwim.test_local_action_string" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f13bb148 [label="78: test_normal_usage()" name="test.parsing.test_mod_args::TestModArgsDwim.test_normal_usage" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9e0dda29 [label="65: test_shell_with_modifiers()" name="test.parsing.test_mod_args::TestModArgsDwim.test_shell_with_modifiers" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f0576191 [label="105: test_play_with_roles()" name="test.playbook.test_play::TestPlay.test_play_with_roles" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fc277764 [label="50: test_bad_playbook_files()" name="test.playbook.test_playbook::TestPlaybook.test_bad_playbook_files" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c2e957ca [label="41: test_basic_playbook()" name="test.playbook.test_playbook::TestPlaybook.test_basic_playbook" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cd695634 [label="152: test_load_role_complex()" name="test.playbook.test_role::TestRole.test_load_role_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ce09b5fb [label="56: test_load_role_with_handlers()" name="test.playbook.test_role::TestRole.test_load_role_with_handlers" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f3c2fb5f [label="88: test_load_role_with_metadata()" name="test.playbook.test_role::TestRole.test_load_role_with_metadata" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0f8d6484 [label="41: test_load_role_with_tasks()" name="test.playbook.test_role::TestRole.test_load_role_with_tasks" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c7395ad1 [label="71: test_load_role_with_vars()" name="test.playbook.test_role::TestRole.test_load_role_with_vars" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_49228f01 [label="31: setUp()" name="test.playbook.test_task_include::TestTaskInclude.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_473c55ee [label="82: test_manager_group_vars_file()" name="test.vars.test_variable_manager::TestVariableManager.test_manager_group_vars_file" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_26d63992 [label="63: test_manager_host_vars_file()" name="test.vars.test_variable_manager::TestVariableManager.test_manager_host_vars_file" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_152a27e4 [label="110: test_manager_play_vars_files()" name="test.vars.test_variable_manager::TestVariableManager.test_manager_play_vars_files" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_166b5284 -> node_8e8b758a [color="#F0E442" penwidth="2"];
+node_8e8b758a -> node_8e8b758a [color="#56B4E9" penwidth="2"];
+node_8e8b758a -> node_665116a9 [color="#56B4E9" penwidth="2"];
+node_665116a9 -> node_89450576 [color="#E69F00" penwidth="2"];
+node_c2b7965c -> node_665116a9 [color="#F0E442" penwidth="2"];
+node_aabaabc0 -> node_665116a9 [color="#000000" penwidth="2"];
+node_aa1dd229 -> node_2a3de3bd [color="#E69F00" penwidth="2"];
+node_36faa11d -> node_2a3de3bd [color="#0072B2" penwidth="2"];
+node_67fa4a6d -> node_c535869c [color="#0072B2" penwidth="2"];
+node_419c9184 -> node_c535869c [color="#F0E442" penwidth="2"];
+node_02c3393e -> node_c535869c [color="#D55E00" penwidth="2"];
+node_f1177e87 -> node_c535869c [color="#CC79A7" penwidth="2"];
+node_be7d6253 -> node_c535869c [color="#009E73" penwidth="2"];
+node_70197246 -> node_c535869c [color="#D55E00" penwidth="2"];
+node_f13bb148 -> node_c535869c [color="#000000" penwidth="2"];
+node_9e0dda29 -> node_c535869c [color="#E69F00" penwidth="2"];
+node_f0576191 -> node_8e8b758a [color="#E69F00" penwidth="2"];
+node_fc277764 -> node_8e8b758a [color="#F0E442" penwidth="2"];
+node_c2e957ca -> node_8e8b758a [color="#56B4E9" penwidth="2"];
+node_cd695634 -> node_8e8b758a [color="#F0E442" penwidth="2"];
+node_ce09b5fb -> node_8e8b758a [color="#009E73" penwidth="2"];
+node_f3c2fb5f -> node_8e8b758a [color="#CC79A7" penwidth="2"];
+node_0f8d6484 -> node_8e8b758a [color="#F0E442" penwidth="2"];
+node_c7395ad1 -> node_8e8b758a [color="#E69F00" penwidth="2"];
+node_49228f01 -> node_8e8b758a [color="#E69F00" penwidth="2"];
+node_473c55ee -> node_8e8b758a [color="#D55E00" penwidth="2"];
+node_26d63992 -> node_8e8b758a [color="#56B4E9" penwidth="2"];
+node_152a27e4 -> node_8e8b758a [color="#F0E442" penwidth="2"];
+subgraph cluster_d824b39b {
+    label="File: test.executor.test_play_iterator";
+    name="test.executor.test_play_iterator";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_ab739429 {
+        node_166b5284;
+        label="Class: TestPlayIterator";
+        name="TestPlayIterator";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_c4b97354 {
+    label="File: test.mock.loader";
+    name="test.mock.loader";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_078496d4 {
+        node_8e8b758a node_2a3de3bd node_89450576 node_665116a9 node_aabaabc0 node_c2b7965c;
+        label="Class: DictDataLoader";
+        name="DictDataLoader";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_a181ab03 {
+    label="File: test.parsing.test_data_loader";
+    name="test.parsing.test_data_loader";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_793571c1 {
+        node_aa1dd229 node_36faa11d;
+        label="Class: TestDataLoader";
+        name="TestDataLoader";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_19924ee3 {
+    label="File: test.parsing.test_mod_args";
+    name="test.parsing.test_mod_args";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a58295c1 {
+        node_c535869c node_f1177e87 node_02c3393e node_9e0dda29 node_f13bb148 node_be7d6253 node_67fa4a6d node_419c9184 node_70197246;
+        label="Class: TestModArgsDwim";
+        name="TestModArgsDwim";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_c0f86af3 {
+    label="File: test.playbook.test_play";
+    name="test.playbook.test_play";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_9f9bea66 {
+        node_f0576191;
+        label="Class: TestPlay";
+        name="TestPlay";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_041805c9 {
+    label="File: test.playbook.test_playbook";
+    name="test.playbook.test_playbook";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_6082afac {
+        node_c2e957ca node_fc277764;
+        label="Class: TestPlaybook";
+        name="TestPlaybook";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_853fd371 {
+    label="File: test.playbook.test_role";
+    name="test.playbook.test_role";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_03330851 {
+        node_0f8d6484 node_ce09b5fb node_c7395ad1 node_f3c2fb5f node_cd695634;
+        label="Class: TestRole";
+        name="TestRole";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_1ea34b5a {
+    label="File: test.playbook.test_task_include";
+    name="test.playbook.test_task_include";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_3c594b19 {
+        node_49228f01;
+        label="Class: TestTaskInclude";
+        name="TestTaskInclude";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_a5e0f5c7 {
+    label="File: test.vars.test_variable_manager";
+    name="test.vars.test_variable_manager";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_4887a295 {
+        node_26d63992 node_473c55ee node_152a27e4;
+        label="Class: TestVariableManager";
+        name="TestVariableManager";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

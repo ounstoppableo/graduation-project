@@ -1,0 +1,35 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_7f2a8c5a [label="0: (global)()" name="backend_driver::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0b18fd1e [label="362: drive()" name="backend_driver::drive" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ba50fd0f [label="436: parse_options()" name="backend_driver::parse_options" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e0cbdbbf [label="334: report_all_missing()" name="backend_driver::report_all_missing" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_15516188 [label="320: report_missing()" name="backend_driver::report_missing" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9ed570ee [label="351: run()" name="backend_driver::run" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7f2a8c5a -> node_0b18fd1e [color="#56B4E9" penwidth="2"];
+node_7f2a8c5a -> node_ba50fd0f [color="#56B4E9" penwidth="2"];
+node_7f2a8c5a -> node_e0cbdbbf [color="#56B4E9" penwidth="2"];
+node_0b18fd1e -> node_9ed570ee [color="#D55E00" penwidth="2"];
+node_e0cbdbbf -> node_15516188 [color="#CC79A7" penwidth="2"];
+subgraph cluster_5abdd76d {
+    node_15516188 node_e0cbdbbf node_9ed570ee node_0b18fd1e node_ba50fd0f node_7f2a8c5a;
+    label="File: backend_driver";
+    name="backend_driver";
+    style="filled";
+    graph[style=dotted];
+};
+}

@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.4"
+
+install:
+  - pip install --quiet coveralls
+
+script:
+  - nosetests --with-coverage --cover-package=yapf
+
+after_success:
+  - coveralls

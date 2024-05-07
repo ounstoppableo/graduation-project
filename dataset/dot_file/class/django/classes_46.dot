@@ -1,0 +1,39 @@
+digraph "classes_46" {
+rankdir=BT
+charset="utf-8"
+"serializers.models.Actor" [color="black", fontcolor="black", label=<{Actor|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Article" [color="black", fontcolor="black", label=<{Article|author<br ALIGN="LEFT"/>categories<br ALIGN="LEFT"/>headline<br ALIGN="LEFT"/>pub_date<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Author" [color="black", fontcolor="black", label=<{Author|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.AuthorProfile" [color="black", fontcolor="black", label=<{AuthorProfile|author<br ALIGN="LEFT"/>date_of_birth<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Category" [color="black", fontcolor="black", label=<{Category|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.JsonSerializerTestCase" [color="black", fontcolor="black", label=<{JsonSerializerTestCase|pkless_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|test_indentation_whitespace()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.tests.JsonSerializerTransactionTestCase" [color="black", fontcolor="black", label=<{JsonSerializerTransactionTestCase|fwd_ref_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Category.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Author.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Article.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Actor.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Movie.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Movie" [color="black", fontcolor="black", label=<{Movie|actor<br ALIGN="LEFT"/>price<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.NoYamlSerializerTestCase" [color="black", fontcolor="black", label=<{NoYamlSerializerTestCase|<br ALIGN="LEFT"/>|setUpClass()<br ALIGN="LEFT"/>tearDownClass()<br ALIGN="LEFT"/>test_deserializer_pyyaml_error_message()<br ALIGN="LEFT"/>test_dumpdata_pyyaml_error_message()<br ALIGN="LEFT"/>test_serializer_pyyaml_error_message()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.models.Player" [color="black", fontcolor="black", label=<{Player|name<br ALIGN="LEFT"/>rank<br ALIGN="LEFT"/>team<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.models.Score" [color="black", fontcolor="black", label=<{Score|score<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.SerializerRegistrationTests" [color="black", fontcolor="black", label=<{SerializerRegistrationTests|old_serializers<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>tearDown()<br ALIGN="LEFT"/>test_builtin_serializers()<br ALIGN="LEFT"/>test_register()<br ALIGN="LEFT"/>test_unregister()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.tests.SerializersTestBase" [color="black", fontcolor="black", label=<{SerializersTestBase|a1<br ALIGN="LEFT"/>a2<br ALIGN="LEFT"/>jane<br ALIGN="LEFT"/>joe<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_altering_serialized_output()<br ALIGN="LEFT"/>test_custom_field_serialization()<br ALIGN="LEFT"/>test_float_serialization()<br ALIGN="LEFT"/>test_one_to_one_as_pk()<br ALIGN="LEFT"/>test_pkless_serialized_strings()<br ALIGN="LEFT"/>test_pre_1000ad_date()<br ALIGN="LEFT"/>test_serialize()<br ALIGN="LEFT"/>test_serialize_field_subset()<br ALIGN="LEFT"/>test_serialize_superfluous_queries()<br ALIGN="LEFT"/>test_serialize_unicode()<br ALIGN="LEFT"/>test_serialize_with_null_pk()<br ALIGN="LEFT"/>test_serializer_roundtrip()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.tests.SerializersTransactionTestBase" [color="black", fontcolor="black", label=<{SerializersTransactionTestBase|available_apps : list<br ALIGN="LEFT"/>|test_forward_refs()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.models.Team" [color="black", fontcolor="black", label=<{Team|title<br ALIGN="LEFT"/>|to_string()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.models.TeamField" [color="black", fontcolor="black", label=<{TeamField|<br ALIGN="LEFT"/>|deconstruct()<br ALIGN="LEFT"/>from_db_value(value, expression, connection, context)<br ALIGN="LEFT"/>get_db_prep_save(value, connection)<br ALIGN="LEFT"/>to_python(value)<br ALIGN="LEFT"/>value_to_string(obj)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.tests.XmlSerializerTestCase" [color="black", fontcolor="black", label=<{XmlSerializerTestCase|pkless_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.XmlSerializerTransactionTestCase" [color="black", fontcolor="black", label=<{XmlSerializerTransactionTestCase|fwd_ref_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.YamlImportModuleMock" [color="black", fontcolor="black", label=<{YamlImportModuleMock|<br ALIGN="LEFT"/>|import_module(module_path)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"serializers.tests.YamlSerializerTestCase" [color="black", fontcolor="black", label=<{YamlSerializerTestCase|fwd_ref_str : str<br ALIGN="LEFT"/>pkless_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.YamlSerializerTransactionTestCase" [color="black", fontcolor="black", label=<{YamlSerializerTransactionTestCase|fwd_ref_str : str<br ALIGN="LEFT"/>serializer_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"serializers.tests.JsonSerializerTestCase" -> "serializers.tests.SerializersTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.tests.JsonSerializerTransactionTestCase" -> "serializers.tests.SerializersTransactionTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.tests.XmlSerializerTestCase" -> "serializers.tests.SerializersTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.tests.XmlSerializerTransactionTestCase" -> "serializers.tests.SerializersTransactionTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.tests.YamlSerializerTestCase" -> "serializers.tests.SerializersTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.tests.YamlSerializerTransactionTestCase" -> "serializers.tests.SerializersTransactionTestBase" [arrowhead="empty", arrowtail="none"];
+"serializers.models.Article" -> "serializers.tests.SerializersTestBase" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="a1", style="solid"];
+"serializers.models.Article" -> "serializers.tests.SerializersTestBase" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="a2", style="solid"];
+"serializers.models.Team" -> "serializers.models.Player" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="team", style="solid"];
+}

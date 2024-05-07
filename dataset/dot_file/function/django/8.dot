@@ -1,0 +1,78 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_6a30ee20 [label="66: create_a()" name="delete.models::create_a" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_91d6878f [label="182: test_instance_update()" name="delete.tests::DeletionTests.test_instance_update" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5ec63c10 [label="20: test_auto()" name="delete.tests::OnDeleteTests.test_auto" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a9289d56 [label="25: test_auto_nullable()" name="delete.tests::OnDeleteTests.test_auto_nullable" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_891b3e0c [label="54: test_cascade()" name="delete.tests::OnDeleteTests.test_cascade" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_081ca3aa [label="104: test_cascade_from_child()" name="delete.tests::OnDeleteTests.test_cascade_from_child" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d6fdcbc5 [label="110: test_cascade_from_parent()" name="delete.tests::OnDeleteTests.test_cascade_from_parent" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8bebca67 [label="59: test_cascade_nullable()" name="delete.tests::OnDeleteTests.test_cascade_nullable" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5139e0c2 [label="68: test_do_nothing()" name="delete.tests::OnDeleteTests.test_do_nothing" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c997da41 [label="132: test_o2o_setnull()" name="delete.tests::OnDeleteTests.test_o2o_setnull" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9e74b9d2 [label="64: test_protect()" name="delete.tests::OnDeleteTests.test_protect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9e614050 [label="42: test_setdefault()" name="delete.tests::OnDeleteTests.test_setdefault" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c7d19e79 [label="48: test_setdefault_none()" name="delete.tests::OnDeleteTests.test_setdefault_none" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_203e859c [label="36: test_setnull()" name="delete.tests::OnDeleteTests.test_setnull" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0a5d1cb1 [label="116: test_setnull_from_child()" name="delete.tests::OnDeleteTests.test_setnull_from_child" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a8754bad [label="124: test_setnull_from_parent()" name="delete.tests::OnDeleteTests.test_setnull_from_parent" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7b6622c2 [label="30: test_setvalue()" name="delete.tests::OnDeleteTests.test_setvalue" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_91d6878f -> node_6a30ee20 [color="#CC79A7" penwidth="2"];
+node_91d6878f -> node_6a30ee20 [color="#CC79A7" penwidth="2"];
+node_5ec63c10 -> node_6a30ee20 [color="#000000" penwidth="2"];
+node_a9289d56 -> node_6a30ee20 [color="#D55E00" penwidth="2"];
+node_891b3e0c -> node_6a30ee20 [color="#F0E442" penwidth="2"];
+node_081ca3aa -> node_6a30ee20 [color="#56B4E9" penwidth="2"];
+node_d6fdcbc5 -> node_6a30ee20 [color="#0072B2" penwidth="2"];
+node_8bebca67 -> node_6a30ee20 [color="#CC79A7" penwidth="2"];
+node_5139e0c2 -> node_6a30ee20 [color="#56B4E9" penwidth="2"];
+node_c997da41 -> node_6a30ee20 [color="#E69F00" penwidth="2"];
+node_9e74b9d2 -> node_6a30ee20 [color="#56B4E9" penwidth="2"];
+node_9e614050 -> node_6a30ee20 [color="#000000" penwidth="2"];
+node_c7d19e79 -> node_6a30ee20 [color="#E69F00" penwidth="2"];
+node_203e859c -> node_6a30ee20 [color="#F0E442" penwidth="2"];
+node_0a5d1cb1 -> node_6a30ee20 [color="#E69F00" penwidth="2"];
+node_a8754bad -> node_6a30ee20 [color="#0072B2" penwidth="2"];
+node_7b6622c2 -> node_6a30ee20 [color="#56B4E9" penwidth="2"];
+subgraph cluster_d0680034 {
+    node_6a30ee20;
+    label="File: delete.models";
+    name="delete.models";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_e533e2fc {
+    label="File: delete.tests";
+    name="delete.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_18890c5f {
+        node_5ec63c10 node_a9289d56 node_7b6622c2 node_203e859c node_9e614050 node_c7d19e79 node_891b3e0c node_8bebca67 node_9e74b9d2 node_5139e0c2 node_081ca3aa node_d6fdcbc5 node_0a5d1cb1 node_a8754bad node_c997da41;
+        label="Class: OnDeleteTests";
+        name="OnDeleteTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8b3a6880 {
+        node_91d6878f;
+        label="Class: DeletionTests";
+        name="DeletionTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

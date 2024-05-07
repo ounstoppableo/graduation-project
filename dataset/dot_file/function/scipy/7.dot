@@ -1,0 +1,69 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_17cf3fed [label="0: (global)()" name="test_mio::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_89d7a623 [label="249: _check_level()" name="test_mio::_check_level" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_1009a08b [label="296: _load_check_case()" name="test_mio::_load_check_case" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_a0cefd05 [label="324: _rt_check_case()" name="test_mio::_rt_check_case" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4c5ac082 [label="703: assert_any_equal()" name="test_mio::assert_any_equal" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ae85d85c [label="41: mlarr()" name="test_mio::mlarr" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_041bf866 [label="714: test_to_writeable()" name="test_mio::test_to_writeable" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ab6a8d5c [label="1102: test_varmats_from_mat()" name="test_mio::test_varmats_from_mat" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5c211223 [label="233: types_compatible()" name="test_mio::types_compatible" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_17cf3fed -> node_ae85d85c [color="#0072B2" penwidth="2"];
+node_89d7a623 -> node_89d7a623 [color="#009E73" penwidth="2"];
+node_89d7a623 -> node_89d7a623 [color="#009E73" penwidth="2"];
+node_89d7a623 -> node_5c211223 [color="#009E73" penwidth="2"];
+node_1009a08b -> node_89d7a623 [color="#009E73" penwidth="2"];
+node_a0cefd05 -> node_1009a08b [color="#0072B2" penwidth="2"];
+node_041bf866 -> node_4c5ac082 [color="#D55E00" penwidth="2"];
+node_041bf866 -> node_4c5ac082 [color="#D55E00" penwidth="2"];
+node_041bf866 -> node_4c5ac082 [color="#D55E00" penwidth="2"];
+node_041bf866 -> node_4c5ac082 [color="#D55E00" penwidth="2"];
+node_041bf866 -> node_4c5ac082 [color="#D55E00" penwidth="2"];
+node_ab6a8d5c -> node_ae85d85c [color="#F0E442" penwidth="2"];
+node_ab6a8d5c -> node_ae85d85c [color="#F0E442" penwidth="2"];
+node_ab6a8d5c -> node_ae85d85c [color="#F0E442" penwidth="2"];
+subgraph cluster_ac352880 {
+    node_ae85d85c node_5c211223 node_89d7a623 node_1009a08b node_a0cefd05 node_4c5ac082 node_041bf866 node_ab6a8d5c node_17cf3fed;
+    label="File: test_mio";
+    name="test_mio";
+    style="filled";
+    graph[style=dotted];
+};
+}

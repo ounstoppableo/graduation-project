@@ -1,0 +1,26 @@
+application: flashlightplugins
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /cleanup
+  login: admin
+  script: cleanup.app
+
+- url: /__background_work/.*
+  login: admin
+  script: background_work.app
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest

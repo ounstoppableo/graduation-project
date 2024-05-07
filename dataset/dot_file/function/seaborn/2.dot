@@ -1,0 +1,72 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_c5905737 [label="418: __init__()" name="plot_directive::ImageFile.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ef5b0c98 [label="423: filename()" name="plot_directive::ImageFile.filename" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e8f4f20d [label="426: filenames()" name="plot_directive::ImageFile.filenames" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_835d605a [label="520: clear_state()" name="plot_directive::clear_state" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0dc5c932 [label="277: contains_doctest()" name="plot_directive::contains_doctest" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5a165b0e [label="158: format_template()" name="plot_directive::format_template" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b7f13c14 [label="430: out_of_date()" name="plot_directive::out_of_date" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1fbda7f8 [label="177: plot_directive()" name="plot_directive::plot_directive" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_388b62e6 [label="333: remove_coding()" name="plot_directive::remove_coding" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a22c0fb8 [label="527: render_figures()" name="plot_directive::render_figures" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ea360ff6 [label="646: run()" name="plot_directive::run" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ae9b4f7f [label="444: run_code()" name="plot_directive::run_code" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f1770a84 [label="310: split_code_at_show()" name="plot_directive::split_code_at_show" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_efd5b017 [label="289: unescape_doctest()" name="plot_directive::unescape_doctest" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_e8f4f20d -> node_ef5b0c98 [color="#0072B2" penwidth="2"];
+node_1fbda7f8 -> node_ea360ff6 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_c5905737 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_ef5b0c98 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_ef5b0c98 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_ef5b0c98 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_835d605a [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_835d605a [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_835d605a [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_b7f13c14 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_b7f13c14 [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_ae9b4f7f [color="#000000" penwidth="2"];
+node_a22c0fb8 -> node_f1770a84 [color="#000000" penwidth="2"];
+node_ea360ff6 -> node_e8f4f20d [color="#D55E00" penwidth="2"];
+node_ea360ff6 -> node_0dc5c932 [color="#D55E00" penwidth="2"];
+node_ea360ff6 -> node_5a165b0e [color="#D55E00" penwidth="2"];
+node_ea360ff6 -> node_a22c0fb8 [color="#D55E00" penwidth="2"];
+node_ea360ff6 -> node_efd5b017 [color="#D55E00" penwidth="2"];
+node_ae9b4f7f -> node_388b62e6 [color="#CC79A7" penwidth="2"];
+node_ae9b4f7f -> node_efd5b017 [color="#CC79A7" penwidth="2"];
+node_f1770a84 -> node_0dc5c932 [color="#F0E442" penwidth="2"];
+node_efd5b017 -> node_0dc5c932 [color="#CC79A7" penwidth="2"];
+subgraph cluster_7dfe7152 {
+    node_5a165b0e node_1fbda7f8 node_0dc5c932 node_efd5b017 node_f1770a84 node_388b62e6 node_b7f13c14 node_ae9b4f7f node_835d605a node_a22c0fb8 node_ea360ff6;
+    label="File: plot_directive";
+    name="plot_directive";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_730eeb7d {
+        node_c5905737 node_ef5b0c98 node_e8f4f20d;
+        label="Class: ImageFile";
+        name="ImageFile";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

@@ -1,0 +1,36 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_7fa1d245 [label="0: (global)()" name="openshift::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_44be8e39 [label="59: get_config()" name="openshift::get_config" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b9af0b8d [label="45: get_from_rhc_config()" name="openshift::get_from_rhc_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ed95cd2d [label="69: get_json_from_api()" name="openshift::get_json_from_api" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_884ff2a0 [label="75: passwd_setup()" name="openshift::passwd_setup" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7fa1d245 -> node_44be8e39 [color="#0072B2" penwidth="2"];
+node_7fa1d245 -> node_44be8e39 [color="#0072B2" penwidth="2"];
+node_7fa1d245 -> node_44be8e39 [color="#0072B2" penwidth="2"];
+node_7fa1d245 -> node_ed95cd2d [color="#0072B2" penwidth="2"];
+node_7fa1d245 -> node_ed95cd2d [color="#0072B2" penwidth="2"];
+node_7fa1d245 -> node_884ff2a0 [color="#0072B2" penwidth="2"];
+node_44be8e39 -> node_b9af0b8d [color="#E69F00" penwidth="2"];
+subgraph cluster_d7bed266 {
+    node_b9af0b8d node_44be8e39 node_ed95cd2d node_884ff2a0 node_7fa1d245;
+    label="File: openshift";
+    name="openshift";
+    style="filled";
+    graph[style=dotted];
+};
+}

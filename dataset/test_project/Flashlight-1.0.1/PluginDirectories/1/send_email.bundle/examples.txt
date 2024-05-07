@@ -1,0 +1,13 @@
+compose an email
+send an email to recip(@contact(...))
+send an email to recip(@contact(...)) saying ~message(hello) with the subject ~subject(this is it)
+compose a new email to recip(email(nateparro2t@gmail.com))
+send @file(...) to recip(@contact(...))
+email @file(...) to recip(@contact(...)), recip(@contact(...)) and recip(email(riowhgieorg@yahoo.com))
+email recip(@contact(...)) saying ~message(hello world)
+send an email saying ~message(good morning) to recip(@contact(...)) with @file(...) attached
+new email with the subject ~subject(subject) and contents ~message(hello, world) with @file(...) attached to recip(email(hruogheog@hotmail.com))
+send ~message(hello world) and @file(...) to recip/@contact(...)
+send @file(...) to recip(@contact(...)) with the subject ~subject(here you go) as an email
+gmail say ~message(good morning) to recip(@contact(...))
+attach @file(...) in a new email to recip(@contact(...)) with the subject ~subject(subject) saying ~message(hello, world)

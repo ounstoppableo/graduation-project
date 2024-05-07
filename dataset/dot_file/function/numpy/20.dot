@@ -1,0 +1,37 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_5c4bd389 [label="666: check_function()" name="test_random::TestThread.check_function" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4466b965 [label="695: test_exp()" name="test_random::TestThread.test_exp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_57975d2b [label="700: test_multinomial()" name="test_random::TestThread.test_multinomial" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ea9d338d [label="690: test_normal()" name="test_random::TestThread.test_normal" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4466b965 -> node_5c4bd389 [color="#0072B2" penwidth="2"];
+node_57975d2b -> node_5c4bd389 [color="#009E73" penwidth="2"];
+node_ea9d338d -> node_5c4bd389 [color="#0072B2" penwidth="2"];
+subgraph cluster_7a52b914 {
+    label="File: test_random";
+    name="test_random";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_c39a96f0 {
+        node_5c4bd389 node_ea9d338d node_4466b965 node_57975d2b;
+        label="Class: TestThread";
+        name="TestThread";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

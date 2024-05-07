@@ -1,0 +1,78 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_7005e9dc [label="15: __init__()" name="TestPlayVarsFiles::FakeCallBacks.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_20a8f2f0 [label="23: __init__()" name="TestPlayVarsFiles::FakeInventory.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d36ad0a6 [label="36: __init__()" name="TestPlayVarsFiles::FakePlayBook.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d8f90932 [label="115: test_multiple_vars_files()" name="TestPlayVarsFiles::TestMe.test_multiple_vars_files" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_00c455b6 [label="65: test_play_constructor()" name="TestPlayVarsFiles::TestMe.test_play_constructor" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b9bfa404 [label="72: test_vars_file()" name="TestPlayVarsFiles::TestMe.test_vars_file" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_45ffa9fe [label="92: test_vars_file_nonlist_error()" name="TestPlayVarsFiles::TestMe.test_vars_file_nonlist_error" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7fc59835 [label="198: test_vars_files_assert_all_found()" name="TestPlayVarsFiles::TestMe.test_vars_files_assert_all_found" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_02116e35 [label="145: test_vars_files_first_found()" name="TestPlayVarsFiles::TestMe.test_vars_files_first_found" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_29816129 [label="244: test_vars_files_for_host()" name="TestPlayVarsFiles::TestMe.test_vars_files_for_host" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8af0ee42 [label="170: test_vars_files_multiple_found()" name="TestPlayVarsFiles::TestMe.test_vars_files_multiple_found" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_956b38fc [label="308: test_vars_files_two_vars_different_scope()" name="TestPlayVarsFiles::TestMe.test_vars_files_two_vars_different_scope" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dd004f9e [label="351: test_vars_files_two_vars_different_scope_first_found()" name="TestPlayVarsFiles::TestMe.test_vars_files_two_vars_different_scope_first_found" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_62645ffa [label="278: test_vars_files_two_vars_in_name()" name="TestPlayVarsFiles::TestMe.test_vars_files_two_vars_in_name" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d36ad0a6 -> node_7005e9dc [color="#D55E00" penwidth="2"];
+node_d36ad0a6 -> node_20a8f2f0 [color="#D55E00" penwidth="2"];
+node_d8f90932 -> node_d36ad0a6 [color="#56B4E9" penwidth="2"];
+node_00c455b6 -> node_d36ad0a6 [color="#D55E00" penwidth="2"];
+node_b9bfa404 -> node_d36ad0a6 [color="#F0E442" penwidth="2"];
+node_45ffa9fe -> node_d36ad0a6 [color="#D55E00" penwidth="2"];
+node_7fc59835 -> node_d36ad0a6 [color="#0072B2" penwidth="2"];
+node_02116e35 -> node_d36ad0a6 [color="#0072B2" penwidth="2"];
+node_29816129 -> node_d36ad0a6 [color="#E69F00" penwidth="2"];
+node_8af0ee42 -> node_d36ad0a6 [color="#56B4E9" penwidth="2"];
+node_956b38fc -> node_d36ad0a6 [color="#F0E442" penwidth="2"];
+node_dd004f9e -> node_d36ad0a6 [color="#D55E00" penwidth="2"];
+node_62645ffa -> node_d36ad0a6 [color="#56B4E9" penwidth="2"];
+subgraph cluster_c434c3fa {
+    label="File: TestPlayVarsFiles";
+    name="TestPlayVarsFiles";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a1007775 {
+        node_7005e9dc;
+        label="Class: FakeCallBacks";
+        name="FakeCallBacks";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6f3832f6 {
+        node_20a8f2f0;
+        label="Class: FakeInventory";
+        name="FakeInventory";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_23702882 {
+        node_d36ad0a6;
+        label="Class: FakePlayBook";
+        name="FakePlayBook";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_0b0e6cd9 {
+        node_00c455b6 node_b9bfa404 node_45ffa9fe node_d8f90932 node_02116e35 node_8af0ee42 node_7fc59835 node_29816129 node_62645ffa node_956b38fc node_dd004f9e;
+        label="Class: TestMe";
+        name="TestMe";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

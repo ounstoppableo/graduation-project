@@ -1,0 +1,32 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_3c7e95d7 [label="74: check_api_version()" name="numpy.core.setup_common::check_api_version" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aae7189c [label="170: check_long_double_representation()" name="numpy.core.setup_common::check_long_double_representation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_04ee9c2e [label="55: get_api_versions()" name="numpy.core.setup_common::get_api_versions" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_995d770e [label="271: long_double_representation()" name="numpy.core.setup_common::long_double_representation" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_47861720 [label="200: pyod()" name="numpy.core.setup_common::pyod" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_3c7e95d7 -> node_04ee9c2e [color="#CC79A7" penwidth="2"];
+node_aae7189c -> node_995d770e [color="#F0E442" penwidth="2"];
+node_aae7189c -> node_47861720 [color="#F0E442" penwidth="2"];
+subgraph cluster_4d8e98ad {
+    node_04ee9c2e node_3c7e95d7 node_aae7189c node_47861720 node_995d770e;
+    label="File: numpy.core.setup_common";
+    name="numpy.core.setup_common";
+    style="filled";
+    graph[style=dotted];
+};
+}

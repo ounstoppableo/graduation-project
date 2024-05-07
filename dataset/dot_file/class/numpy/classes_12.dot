@@ -1,0 +1,14 @@
+digraph "classes_12" {
+rankdir=BT
+charset="utf-8"
+"test_laguerre.TestArithmetic" [color="black", fontcolor="black", label=<{TestArithmetic|x : ndarray<br ALIGN="LEFT"/>|test_lagadd()<br ALIGN="LEFT"/>test_lagdiv()<br ALIGN="LEFT"/>test_lagmul()<br ALIGN="LEFT"/>test_lagmulx()<br ALIGN="LEFT"/>test_lagsub()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestCompanion" [color="black", fontcolor="black", label=<{TestCompanion|<br ALIGN="LEFT"/>|test_dimensions()<br ALIGN="LEFT"/>test_linear_root()<br ALIGN="LEFT"/>test_raises()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestConstants" [color="black", fontcolor="black", label=<{TestConstants|<br ALIGN="LEFT"/>|test_lagdomain()<br ALIGN="LEFT"/>test_lagone()<br ALIGN="LEFT"/>test_lagx()<br ALIGN="LEFT"/>test_lagzero()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestDerivative" [color="black", fontcolor="black", label=<{TestDerivative|<br ALIGN="LEFT"/>|test_lagder()<br ALIGN="LEFT"/>test_lagder_axis()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestEvaluation" [color="black", fontcolor="black", label=<{TestEvaluation|c1d : ndarray<br ALIGN="LEFT"/>c2d : ndarray<br ALIGN="LEFT"/>c3d : ndarray<br ALIGN="LEFT"/>x<br ALIGN="LEFT"/>y<br ALIGN="LEFT"/>|test_laggrid2d()<br ALIGN="LEFT"/>test_laggrid3d()<br ALIGN="LEFT"/>test_lagval()<br ALIGN="LEFT"/>test_lagval2d()<br ALIGN="LEFT"/>test_lagval3d()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestFitting" [color="black", fontcolor="black", label=<{TestFitting|<br ALIGN="LEFT"/>|test_lagfit()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestGauss" [color="black", fontcolor="black", label=<{TestGauss|<br ALIGN="LEFT"/>|test_100()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestIntegral" [color="black", fontcolor="black", label=<{TestIntegral|<br ALIGN="LEFT"/>|test_lagint()<br ALIGN="LEFT"/>test_lagint_axis()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestMisc" [color="black", fontcolor="black", label=<{TestMisc|<br ALIGN="LEFT"/>|test_lag2poly()<br ALIGN="LEFT"/>test_lagfromroots()<br ALIGN="LEFT"/>test_lagline()<br ALIGN="LEFT"/>test_lagroots()<br ALIGN="LEFT"/>test_lagtrim()<br ALIGN="LEFT"/>test_poly2lag()<br ALIGN="LEFT"/>test_weight()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_laguerre.TestVander" [color="black", fontcolor="black", label=<{TestVander|x<br ALIGN="LEFT"/>|test_lagvander()<br ALIGN="LEFT"/>test_lagvander2d()<br ALIGN="LEFT"/>test_lagvander3d()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

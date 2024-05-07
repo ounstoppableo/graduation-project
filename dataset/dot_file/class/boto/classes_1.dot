@@ -1,0 +1,12 @@
+digraph "classes_1" {
+rankdir=BT
+charset="utf-8"
+"test_wrapper.BasicSuite" [color="black", fontcolor="black", label=<{BasicSuite|app_name : str<br ALIGN="LEFT"/>app_version : str<br ALIGN="LEFT"/>beanstalk<br ALIGN="LEFT"/>environment : str<br ALIGN="LEFT"/>random_id : str<br ALIGN="LEFT"/>template : str<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_wrapper.GetSuite" [color="black", fontcolor="black", label=<{GetSuite|<br ALIGN="LEFT"/>|test_12_describe_environments()<br ALIGN="LEFT"/>test_14_describe_events()<br ALIGN="LEFT"/>test_15_list_available_solution_stacks()<br ALIGN="LEFT"/>test_describe_application_versions()<br ALIGN="LEFT"/>test_describe_applications()<br ALIGN="LEFT"/>test_describe_configuration_options()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_wrapper.MiscSuite" [color="black", fontcolor="black", label=<{MiscSuite|<br ALIGN="LEFT"/>|test_check_dns_availability()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_wrapper.TestApplicationObjects" [color="black", fontcolor="black", label=<{TestApplicationObjects|<br ALIGN="LEFT"/>|create_application()<br ALIGN="LEFT"/>test_create_configuration_template()<br ALIGN="LEFT"/>test_create_delete_application_version()<br ALIGN="LEFT"/>test_create_storage_location()<br ALIGN="LEFT"/>test_update_application()<br ALIGN="LEFT"/>test_update_application_version()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_wrapper.TestsWithEnvironment" [color="black", fontcolor="black", label=<{TestsWithEnvironment|<br ALIGN="LEFT"/>|env_ready(env_name, desired_status)<br ALIGN="LEFT"/>setUpClass()<br ALIGN="LEFT"/>tearDownClass()<br ALIGN="LEFT"/>test_describe_configuration_settings()<br ALIGN="LEFT"/>test_describe_environment_resources()<br ALIGN="LEFT"/>test_rebuild_environment()<br ALIGN="LEFT"/>test_request_environment_info()<br ALIGN="LEFT"/>test_restart_app_server()<br ALIGN="LEFT"/>test_update_configuration_template()<br ALIGN="LEFT"/>test_update_environment()<br ALIGN="LEFT"/>wait_for_env(env_name, status)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_wrapper.GetSuite" -> "test_wrapper.BasicSuite" [arrowhead="empty", arrowtail="none"];
+"test_wrapper.MiscSuite" -> "test_wrapper.BasicSuite" [arrowhead="empty", arrowtail="none"];
+"test_wrapper.TestApplicationObjects" -> "test_wrapper.BasicSuite" [arrowhead="empty", arrowtail="none"];
+}

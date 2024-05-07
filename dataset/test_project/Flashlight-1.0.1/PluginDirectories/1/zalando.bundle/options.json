@@ -1,0 +1,103 @@
+{
+  "options": [
+    {
+      "type": "hint",
+      "text": "Choose your category and your country."
+    },
+    {
+      "type": "dropdown",
+      "text": "Category:",
+      "key": "category",
+      "options": [
+        {
+          "text": "All",
+          "value": "catalog"
+        },
+        {
+          "text": "Women",
+          "value": "women"
+        },
+        {
+          "text": "Men",
+          "value": "men"
+        },
+        {
+          "text": "Kids",
+          "value": "kids"
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "text": "Country:",
+      "key": "country",
+      "options": [
+        {
+          "text": "Deutschland",
+          "value": "de"
+        },
+        {
+          "text": "Österreich",
+          "value": "at"
+        },
+        {
+          "text": "Schweiz",
+          "value": "ch"
+        },
+        {
+          "text": "Nederland",
+          "value": "nl"
+        },
+        {
+          "text": "Great Britain",
+          "value": "co.uk"
+        },
+        {
+          "text": "Espana",
+          "value": "es"
+        },
+        {
+          "text": "Italia",
+          "value": "it"
+        },
+        {
+          "text": "France",
+          "value": "fr"
+        },
+        {
+          "text": "Poland",
+          "value": "pl"
+        },
+        {
+          "text": "Belgium",
+          "value": "be"
+        },
+        {
+          "text": "Sverige",
+          "value": "se"
+        },
+        {
+          "text": "Suomi",
+          "value": "fi"
+        },
+        {
+          "text": "Danmark",
+          "value": "dk"
+        },
+        {
+          "text": "Norge",
+          "value": "no"
+        }
+      ]
+    },
+    {
+      "type": "checkmark",
+      "text": "Only sale",
+      "key": "sale"
+    },
+    {
+      "type": "hint",
+      "text": "Choose 'Sale' in your search tearm to get sale offers. For example \"zalando sale nike shoe\" search only for sale offers to \"nike schuhe\"."
+    }
+  ]
+}

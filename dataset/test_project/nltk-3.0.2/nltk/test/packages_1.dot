@@ -1,0 +1,36 @@
+digraph "packages_1" {
+rankdir=BT
+charset="utf-8"
+"nltk.test" [color="black", label=<nltk.test>, shape="box", style="solid"];
+"nltk.test.align_fixt" [color="black", label=<nltk.test.align_fixt>, shape="box", style="solid"];
+"nltk.test.all" [color="black", label=<nltk.test.all>, shape="box", style="solid"];
+"nltk.test.childes_fixt" [color="black", label=<nltk.test.childes_fixt>, shape="box", style="solid"];
+"nltk.test.classify_fixt" [color="black", label=<nltk.test.classify_fixt>, shape="box", style="solid"];
+"nltk.test.compat_fixt" [color="black", label=<nltk.test.compat_fixt>, shape="box", style="solid"];
+"nltk.test.corpus_fixt" [color="black", label=<nltk.test.corpus_fixt>, shape="box", style="solid"];
+"nltk.test.discourse_fixt" [color="black", label=<nltk.test.discourse_fixt>, shape="box", style="solid"];
+"nltk.test.doctest_nose_plugin" [color="black", label=<nltk.test.doctest_nose_plugin>, shape="box", style="solid"];
+"nltk.test.gluesemantics_malt_fixt" [color="black", label=<nltk.test.gluesemantics_malt_fixt>, shape="box", style="solid"];
+"nltk.test.inference_fixt" [color="black", label=<nltk.test.inference_fixt>, shape="box", style="solid"];
+"nltk.test.nonmonotonic_fixt" [color="black", label=<nltk.test.nonmonotonic_fixt>, shape="box", style="solid"];
+"nltk.test.portuguese_en_fixt" [color="black", label=<nltk.test.portuguese_en_fixt>, shape="box", style="solid"];
+"nltk.test.probability_fixt" [color="black", label=<nltk.test.probability_fixt>, shape="box", style="solid"];
+"nltk.test.runtests" [color="black", label=<nltk.test.runtests>, shape="box", style="solid"];
+"nltk.test.segmentation_fixt" [color="black", label=<nltk.test.segmentation_fixt>, shape="box", style="solid"];
+"nltk.test.semantics_fixt" [color="black", label=<nltk.test.semantics_fixt>, shape="box", style="solid"];
+"nltk.test.unit" [color="black", label=<nltk.test.unit>, shape="box", style="solid"];
+"nltk.test.unit.test_2x_compat" [color="black", label=<nltk.test.unit.test_2x_compat>, shape="box", style="solid"];
+"nltk.test.unit.test_classify" [color="black", label=<nltk.test.unit.test_classify>, shape="box", style="solid"];
+"nltk.test.unit.test_collocations" [color="black", label=<nltk.test.unit.test_collocations>, shape="box", style="solid"];
+"nltk.test.unit.test_corpora" [color="black", label=<nltk.test.unit.test_corpora>, shape="box", style="solid"];
+"nltk.test.unit.test_corpus_views" [color="black", label=<nltk.test.unit.test_corpus_views>, shape="box", style="solid"];
+"nltk.test.unit.test_hmm" [color="black", label=<nltk.test.unit.test_hmm>, shape="box", style="solid"];
+"nltk.test.unit.test_naivebayes" [color="black", label=<nltk.test.unit.test_naivebayes>, shape="box", style="solid"];
+"nltk.test.unit.test_seekable_unicode_stream_reader" [color="black", label=<nltk.test.unit.test_seekable_unicode_stream_reader>, shape="box", style="solid"];
+"nltk.test.unit.test_stem" [color="black", label=<nltk.test.unit.test_stem>, shape="box", style="solid"];
+"nltk.test.unit.test_tag" [color="black", label=<nltk.test.unit.test_tag>, shape="box", style="solid"];
+"nltk.test.unit.utils" [color="black", label=<nltk.test.unit.utils>, shape="box", style="solid"];
+"nltk.test.wordnet_fixt" [color="black", label=<nltk.test.wordnet_fixt>, shape="box", style="solid"];
+"nltk.test.runtests" -> "nltk.test.doctest_nose_plugin" [arrowhead="open", arrowtail="none"];
+"nltk.test.unit.test_corpora" -> "nltk.test.unit.utils" [arrowhead="open", arrowtail="none"];
+}

@@ -1,0 +1,48 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_0359be2f [label="39: check_simple()" name="test_netcdf::check_simple" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2cb5228c [label="27: make_simple()" name="test_netcdf::make_simple" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_26f18e48 [label="199: test_dtype_specifiers()" name="test_netcdf::test_dtype_specifiers" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ec0f65e1 [label="185: test_flush_rewind()" name="test_netcdf::test_flush_rewind" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_11b948a9 [label="48: test_read_write_files()" name="test_netcdf::test_read_write_files" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f1d17c52 [label="120: test_read_write_sio()" name="test_netcdf::test_read_write_sio" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5c53bd08 [label="254: test_zero_dimensional_var()" name="test_netcdf::test_zero_dimensional_var" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_26f18e48 -> node_2cb5228c [color="#000000" penwidth="2"];
+node_ec0f65e1 -> node_2cb5228c [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_0359be2f [color="#E69F00" penwidth="2"];
+node_11b948a9 -> node_2cb5228c [color="#E69F00" penwidth="2"];
+node_f1d17c52 -> node_0359be2f [color="#56B4E9" penwidth="2"];
+node_f1d17c52 -> node_0359be2f [color="#56B4E9" penwidth="2"];
+node_f1d17c52 -> node_0359be2f [color="#56B4E9" penwidth="2"];
+node_f1d17c52 -> node_2cb5228c [color="#56B4E9" penwidth="2"];
+node_f1d17c52 -> node_2cb5228c [color="#56B4E9" penwidth="2"];
+node_5c53bd08 -> node_2cb5228c [color="#000000" penwidth="2"];
+subgraph cluster_b7e9ad67 {
+    node_2cb5228c node_0359be2f node_11b948a9 node_f1d17c52 node_ec0f65e1 node_26f18e48 node_5c53bd08;
+    label="File: test_netcdf";
+    name="test_netcdf";
+    style="filled";
+    graph[style=dotted];
+};
+}

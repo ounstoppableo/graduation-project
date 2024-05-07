@@ -1,0 +1,9 @@
+{
+	"name": "doc-webdev",
+	"displayName": "Documentation Webdev",
+	"displayName_de": "Webentwickler Documentationen",
+	"description": "Open Documentations",
+	"description_de": "Öffnet Dokumentationen",
+	"examples": ["docpy class", "docdj translation"],
+	"categories": ["Developer"]
+}

@@ -1,0 +1,14 @@
+digraph "classes_1" {
+rankdir=BT
+charset="utf-8"
+"test_dtype.TestSubarray.test_shape_sequence.IntLike" [color="black", fontcolor="black", label=<{IntLike|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_dtype.TestBuiltin" [color="black", fontcolor="black", label=<{TestBuiltin|<br ALIGN="LEFT"/>|test_bad_param()<br ALIGN="LEFT"/>test_dtype()<br ALIGN="LEFT"/>test_equivalent_dtype_hashing()<br ALIGN="LEFT"/>test_invalid_types()<br ALIGN="LEFT"/>test_run()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestDtypeAttributeDeletion" [color="black", fontcolor="black", label=<{TestDtypeAttributeDeletion|<br ALIGN="LEFT"/>|test_dtype_non_writable_attributes_deletion()<br ALIGN="LEFT"/>test_dtype_writable_attributes_deletion()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestDtypeAttributes" [color="black", fontcolor="black", label=<{TestDtypeAttributes|<br ALIGN="LEFT"/>|test_name_builtin()<br ALIGN="LEFT"/>test_name_dtype_subclass()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestMetadata" [color="black", fontcolor="black", label=<{TestMetadata|<br ALIGN="LEFT"/>|test_metadata_rejects_nondict()<br ALIGN="LEFT"/>test_metadata_takes_dict()<br ALIGN="LEFT"/>test_nested_metadata()<br ALIGN="LEFT"/>test_no_metadata()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestMonsterType" [color="black", fontcolor="black", label=<{TestMonsterType|<br ALIGN="LEFT"/>|test1()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestRecord" [color="black", fontcolor="black", label=<{TestRecord|<br ALIGN="LEFT"/>|test_aligned_size()<br ALIGN="LEFT"/>test_comma_datetime()<br ALIGN="LEFT"/>test_different_names()<br ALIGN="LEFT"/>test_different_titles()<br ALIGN="LEFT"/>test_equivalent_record()<br ALIGN="LEFT"/>test_not_lists()<br ALIGN="LEFT"/>test_union_struct()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestString" [color="black", fontcolor="black", label=<{TestString|<br ALIGN="LEFT"/>|test_base_dtype_with_object_type()<br ALIGN="LEFT"/>test_complex_dtype_repr()<br ALIGN="LEFT"/>test_complex_dtype_str()<br ALIGN="LEFT"/>test_dtype_str_with_long_in_shape()<br ALIGN="LEFT"/>test_empty_string_to_object()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestSubarray" [color="black", fontcolor="black", label=<{TestSubarray|<br ALIGN="LEFT"/>|test_alignment()<br ALIGN="LEFT"/>test_equivalent_record()<br ALIGN="LEFT"/>test_nonequivalent_record()<br ALIGN="LEFT"/>test_shape_equal()<br ALIGN="LEFT"/>test_shape_invalid()<br ALIGN="LEFT"/>test_shape_monster()<br ALIGN="LEFT"/>test_shape_sequence()<br ALIGN="LEFT"/>test_shape_simple()<br ALIGN="LEFT"/>test_single_subarray()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_dtype.TestDtypeAttributes.test_name_dtype_subclass.user_def_subcls" [color="black", fontcolor="black", label=<{user_def_subcls|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

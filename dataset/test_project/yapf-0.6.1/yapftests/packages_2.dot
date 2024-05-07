@@ -1,0 +1,21 @@
+digraph "packages_2" {
+rankdir=BT
+charset="utf-8"
+"yapftests" [color="black", label=<yapftests>, shape="box", style="solid"];
+"yapftests.blank_line_calculator_test" [color="black", label=<yapftests.blank_line_calculator_test>, shape="box", style="solid"];
+"yapftests.comment_splicer_test" [color="black", label=<yapftests.comment_splicer_test>, shape="box", style="solid"];
+"yapftests.file_resources_test" [color="black", label=<yapftests.file_resources_test>, shape="box", style="solid"];
+"yapftests.format_decision_state_test" [color="black", label=<yapftests.format_decision_state_test>, shape="box", style="solid"];
+"yapftests.format_token_test" [color="black", label=<yapftests.format_token_test>, shape="box", style="solid"];
+"yapftests.line_joiner_test" [color="black", label=<yapftests.line_joiner_test>, shape="box", style="solid"];
+"yapftests.main_test" [color="black", label=<yapftests.main_test>, shape="box", style="solid"];
+"yapftests.pytree_unwrapper_test" [color="black", label=<yapftests.pytree_unwrapper_test>, shape="box", style="solid"];
+"yapftests.pytree_utils_test" [color="black", label=<yapftests.pytree_utils_test>, shape="box", style="solid"];
+"yapftests.pytree_visitor_test" [color="black", label=<yapftests.pytree_visitor_test>, shape="box", style="solid"];
+"yapftests.reformatter_test" [color="black", label=<yapftests.reformatter_test>, shape="box", style="solid"];
+"yapftests.split_penalty_test" [color="black", label=<yapftests.split_penalty_test>, shape="box", style="solid"];
+"yapftests.style_test" [color="black", label=<yapftests.style_test>, shape="box", style="solid"];
+"yapftests.subtype_assigner_test" [color="black", label=<yapftests.subtype_assigner_test>, shape="box", style="solid"];
+"yapftests.unwrapped_line_test" [color="black", label=<yapftests.unwrapped_line_test>, shape="box", style="solid"];
+"yapftests.yapf_test" [color="black", label=<yapftests.yapf_test>, shape="box", style="solid"];
+}

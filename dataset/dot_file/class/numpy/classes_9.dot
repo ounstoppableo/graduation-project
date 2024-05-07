@@ -1,0 +1,8 @@
+digraph "classes_9" {
+rankdir=BT
+charset="utf-8"
+"test__iotools.TestLineSplitter" [color="black", fontcolor="black", label=<{TestLineSplitter|<br ALIGN="LEFT"/>|test_constant_fixed_width()<br ALIGN="LEFT"/>test_no_delimiter()<br ALIGN="LEFT"/>test_other_delimiter()<br ALIGN="LEFT"/>test_space_delimiter()<br ALIGN="LEFT"/>test_tab_delimiter()<br ALIGN="LEFT"/>test_variable_fixed_width()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test__iotools.TestMiscFunctions" [color="black", fontcolor="black", label=<{TestMiscFunctions|<br ALIGN="LEFT"/>|test_easy_dtype()<br ALIGN="LEFT"/>test_flatten_dtype()<br ALIGN="LEFT"/>test_has_nested_dtype()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test__iotools.TestNameValidator" [color="black", fontcolor="black", label=<{TestNameValidator|<br ALIGN="LEFT"/>|test_case_sensitivity()<br ALIGN="LEFT"/>test_excludelist()<br ALIGN="LEFT"/>test_missing_names()<br ALIGN="LEFT"/>test_validate_nb_names()<br ALIGN="LEFT"/>test_validate_wo_names()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test__iotools.TestStringConverter" [color="black", fontcolor="black", label=<{TestStringConverter|<br ALIGN="LEFT"/>|test_creation()<br ALIGN="LEFT"/>test_int64_dtype()<br ALIGN="LEFT"/>test_keep_default()<br ALIGN="LEFT"/>test_keep_default_zero()<br ALIGN="LEFT"/>test_keep_missing_values()<br ALIGN="LEFT"/>test_missing()<br ALIGN="LEFT"/>test_string_to_object()<br ALIGN="LEFT"/>test_uint64_dtype()<br ALIGN="LEFT"/>test_upgrade()<br ALIGN="LEFT"/>test_upgrademapper()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

@@ -1,0 +1,8 @@
+digraph "classes_11" {
+rankdir=BT
+charset="utf-8"
+"auth_tests.test_context_processors.AuthContextProcessorTests" [color="black", fontcolor="black", label=<{AuthContextProcessorTests|fixtures : list<br ALIGN="LEFT"/>|test_message_attrs()<br ALIGN="LEFT"/>test_perm_in_perms_attrs()<br ALIGN="LEFT"/>test_perms_attrs()<br ALIGN="LEFT"/>test_session_is_accessed()<br ALIGN="LEFT"/>test_session_not_accessed()<br ALIGN="LEFT"/>test_user_attrs()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"auth_tests.test_context_processors.PermWrapperTests.EQLimiterObject" [color="black", fontcolor="black", label=<{EQLimiterObject|eq_calls : int<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"auth_tests.test_context_processors.MockUser" [color="black", fontcolor="black", label=<{MockUser|<br ALIGN="LEFT"/>|has_module_perms(perm)<br ALIGN="LEFT"/>has_perm(perm)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"auth_tests.test_context_processors.PermWrapperTests" [color="black", fontcolor="black", label=<{PermWrapperTests|<br ALIGN="LEFT"/>|test_permlookupdict_in()<br ALIGN="LEFT"/>test_permwrapper_in()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

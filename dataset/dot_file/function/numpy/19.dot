@@ -1,0 +1,87 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_6d1d6302 [label="49: test_hermadd()" name="test_hermite::TestArithmetic.test_hermadd" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e9444f73 [label="91: test_hermdiv()" name="test_hermite::TestArithmetic.test_hermdiv" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_45677213 [label="59: test_hermsub()" name="test_hermite::TestArithmetic.test_hermsub" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_66e4d127 [label="298: test_hermder()" name="test_hermite::TestDerivative.test_hermder" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a0b90635 [label="199: test_hermint()" name="test_hermite::TestIntegral.test_hermint" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b62191e4 [label="466: test_hermfromroots()" name="test_hermite::TestMisc.test_hermfromroots" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_150c992e [label="478: test_hermroots()" name="test_hermite::TestMisc.test_hermroots" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2a55e088 [label="27: trim()" name="test_hermite::trim" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6d1d6302 -> node_2a55e088 [color="#56B4E9" penwidth="2"];
+node_6d1d6302 -> node_2a55e088 [color="#56B4E9" penwidth="2"];
+node_e9444f73 -> node_2a55e088 [color="#009E73" penwidth="2"];
+node_e9444f73 -> node_2a55e088 [color="#009E73" penwidth="2"];
+node_45677213 -> node_2a55e088 [color="#009E73" penwidth="2"];
+node_45677213 -> node_2a55e088 [color="#009E73" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_66e4d127 -> node_2a55e088 [color="#CC79A7" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_a0b90635 -> node_2a55e088 [color="#0072B2" penwidth="2"];
+node_b62191e4 -> node_2a55e088 [color="#F0E442" penwidth="2"];
+node_150c992e -> node_2a55e088 [color="#D55E00" penwidth="2"];
+node_150c992e -> node_2a55e088 [color="#D55E00" penwidth="2"];
+subgraph cluster_2b9762df {
+    node_2a55e088;
+    label="File: test_hermite";
+    name="test_hermite";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_83aaab3f {
+        node_6d1d6302 node_45677213 node_e9444f73;
+        label="Class: TestArithmetic";
+        name="TestArithmetic";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_b9e7274b {
+        node_a0b90635;
+        label="Class: TestIntegral";
+        name="TestIntegral";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a1e610f7 {
+        node_66e4d127;
+        label="Class: TestDerivative";
+        name="TestDerivative";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_dfa90fa9 {
+        node_b62191e4 node_150c992e;
+        label="Class: TestMisc";
+        name="TestMisc";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'/>
+<head>
+   <style>
+   body {
+      margin: 1em;
+      font-family: "HelveticaNeue", "Helvetica Neue", sans-serif;
+      /*background-color: #456;*/
+      cursor: default;
+      -webkit-touch-callout: none;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+   }
+   .plugins {
+      padding: 0;
+      -webkit-column-width: 200px;
+      -webkit-column-gap: 1em;
+      width: 100%;
+   }
+   .plugins > li {
+      list-style-type: none;
+      padding-top: 1em;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      position: relative;
+   }
+   .plugins .pod {
+      background-color: rgba(100,100,100,0.1);
+      padding: 14px;
+      border-radius: 10px;
+   }
+   .icon {
+      position: absolute;
+      height: 40px;
+      top: 0px;
+      right: 15px;
+   }
+   .plugins h4, p.description {
+      margin: 0px;
+      font-size: small;
+   }
+   .control {
+      background-color: rgba(0,0,0,0.1);
+      font-weight: bold;
+      margin-left: auto;
+      border-radius: 5px;
+      font-size: small;
+      text-transform: uppercase;
+      text-align: center;
+      min-width: 110px;
+   }
+   .control:hover {
+      background-color: rgba(0,0,0,0.15);
+   }
+   .control:active {
+      background-color: rgba(0,0,0,0.2);
+   }
+   .bottom {
+      display: table;
+   }
+   .bottom > * {
+      display: table-cell;
+   }
+   .control a {
+      display: none;
+      color: #222;
+      text-decoration: none;
+      width: 100%;
+      padding: 10px 5px;
+      text-align: center;
+      -webkit-box-sizing: border-box;
+   }
+   li[status=installing] .control a.installing {
+      display: block;
+   }
+   li[status=installed] .control a.uninstall {
+      display: block;
+   }
+   li[status=uninstalled] .control a.install {
+      display: block;
+   }
+	 li[status=needsUpdate] .control a.needsUpdate {
+		 display: block;
+	 }
+   .examples {
+      padding: 0;
+   }
+   .examples > li {
+      list-style-type: none;
+      margin-top: 8px;
+      margin-bottom: 8px;
+   }
+   .examples > li:before {
+      content: "“";
+   }
+   .examples > li:after {
+      content: "”";
+   }
+   .screenshot {
+      width: 100%;
+      height: auto;
+      margin-top: 4px;
+      margin-bottom: 4px;
+   }
+   .description {
+      color: #666;
+      padding-bottom: 0.5em;
+   }
+   .bottom .info {
+      width: 100%;
+      vertical-align: middle;
+      text-align: left;
+      font-size: x-small;
+   }
+   .control-container {
+      vertical-align: bottom;
+      padding-left: 5px;
+   }
+   .download_count {
+      font-weight: 300;
+      padding-left: 0.25em;
+   }
+   h3 {
+      font-weight: 200;
+   }
+   #search_summary h2 {
+      margin-bottom: 0;
+   }
+   #search_summary h3 {
+      margin-top: 0px;
+      margin-bottom: -15px;
+   }
+   .plugin_link {
+      text-decoration: none;
+      color: inherit;
+   }
+   .plugins.other_locales {
+      font-size: 0.9em;
+      opacity: 0.9;
+   }
+   .group_header {
+      opacity: 0.7;
+      font-weight: 200;
+   }
+	 #ideas {
+		 text-align: center;
+		 font-size: small;
+	 }
+	 #ideas a:link, #ideas a:visited {
+		 color: inherit;
+	 }
+   </style>
+</head>
+<body>
+   <script>
+   window.addEventListener('onContextMenu', function(e) {
+      e.preventDefault();
+   })
+   </script>
+   {% if search %}
+   <div id='search_summary'>
+      <h2>{{ search }}</h2>
+      <h3>{{ count }} results</h3>
+   </div>
+   {% endif %}
+	 {% if new %}
+   <div id='search_summary'>
+      <h2>New &amp; recently updated</h2>
+   </div>
+	 {% endif %}
+   
+   {% for group in groups %}
+   
+   {% if group.header %}
+   <h4 class='group_header'>{{ group.header }}</h4>
+   {% endif %}
+   <ul id='plugins' class='plugins {% if group.class %} {{ group.class }} {% endif %}'>
+      {% for plugin in group.plugins %}
+      <li class='{{ plugin.name }}' status='uninstalled'>
+         <div class='pod'>
+            {% if plugin.model.icon_url %}
+            <img class='icon' src='{{ plugin.model.icon_url }}'/>
+            {% endif %}
+            <h4>
+               {% if browse %} <a class='plugin_link' href='/plugin/{{ plugin.name }}'> {% endif %}
+               {{ plugin.displayName }}
+               {% if browse %} </a> {% endif %}
+            </h4>
+            <ul class='examples'>
+               {% for example in plugin.examples %}
+               <li>{{ example }}</li>
+               {% endfor %}
+            </ul>
+            <p class='description'>
+               {{ plugin.description }}
+            </p>
+            <div class='bottom'>
+               <div class='info'>
+                  
+               </div>
+               <div class='control-container'>
+                  <div class='control'>
+                     {% if browse %}
+											 {% if deep_links %}
+                     		<a class='install' href='flashlight://plugin/{{ plugin.name }}'>Show <span class='download_count'>{{plugin.model.downloads | format_as_compact_download_count}}</span></a>
+											 {% else %}
+	                     <a class='install' href='/plugin/{{ plugin.name }}'>View <span class='download_count'>{{plugin.model.downloads | format_as_compact_download_count}}</span></a>
+											 {% endif %}
+                     {% else %}
+                     <a class='install' href='{{ plugin.install_url }}'>Install <span class='download_count'>{{plugin.model.downloads | format_as_compact_download_count}}</span></a>
+                     {% endif %}
+                     <a class='installing'>Installing...</a>
+                     <a class='uninstall' href='uninstall://{{ plugin.name }}'>Uninstall</a>
+                     <a class='needsUpdate' href='{{ plugin.update_url }}'>Update</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </li>
+      {% endfor %}
+   </ul>
+   {% endfor %}
+	 
+	 <p id='ideas'>
+		 Have an idea for a plugin you'd want?
+		 {% if browse %}
+		 <a href='/ideas'>Request a plugin</a>
+		 {% else %}
+		 <a href='open://flashlight.nateparrott.com/ideas'>Request a plugin</a>
+		 {% endif %}
+	 </p>
+	 
+   {% if browse %}
+   <script>
+   function reveal(name) {
+      window.location = '/latest_download';
+   }
+   </script>
+   {% else %}
+   <script>
+   window.location = "domready://_";
+   </script>
+   {% endif %}
+	 
+	 {% if gae %}
+   <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-37604830-8', 'auto');
+     ga('send', 'pageview');
+		 
+		 (function() {
+			 var markPluginLinksWithEvents = function(className) {
+				 var plugins = document.querySelectorAll("#plugins > li");
+				 for (var i=0; i<plugins.length; i++) {
+					 var pluginNode = plugins[i];
+					 var pluginName = pluginNode.className;
+					 var link = pluginNode.querySelector("." + className);
+					 link.addEventListener('click', function() {
+						 ga('send', 'event', 'app', className, pluginName);
+					 });
+				 }
+			 }
+			 markPluginLinksWithEvents("uninstall");
+			 markPluginLinksWithEvents("install");
+		 })();
+   </script>
+	 {% endif %}
+</body>
+</html>

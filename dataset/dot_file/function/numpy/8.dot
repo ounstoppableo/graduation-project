@@ -1,0 +1,45 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_acf027d3 [label="693: check_identityless_reduction()" name="test_ufunc::TestUfunc.check_identityless_reduction" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_adafda89 [label="502: compare_matrix_multiply_results()" name="test_ufunc::TestUfunc.compare_matrix_multiply_results" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_01056497 [label="739: test_identityless_reduction_corder()" name="test_ufunc::TestUfunc.test_identityless_reduction_corder" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7d56b737 [label="743: test_identityless_reduction_forder()" name="test_ufunc::TestUfunc.test_identityless_reduction_forder" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e0692f8c [label="751: test_identityless_reduction_noncontig()" name="test_ufunc::TestUfunc.test_identityless_reduction_noncontig" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1bcd5ef5 [label="756: test_identityless_reduction_noncontig_unaligned()" name="test_ufunc::TestUfunc.test_identityless_reduction_noncontig_unaligned" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b7c6b821 [label="747: test_identityless_reduction_otherorder()" name="test_ufunc::TestUfunc.test_identityless_reduction_otherorder" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9ffd5804 [label="498: test_matrix_multiply()" name="test_ufunc::TestUfunc.test_matrix_multiply" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_01056497 -> node_acf027d3 [color="#CC79A7" penwidth="2"];
+node_7d56b737 -> node_acf027d3 [color="#CC79A7" penwidth="2"];
+node_e0692f8c -> node_acf027d3 [color="#F0E442" penwidth="2"];
+node_1bcd5ef5 -> node_acf027d3 [color="#0072B2" penwidth="2"];
+node_b7c6b821 -> node_acf027d3 [color="#E69F00" penwidth="2"];
+node_9ffd5804 -> node_adafda89 [color="#F0E442" penwidth="2"];
+node_9ffd5804 -> node_adafda89 [color="#F0E442" penwidth="2"];
+subgraph cluster_a76a663e {
+    label="File: test_ufunc";
+    name="test_ufunc";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_5f6dd5aa {
+        node_9ffd5804 node_adafda89 node_acf027d3 node_01056497 node_7d56b737 node_b7c6b821 node_e0692f8c node_1bcd5ef5;
+        label="Class: TestUfunc";
+        name="TestUfunc";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

@@ -1,0 +1,7 @@
+google maps ~googlemapsquery(query here)
+zeige auf maps ~googlemapsquery(query here)
+zeige auf google maps ~googlemapsquery(query here)
+zeige ~googlemapsquery(query here) auf der karte
+Karte ~googlemapsquery(query here)
+Karte von ~googlemapsquery(san francisco)
+gm ~googlemapsquery(query here)

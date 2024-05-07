@@ -1,0 +1,105 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_44d4405e [label="677: test_random()" name="test_basic::TestDet.test_random" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_399c3a74 [label="686: test_random_complex()" name="test_basic::TestDet.test_random_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d721ce0e [label="630: test_random()" name="test_basic::TestInv.test_random" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b9dee36e [label="646: test_random_complex()" name="test_basic::TestInv.test_random_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6b0a1a70 [label="763: test_random_complex_exact()" name="test_basic::TestLstsq.test_random_complex_exact" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e4c8f4cd [label="786: test_random_complex_overdet()" name="test_basic::TestLstsq.test_random_complex_overdet" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1adcc4f2 [label="752: test_random_exact()" name="test_basic::TestLstsq.test_random_exact" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b4ce4b18 [label="773: test_random_overdet()" name="test_basic::TestLstsq.test_random_overdet" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cc68fab7 [label="714: test_random_overdet_large()" name="test_basic::TestLstsq.test_random_overdet_large" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dd8724f1 [label="731: test_simple_overdet()" name="test_basic::TestLstsq.test_simple_overdet" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_15849994 [label="738: test_simple_overdet_complex()" name="test_basic::TestLstsq.test_simple_overdet_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5ae594d6 [label="509: test_nils_20Feb04()" name="test_basic::TestSolve.test_nils_20Feb04" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6fd2821c [label="520: test_random()" name="test_basic::TestSolve.test_random" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_af0b8a58 [label="531: test_random_complex()" name="test_basic::TestSolve.test_random_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9da44f50 [label="541: test_random_sym()" name="test_basic::TestSolve.test_random_sym" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a75d6af9 [label="553: test_random_sym_complex()" name="test_basic::TestSolve.test_random_sym_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_055e2e25 [label="701: direct_lstsq()" name="test_basic::direct_lstsq" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_245ba12b [label="40: random()" name="test_basic::random" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_44d4405e -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_399c3a74 -> node_245ba12b [color="#F0E442" penwidth="2"];
+node_399c3a74 -> node_245ba12b [color="#F0E442" penwidth="2"];
+node_d721ce0e -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_b9dee36e -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_b9dee36e -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_6b0a1a70 -> node_245ba12b [color="#000000" penwidth="2"];
+node_6b0a1a70 -> node_245ba12b [color="#000000" penwidth="2"];
+node_6b0a1a70 -> node_245ba12b [color="#000000" penwidth="2"];
+node_e4c8f4cd -> node_055e2e25 [color="#0072B2" penwidth="2"];
+node_e4c8f4cd -> node_245ba12b [color="#0072B2" penwidth="2"];
+node_e4c8f4cd -> node_245ba12b [color="#0072B2" penwidth="2"];
+node_e4c8f4cd -> node_245ba12b [color="#0072B2" penwidth="2"];
+node_1adcc4f2 -> node_245ba12b [color="#56B4E9" penwidth="2"];
+node_1adcc4f2 -> node_245ba12b [color="#56B4E9" penwidth="2"];
+node_b4ce4b18 -> node_055e2e25 [color="#000000" penwidth="2"];
+node_b4ce4b18 -> node_245ba12b [color="#000000" penwidth="2"];
+node_b4ce4b18 -> node_245ba12b [color="#000000" penwidth="2"];
+node_cc68fab7 -> node_055e2e25 [color="#CC79A7" penwidth="2"];
+node_cc68fab7 -> node_245ba12b [color="#CC79A7" penwidth="2"];
+node_cc68fab7 -> node_245ba12b [color="#CC79A7" penwidth="2"];
+node_dd8724f1 -> node_055e2e25 [color="#E69F00" penwidth="2"];
+node_15849994 -> node_055e2e25 [color="#F0E442" penwidth="2"];
+node_5ae594d6 -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_5ae594d6 -> node_245ba12b [color="#D55E00" penwidth="2"];
+node_6fd2821c -> node_245ba12b [color="#F0E442" penwidth="2"];
+node_6fd2821c -> node_245ba12b [color="#F0E442" penwidth="2"];
+node_af0b8a58 -> node_245ba12b [color="#000000" penwidth="2"];
+node_af0b8a58 -> node_245ba12b [color="#000000" penwidth="2"];
+node_af0b8a58 -> node_245ba12b [color="#000000" penwidth="2"];
+node_9da44f50 -> node_245ba12b [color="#000000" penwidth="2"];
+node_9da44f50 -> node_245ba12b [color="#000000" penwidth="2"];
+node_a75d6af9 -> node_245ba12b [color="#E69F00" penwidth="2"];
+node_a75d6af9 -> node_245ba12b [color="#E69F00" penwidth="2"];
+node_a75d6af9 -> node_245ba12b [color="#E69F00" penwidth="2"];
+subgraph cluster_d47c6c4f {
+    node_245ba12b node_055e2e25;
+    label="File: test_basic";
+    name="test_basic";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a19e3d65 {
+        node_5ae594d6 node_6fd2821c node_af0b8a58 node_9da44f50 node_a75d6af9;
+        label="Class: TestSolve";
+        name="TestSolve";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_177e375a {
+        node_d721ce0e node_b9dee36e;
+        label="Class: TestInv";
+        name="TestInv";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_c9edf077 {
+        node_44d4405e node_399c3a74;
+        label="Class: TestDet";
+        name="TestDet";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_0565e1bc {
+        node_cc68fab7 node_dd8724f1 node_15849994 node_1adcc4f2 node_6b0a1a70 node_b4ce4b18 node_e4c8f4cd;
+        label="Class: TestLstsq";
+        name="TestLstsq";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

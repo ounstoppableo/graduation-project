@@ -1,0 +1,89 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_9724051b [label="25: test_dtype()" name="test_dtype::TestBuiltin.test_dtype" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7b7a8358 [label="343: test1()" name="test_dtype::TestMonsterType.test1" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9536e2c7 [label="111: test_different_names()" name="test_dtype::TestRecord.test_different_names" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b685954e [label="117: test_different_titles()" name="test_dtype::TestRecord.test_different_titles" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_184ed8e7 [label="105: test_equivalent_record()" name="test_dtype::TestRecord.test_equivalent_record" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_edf9b0db [label="244: test_equivalent_record()" name="test_dtype::TestSubarray.test_equivalent_record" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0e192d08 [label="250: test_nonequivalent_record()" name="test_dtype::TestSubarray.test_nonequivalent_record" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c6ea0aad [label="264: test_shape_equal()" name="test_dtype::TestSubarray.test_shape_equal" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d98fcff0 [label="279: test_shape_monster()" name="test_dtype::TestSubarray.test_shape_monster" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5057a0e2 [label="273: test_shape_simple()" name="test_dtype::TestSubarray.test_shape_simple" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2c382e76 [label="236: test_single_subarray()" name="test_dtype::TestSubarray.test_single_subarray" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c667d348 [label="7: assert_dtype_equal()" name="test_dtype::assert_dtype_equal" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_20c8d9b5 [label="12: assert_dtype_not_equal()" name="test_dtype::assert_dtype_not_equal" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9724051b -> node_c667d348 [color="#009E73" penwidth="2"];
+node_9724051b -> node_c667d348 [color="#009E73" penwidth="2"];
+node_7b7a8358 -> node_c667d348 [color="#000000" penwidth="2"];
+node_7b7a8358 -> node_c667d348 [color="#000000" penwidth="2"];
+node_9536e2c7 -> node_20c8d9b5 [color="#CC79A7" penwidth="2"];
+node_b685954e -> node_20c8d9b5 [color="#D55E00" penwidth="2"];
+node_184ed8e7 -> node_c667d348 [color="#CC79A7" penwidth="2"];
+node_edf9b0db -> node_c667d348 [color="#009E73" penwidth="2"];
+node_0e192d08 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_0e192d08 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_0e192d08 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_c6ea0aad -> node_c667d348 [color="#0072B2" penwidth="2"];
+node_c6ea0aad -> node_c667d348 [color="#0072B2" penwidth="2"];
+node_c6ea0aad -> node_c667d348 [color="#0072B2" penwidth="2"];
+node_c6ea0aad -> node_c667d348 [color="#0072B2" penwidth="2"];
+node_c6ea0aad -> node_c667d348 [color="#0072B2" penwidth="2"];
+node_d98fcff0 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_d98fcff0 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_d98fcff0 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_d98fcff0 -> node_20c8d9b5 [color="#000000" penwidth="2"];
+node_5057a0e2 -> node_20c8d9b5 [color="#56B4E9" penwidth="2"];
+node_5057a0e2 -> node_20c8d9b5 [color="#56B4E9" penwidth="2"];
+node_5057a0e2 -> node_20c8d9b5 [color="#56B4E9" penwidth="2"];
+node_2c382e76 -> node_c667d348 [color="#D55E00" penwidth="2"];
+subgraph cluster_b2a7d8a6 {
+    node_c667d348 node_20c8d9b5;
+    label="File: test_dtype";
+    name="test_dtype";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_3a983f7c {
+        node_9724051b;
+        label="Class: TestBuiltin";
+        name="TestBuiltin";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_18e176f4 {
+        node_184ed8e7 node_9536e2c7 node_b685954e;
+        label="Class: TestRecord";
+        name="TestRecord";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9d5d4d93 {
+        node_2c382e76 node_edf9b0db node_0e192d08 node_c6ea0aad node_5057a0e2 node_d98fcff0;
+        label="Class: TestSubarray";
+        name="TestSubarray";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ebbb6d1d {
+        node_7b7a8358;
+        label="Class: TestMonsterType";
+        name="TestMonsterType";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

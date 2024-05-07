@@ -1,0 +1,9 @@
+digraph "classes_32" {
+rankdir=BT
+charset="utf-8"
+"m2m_multiple.models.Article" [color="black", fontcolor="black", label=<{Article|headline<br ALIGN="LEFT"/>primary_categories<br ALIGN="LEFT"/>pub_date<br ALIGN="LEFT"/>secondary_categories<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_multiple.models.Category" [color="black", fontcolor="black", label=<{Category|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_multiple.tests.M2MMultipleTests" [color="black", fontcolor="black", label=<{M2MMultipleTests|<br ALIGN="LEFT"/>|test_multiple()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"m2m_multiple.models.Category.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_multiple.models.Article.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

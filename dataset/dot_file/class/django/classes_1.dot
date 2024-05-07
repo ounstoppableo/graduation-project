@@ -1,0 +1,8 @@
+digraph "classes_1" {
+rankdir=BT
+charset="utf-8"
+"django.contrib.gis.geos.libgeos.GEOSContextHandle_t" [color="black", fontcolor="black", label=<{GEOSContextHandle_t|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"django.contrib.gis.geos.libgeos.GEOSCoordSeq_t" [color="black", fontcolor="black", label=<{GEOSCoordSeq_t|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"django.contrib.gis.geos.libgeos.GEOSGeom_t" [color="black", fontcolor="black", label=<{GEOSGeom_t|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"django.contrib.gis.geos.libgeos.GEOSPrepGeom_t" [color="black", fontcolor="black", label=<{GEOSPrepGeom_t|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

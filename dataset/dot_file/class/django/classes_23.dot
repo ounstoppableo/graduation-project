@@ -1,0 +1,23 @@
+digraph "classes_23" {
+rankdir=BT
+charset="utf-8"
+"foreign_object.models.ActiveTranslationField" [color="black", fontcolor="black", label=<{ActiveTranslationField|requires_unique_target : bool<br ALIGN="LEFT"/>|contribute_to_class(cls, name)<br ALIGN="LEFT"/>get_extra_descriptor_filter()<br ALIGN="LEFT"/>get_extra_restriction(where_class, alias, related_alias)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"foreign_object.models.Article" [color="black", fontcolor="black", label=<{Article|active_translation<br ALIGN="LEFT"/>pub_date<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ArticleIdea" [color="black", fontcolor="black", label=<{ArticleIdea|articles<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ArticleTag" [color="black", fontcolor="black", label=<{ArticleTag|article<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ArticleTranslation" [color="black", fontcolor="black", label=<{ArticleTranslation|abstract<br ALIGN="LEFT"/>article<br ALIGN="LEFT"/>body<br ALIGN="LEFT"/>lang<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ArticleTranslationDescriptor" [color="black", fontcolor="black", label=<{ArticleTranslationDescriptor|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ColConstraint" [color="black", fontcolor="black", label=<{ColConstraint|alias<br ALIGN="LEFT"/>col<br ALIGN="LEFT"/>value<br ALIGN="LEFT"/>|as_sql(compiler, connection)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"foreign_object.models.Country" [color="black", fontcolor="black", label=<{Country|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Friendship" [color="black", fontcolor="black", label=<{Friendship|from_friend<br ALIGN="LEFT"/>from_friend_country<br ALIGN="LEFT"/>from_friend_id<br ALIGN="LEFT"/>to_friend<br ALIGN="LEFT"/>to_friend_country<br ALIGN="LEFT"/>to_friend_country_id<br ALIGN="LEFT"/>to_friend_id<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Group" [color="black", fontcolor="black", label=<{Group|group_country<br ALIGN="LEFT"/>members<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Membership" [color="black", fontcolor="black", label=<{Membership|date_joined<br ALIGN="LEFT"/>group<br ALIGN="LEFT"/>group_id<br ALIGN="LEFT"/>invite_reason<br ALIGN="LEFT"/>membership_country<br ALIGN="LEFT"/>person<br ALIGN="LEFT"/>person_id<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Person.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Group.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Membership.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.ArticleTranslation.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>unique_together : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.NewsArticle" [color="black", fontcolor="black", label=<{NewsArticle|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.Person" [color="black", fontcolor="black", label=<{Person|friends<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>person_country<br ALIGN="LEFT"/>person_country_id<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"foreign_object.models.NewsArticle" -> "foreign_object.models.Article" [arrowhead="empty", arrowtail="none"];
+"foreign_object.models.ActiveTranslationField" -> "foreign_object.models.Article" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="active_translation", style="solid"];
+}

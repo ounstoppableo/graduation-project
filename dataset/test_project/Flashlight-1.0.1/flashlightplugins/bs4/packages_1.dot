@@ -1,0 +1,44 @@
+digraph "packages_1" {
+rankdir=BT
+charset="utf-8"
+"bs4" [color="black", label=<bs4>, shape="box", style="solid"];
+"bs4.builder" [color="black", label=<bs4.builder>, shape="box", style="solid"];
+"bs4.builder._html5lib" [color="black", label=<bs4.builder._html5lib>, shape="box", style="solid"];
+"bs4.builder._lxml" [color="black", label=<bs4.builder._lxml>, shape="box", style="solid"];
+"bs4.dammit" [color="black", label=<bs4.dammit>, shape="box", style="solid"];
+"bs4.element" [color="black", label=<bs4.element>, shape="box", style="solid"];
+"bs4.testing" [color="black", label=<bs4.testing>, shape="box", style="solid"];
+"bs4.tests" [color="black", label=<bs4.tests>, shape="box", style="solid"];
+"bs4.tests.test_builder_registry" [color="black", label=<bs4.tests.test_builder_registry>, shape="box", style="solid"];
+"bs4.tests.test_docs" [color="black", label=<bs4.tests.test_docs>, shape="box", style="solid"];
+"bs4.tests.test_htmlparser" [color="black", label=<bs4.tests.test_htmlparser>, shape="box", style="solid"];
+"bs4.tests.test_lxml" [color="black", label=<bs4.tests.test_lxml>, shape="box", style="solid"];
+"bs4.tests.test_tree" [color="black", label=<bs4.tests.test_tree>, shape="box", style="solid"];
+"bs4" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4" -> "bs4.dammit" [arrowhead="open", arrowtail="none"];
+"bs4" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.builder" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.builder._html5lib" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.builder._html5lib" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.builder._lxml" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.builder._lxml" -> "bs4.dammit" [arrowhead="open", arrowtail="none"];
+"bs4.builder._lxml" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.element" -> "bs4.dammit" [arrowhead="open", arrowtail="none"];
+"bs4.testing" -> "bs4" [arrowhead="open", arrowtail="none"];
+"bs4.testing" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.testing" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_builder_registry" -> "bs4" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_builder_registry" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_htmlparser" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_htmlparser" -> "bs4.testing" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4.testing" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4.tests" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_lxml" -> "bs4.tests.test_htmlparser" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_tree" -> "bs4" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_tree" -> "bs4.builder" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_tree" -> "bs4.element" [arrowhead="open", arrowtail="none"];
+"bs4.tests.test_tree" -> "bs4.testing" [arrowhead="open", arrowtail="none"];
+}

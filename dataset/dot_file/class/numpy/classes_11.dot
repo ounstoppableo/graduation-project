@@ -1,0 +1,11 @@
+digraph "classes_11" {
+rankdir=BT
+charset="utf-8"
+"test_subclassing.ComplicatedSubArray" [color="black", fontcolor="black", label=<{ComplicatedSubArray|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_subclassing.MMatrix" [color="black", fontcolor="black", label=<{MMatrix|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_subclassing.MSubArray" [color="black", fontcolor="black", label=<{MSubArray|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_subclassing.SubArray" [color="black", fontcolor="black", label=<{SubArray|info<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_subclassing.TestSubclassing" [color="black", fontcolor="black", label=<{TestSubclassing|data : tuple<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_attributepropagation()<br ALIGN="LEFT"/>test_data_subclassing()<br ALIGN="LEFT"/>test_masked_binary_operations()<br ALIGN="LEFT"/>test_masked_binary_operations2()<br ALIGN="LEFT"/>test_masked_unary_operations()<br ALIGN="LEFT"/>test_maskedarray_subclassing()<br ALIGN="LEFT"/>test_subclass_repr()<br ALIGN="LEFT"/>test_subclass_str()<br ALIGN="LEFT"/>test_subclasspreservation()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_subclassing.ComplicatedSubArray" -> "test_subclassing.SubArray" [arrowhead="empty", arrowtail="none"];
+"test_subclassing.MSubArray" -> "test_subclassing.SubArray" [arrowhead="empty", arrowtail="none"];
+}

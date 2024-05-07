@@ -1,0 +1,37 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_85191c1b [label="0: (global)()" name="fibonacci::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1b7ba22d [label="124: loop_compare()" name="fibonacci::loop_compare" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f5a417aa [label="85: py_fib1()" name="fibonacci::py_fib1" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b6bfb0a9 [label="92: py_fib2()" name="fibonacci::py_fib2" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_71daa7cb [label="105: recurse_compare()" name="fibonacci::recurse_compare" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_85191c1b -> node_1b7ba22d [color="#009E73" penwidth="2"];
+node_85191c1b -> node_f5a417aa [color="#009E73" penwidth="2"];
+node_85191c1b -> node_b6bfb0a9 [color="#009E73" penwidth="2"];
+node_85191c1b -> node_71daa7cb [color="#009E73" penwidth="2"];
+node_1b7ba22d -> node_b6bfb0a9 [color="#0072B2" penwidth="2"];
+node_f5a417aa -> node_f5a417aa [color="#56B4E9" penwidth="2"];
+node_f5a417aa -> node_f5a417aa [color="#56B4E9" penwidth="2"];
+node_71daa7cb -> node_f5a417aa [color="#009E73" penwidth="2"];
+subgraph cluster_c79b0bff {
+    node_f5a417aa node_b6bfb0a9 node_71daa7cb node_1b7ba22d node_85191c1b;
+    label="File: fibonacci";
+    name="fibonacci";
+    style="filled";
+    graph[style=dotted];
+};
+}

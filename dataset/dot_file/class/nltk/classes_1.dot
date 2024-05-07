@@ -1,0 +1,21 @@
+digraph "classes_1" {
+rankdir=BT
+charset="utf-8"
+"nltk.test.doctest_nose_plugin.DoctestFix" [color="black", fontcolor="black", label=<{DoctestFix|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"nltk.test.doctest_nose_plugin.DoctestPluginHelper" [color="black", fontcolor="black", label=<{DoctestPluginHelper|OPTION_BY_NAME : tuple<br ALIGN="LEFT"/>doctest_result_var<br ALIGN="LEFT"/>doctest_tests<br ALIGN="LEFT"/>extension<br ALIGN="LEFT"/>finder : DocTestFinder<br ALIGN="LEFT"/>fixtures<br ALIGN="LEFT"/>optionflags : int<br ALIGN="LEFT"/>options : dict<br ALIGN="LEFT"/>|configure(options, config)<br ALIGN="LEFT"/>loadTestsFromFile(filename)<br ALIGN="LEFT"/>loadTestsFromFileUnicode(filename)<br ALIGN="LEFT"/>loadTestsFromModule(module)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_naivebayes.NaiveBayesClassifierTest" [color="black", fontcolor="black", label=<{NaiveBayesClassifierTest|<br ALIGN="LEFT"/>|test_simple()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.runtests.NltkPluginManager" [color="black", fontcolor="black", label=<{NltkPluginManager|<br ALIGN="LEFT"/>|loadPlugins()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_stem.SnowballTest" [color="black", fontcolor="black", label=<{SnowballTest|<br ALIGN="LEFT"/>|test_german()<br ALIGN="LEFT"/>test_russian()<br ALIGN="LEFT"/>test_short_strings_bug()<br ALIGN="LEFT"/>test_spanish()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_collocations.TestBigram" [color="black", fontcolor="black", label=<{TestBigram|<br ALIGN="LEFT"/>|test_bigram2()<br ALIGN="LEFT"/>test_bigram3()<br ALIGN="LEFT"/>test_bigram5()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestCess" [color="black", fontcolor="black", label=<{TestCess|<br ALIGN="LEFT"/>|test_catalan()<br ALIGN="LEFT"/>test_esp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestCoNLL2007" [color="black", fontcolor="black", label=<{TestCoNLL2007|<br ALIGN="LEFT"/>|test_parsed_sents()<br ALIGN="LEFT"/>test_sents()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpus_views.TestCorpusViews" [color="black", fontcolor="black", label=<{TestCorpusViews|linetok : LineTokenizer<br ALIGN="LEFT"/>names : list<br ALIGN="LEFT"/>|data()<br ALIGN="LEFT"/>test_correct_length()<br ALIGN="LEFT"/>test_correct_values()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestFloresta" [color="black", fontcolor="black", label=<{TestFloresta|<br ALIGN="LEFT"/>|test_words()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestIndian" [color="black", fontcolor="black", label=<{TestIndian|<br ALIGN="LEFT"/>|test_tagged_words()<br ALIGN="LEFT"/>test_words()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestPTB" [color="black", fontcolor="black", label=<{TestPTB|<br ALIGN="LEFT"/>|test_categories()<br ALIGN="LEFT"/>test_category_words()<br ALIGN="LEFT"/>test_fileids()<br ALIGN="LEFT"/>test_news_fileids()<br ALIGN="LEFT"/>test_tagged_words()<br ALIGN="LEFT"/>test_words()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestSinicaTreebank" [color="black", fontcolor="black", label=<{TestSinicaTreebank|<br ALIGN="LEFT"/>|test_parsed_sents()<br ALIGN="LEFT"/>test_sents()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_2x_compat.TestTextTransliteration" [color="black", fontcolor="black", label=<{TestTextTransliteration|txt : Text<br ALIGN="LEFT"/>|test_repr()<br ALIGN="LEFT"/>test_str()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.unit.test_corpora.TestUdhr" [color="black", fontcolor="black", label=<{TestUdhr|<br ALIGN="LEFT"/>|test_raw_unicode()<br ALIGN="LEFT"/>test_words()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.doctest_nose_plugin._UnicodeOutputChecker" [color="black", fontcolor="black", label=<{_UnicodeOutputChecker|<br ALIGN="LEFT"/>|check_output(want, got, optionflags)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"nltk.test.doctest_nose_plugin.DoctestFix" -> "nltk.test.doctest_nose_plugin.DoctestPluginHelper" [arrowhead="empty", arrowtail="none"];
+}

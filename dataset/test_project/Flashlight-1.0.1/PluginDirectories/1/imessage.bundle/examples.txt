@@ -1,0 +1,11 @@
+send an imessage to recip(@contact(...)) saying ~message(...)
+text recip(@contact(...)): ~message(...)
+text @message(...) to recip(@contact(...))
+sms recip(@contact(...)) ~message(...)
+send @file(...) to recip(@contact(...))
+send recip(@contact(...)) @file(...) with imessage
+send @file(...) to recip(@contact(...)) saying ~message(...)
+imessage recip(email(abc@gmail.com)) saying ~message(...)
+text recip(phone(718 123-4567)) saying ~message(...)
+text recip(@contact(...)), ~message(where are you?)
+ask recip(@contact(...)) ~message(where are you?)

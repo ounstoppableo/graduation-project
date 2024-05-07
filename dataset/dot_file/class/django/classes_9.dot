@@ -1,0 +1,8 @@
+digraph "classes_9" {
+rankdir=BT
+charset="utf-8"
+"aggregation.models.Author" [color="black", fontcolor="black", label=<{Author|age<br ALIGN="LEFT"/>friends<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"aggregation.models.Book" [color="black", fontcolor="black", label=<{Book|authors<br ALIGN="LEFT"/>contact<br ALIGN="LEFT"/>isbn<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>pages<br ALIGN="LEFT"/>price<br ALIGN="LEFT"/>pubdate<br ALIGN="LEFT"/>publisher<br ALIGN="LEFT"/>rating<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"aggregation.models.Publisher" [color="black", fontcolor="black", label=<{Publisher|name<br ALIGN="LEFT"/>num_awards<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"aggregation.models.Store" [color="black", fontcolor="black", label=<{Store|books<br ALIGN="LEFT"/>friday_night_closing<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>original_opening<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

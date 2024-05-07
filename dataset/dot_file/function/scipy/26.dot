@@ -1,0 +1,33 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_ad4fb02c [label="0: (global)()" name="convert::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_73006e44 [label="127: _raw_data()" name="convert::_raw_data" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7f7085d9 [label="175: dump_dataset()" name="convert::dump_dataset" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_32935715 [label="184: dump_datasets()" name="convert::dump_datasets" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f4fb187a [label="138: parse_ipp_file()" name="convert::parse_ipp_file" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ad4fb02c -> node_32935715 [color="#F0E442" penwidth="2"];
+node_32935715 -> node_7f7085d9 [color="#0072B2" penwidth="2"];
+node_32935715 -> node_f4fb187a [color="#0072B2" penwidth="2"];
+node_f4fb187a -> node_73006e44 [color="#56B4E9" penwidth="2"];
+subgraph cluster_15cff545 {
+    node_73006e44 node_f4fb187a node_7f7085d9 node_32935715 node_ad4fb02c;
+    label="File: convert";
+    name="convert";
+    style="filled";
+    graph[style=dotted];
+};
+}

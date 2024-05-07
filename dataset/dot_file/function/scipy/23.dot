@@ -1,0 +1,233 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_6fc3a491 [label="85: setUp()" name="test_kdtree::test_random.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c1d03a90 [label="279: setUp()" name="test_kdtree::test_random_ball.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6db18759 [label="307: setUp()" name="test_kdtree::test_random_ball_approx.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4589b71b [label="314: setUp()" name="test_kdtree::test_random_ball_approx_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d7dcbf3d [label="293: setUp()" name="test_kdtree::test_random_ball_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_86fafd86 [label="321: setUp()" name="test_kdtree::test_random_ball_far.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_25bdf766 [label="328: setUp()" name="test_kdtree::test_random_ball_far_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_257138d3 [label="335: setUp()" name="test_kdtree::test_random_ball_l1.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dceddc3a [label="342: setUp()" name="test_kdtree::test_random_ball_l1_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fad31268 [label="349: setUp()" name="test_kdtree::test_random_ball_linf.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2dcd4b8e [label="356: setUp()" name="test_kdtree::test_random_ball_linf_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_59d37704 [label="150: setUp()" name="test_kdtree::test_random_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4fbb0db8 [label="97: setUp()" name="test_kdtree::test_random_far.setUp" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3649dc4b [label="156: setUp()" name="test_kdtree::test_random_far_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_85ebeb62 [label="103: setUp()" name="test_kdtree::test_small.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ba54a0a0 [label="138: setUp()" name="test_kdtree::test_small_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3b6a07ec [label="132: setUp()" name="test_kdtree::test_small_nonleaf.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_89943c47 [label="144: setUp()" name="test_kdtree::test_small_nonleaf_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0b084f34 [label="402: setUp()" name="test_kdtree::test_two_random_trees.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4815801f [label="417: setUp()" name="test_kdtree::test_two_random_trees_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6f7e3812 [label="432: setUp()" name="test_kdtree::test_two_random_trees_far.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_afff8baa [label="439: setUp()" name="test_kdtree::test_two_random_trees_far_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c4610cf8 [label="446: setUp()" name="test_kdtree::test_two_random_trees_linf.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4c5610a6 [label="453: setUp()" name="test_kdtree::test_two_random_trees_linf_compiled.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6db18759 -> node_c1d03a90 [color="#E69F00" penwidth="2"];
+node_4589b71b -> node_d7dcbf3d [color="#009E73" penwidth="2"];
+node_86fafd86 -> node_c1d03a90 [color="#D55E00" penwidth="2"];
+node_25bdf766 -> node_d7dcbf3d [color="#D55E00" penwidth="2"];
+node_257138d3 -> node_c1d03a90 [color="#009E73" penwidth="2"];
+node_dceddc3a -> node_d7dcbf3d [color="#56B4E9" penwidth="2"];
+node_fad31268 -> node_c1d03a90 [color="#000000" penwidth="2"];
+node_2dcd4b8e -> node_d7dcbf3d [color="#D55E00" penwidth="2"];
+node_59d37704 -> node_6fc3a491 [color="#F0E442" penwidth="2"];
+node_4fbb0db8 -> node_6fc3a491 [color="#000000" penwidth="2"];
+node_3649dc4b -> node_4fbb0db8 [color="#009E73" penwidth="2"];
+node_ba54a0a0 -> node_85ebeb62 [color="#000000" penwidth="2"];
+node_3b6a07ec -> node_85ebeb62 [color="#F0E442" penwidth="2"];
+node_89943c47 -> node_85ebeb62 [color="#CC79A7" penwidth="2"];
+node_6f7e3812 -> node_0b084f34 [color="#56B4E9" penwidth="2"];
+node_afff8baa -> node_4815801f [color="#56B4E9" penwidth="2"];
+node_c4610cf8 -> node_0b084f34 [color="#000000" penwidth="2"];
+node_4c5610a6 -> node_4815801f [color="#D55E00" penwidth="2"];
+subgraph cluster_c9a908ce {
+    label="File: test_kdtree";
+    name="test_kdtree";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_22e78bbe {
+        node_6fc3a491;
+        label="Class: test_random";
+        name="test_random";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_64fd1c5f {
+        node_4fbb0db8;
+        label="Class: test_random_far";
+        name="test_random_far";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_fdded6ea {
+        node_85ebeb62;
+        label="Class: test_small";
+        name="test_small";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_3ee74c53 {
+        node_3b6a07ec;
+        label="Class: test_small_nonleaf";
+        name="test_small_nonleaf";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e401acc9 {
+        node_ba54a0a0;
+        label="Class: test_small_compiled";
+        name="test_small_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_534d9e65 {
+        node_89943c47;
+        label="Class: test_small_nonleaf_compiled";
+        name="test_small_nonleaf_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_39b3e101 {
+        node_59d37704;
+        label="Class: test_random_compiled";
+        name="test_random_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f5336aba {
+        node_3649dc4b;
+        label="Class: test_random_far_compiled";
+        name="test_random_far_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_74b398a1 {
+        node_c1d03a90;
+        label="Class: test_random_ball";
+        name="test_random_ball";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e99fad2d {
+        node_d7dcbf3d;
+        label="Class: test_random_ball_compiled";
+        name="test_random_ball_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6b1bcac0 {
+        node_6db18759;
+        label="Class: test_random_ball_approx";
+        name="test_random_ball_approx";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6d4c7b3e {
+        node_4589b71b;
+        label="Class: test_random_ball_approx_compiled";
+        name="test_random_ball_approx_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_fde189b9 {
+        node_86fafd86;
+        label="Class: test_random_ball_far";
+        name="test_random_ball_far";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a783b48d {
+        node_25bdf766;
+        label="Class: test_random_ball_far_compiled";
+        name="test_random_ball_far_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_1143b343 {
+        node_257138d3;
+        label="Class: test_random_ball_l1";
+        name="test_random_ball_l1";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_687b3a7b {
+        node_dceddc3a;
+        label="Class: test_random_ball_l1_compiled";
+        name="test_random_ball_l1_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_dbbb46b7 {
+        node_fad31268;
+        label="Class: test_random_ball_linf";
+        name="test_random_ball_linf";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_697ca49b {
+        node_2dcd4b8e;
+        label="Class: test_random_ball_linf_compiled";
+        name="test_random_ball_linf_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a1a49883 {
+        node_0b084f34;
+        label="Class: test_two_random_trees";
+        name="test_two_random_trees";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ba89c024 {
+        node_4815801f;
+        label="Class: test_two_random_trees_compiled";
+        name="test_two_random_trees_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_111dcb85 {
+        node_6f7e3812;
+        label="Class: test_two_random_trees_far";
+        name="test_two_random_trees_far";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7bd23f67 {
+        node_afff8baa;
+        label="Class: test_two_random_trees_far_compiled";
+        name="test_two_random_trees_far_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e0c173d6 {
+        node_c4610cf8;
+        label="Class: test_two_random_trees_linf";
+        name="test_two_random_trees_linf";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_52a2395b {
+        node_4c5610a6;
+        label="Class: test_two_random_trees_linf_compiled";
+        name="test_two_random_trees_linf_compiled";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

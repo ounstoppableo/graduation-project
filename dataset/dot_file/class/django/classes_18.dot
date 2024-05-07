@@ -1,0 +1,8 @@
+digraph "classes_18" {
+rankdir=BT
+charset="utf-8"
+"custom_columns.models.Article" [color="black", fontcolor="black", label=<{Article|Article_ID<br ALIGN="LEFT"/>authors<br ALIGN="LEFT"/>headline<br ALIGN="LEFT"/>primary_author<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"custom_columns.models.Author" [color="black", fontcolor="black", label=<{Author|Author_ID<br ALIGN="LEFT"/>first_name<br ALIGN="LEFT"/>last_name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"custom_columns.models.Author.Meta" [color="black", fontcolor="black", label=<{Meta|db_table : str<br ALIGN="LEFT"/>ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"custom_columns.models.Article.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

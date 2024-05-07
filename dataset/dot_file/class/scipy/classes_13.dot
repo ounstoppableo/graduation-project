@@ -1,0 +1,5 @@
+digraph "classes_13" {
+rankdir=BT
+charset="utf-8"
+"test_wavelets.TestWavelets" [color="black", fontcolor="black", label=<{TestWavelets|<br ALIGN="LEFT"/>|test_cascade()<br ALIGN="LEFT"/>test_cwt()<br ALIGN="LEFT"/>test_daub()<br ALIGN="LEFT"/>test_morlet()<br ALIGN="LEFT"/>test_qmf()<br ALIGN="LEFT"/>test_ricker()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

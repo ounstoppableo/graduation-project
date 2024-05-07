@@ -1,0 +1,39 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_0803d1d1 [label="141: playbook_on_play_start()" name="hipchat::CallbackModule.playbook_on_play_start" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_787d9b30 [label="172: playbook_on_stats()" name="hipchat::CallbackModule.playbook_on_stats" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_659e2c74 [label="67: send_msg()" name="hipchat::CallbackModule.send_msg" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0803d1d1 -> node_659e2c74 [color="#E69F00" penwidth="2"];
+node_0803d1d1 -> node_659e2c74 [color="#E69F00" penwidth="2"];
+node_0803d1d1 -> node_659e2c74 [color="#E69F00" penwidth="2"];
+node_787d9b30 -> node_659e2c74 [color="#000000" penwidth="2"];
+node_787d9b30 -> node_659e2c74 [color="#000000" penwidth="2"];
+node_787d9b30 -> node_659e2c74 [color="#000000" penwidth="2"];
+subgraph cluster_006a066a {
+    label="File: hipchat";
+    name="hipchat";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_c5b7ec4e {
+        node_659e2c74 node_0803d1d1 node_787d9b30;
+        label="Class: CallbackModule";
+        name="CallbackModule";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

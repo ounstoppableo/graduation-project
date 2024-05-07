@@ -1,0 +1,18 @@
+digraph "classes_48" {
+rankdir=BT
+charset="utf-8"
+"sites_framework.models.AbstractArticle" [color="black", fontcolor="black", label=<{AbstractArticle|objects<br ALIGN="LEFT"/>on_site<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.tests.SitesFrameworkTestCase.test_invalid_field_type.ConfusedArticle" [color="black", fontcolor="black", label=<{ConfusedArticle|site<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.models.CustomArticle" [color="black", fontcolor="black", label=<{CustomArticle|objects<br ALIGN="LEFT"/>on_site<br ALIGN="LEFT"/>places_this_article_should_appear<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.models.ExclusiveArticle" [color="black", fontcolor="black", label=<{ExclusiveArticle|site<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.tests.SitesFrameworkTestCase.test_invalid_name.InvalidArticle" [color="black", fontcolor="black", label=<{InvalidArticle|objects<br ALIGN="LEFT"/>on_site<br ALIGN="LEFT"/>site<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.models.AbstractArticle.Meta" [color="black", fontcolor="black", label=<{Meta|abstract : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.migrations.0001_initial.Migration" [color="black", fontcolor="black", label=<{Migration|dependencies : list<br ALIGN="LEFT"/>operations : list<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.tests.SitesFrameworkTestCase" [color="black", fontcolor="black", label=<{SitesFrameworkTestCase|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>tearDown()<br ALIGN="LEFT"/>test_custom_named_field()<br ALIGN="LEFT"/>test_invalid_field_type()<br ALIGN="LEFT"/>test_invalid_name()<br ALIGN="LEFT"/>test_site_fk()<br ALIGN="LEFT"/>test_sites_m2m()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"sites_framework.models.SyndicatedArticle" [color="black", fontcolor="black", label=<{SyndicatedArticle|sites<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"sites_framework.models.CustomArticle" -> "sites_framework.models.AbstractArticle" [arrowhead="empty", arrowtail="none"];
+"sites_framework.models.ExclusiveArticle" -> "sites_framework.models.AbstractArticle" [arrowhead="empty", arrowtail="none"];
+"sites_framework.models.SyndicatedArticle" -> "sites_framework.models.AbstractArticle" [arrowhead="empty", arrowtail="none"];
+"sites_framework.tests.SitesFrameworkTestCase.test_invalid_field_type.ConfusedArticle" -> "sites_framework.models.AbstractArticle" [arrowhead="empty", arrowtail="none"];
+"sites_framework.tests.SitesFrameworkTestCase.test_invalid_name.InvalidArticle" -> "sites_framework.models.AbstractArticle" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,0 +1,5 @@
+digraph "classes_12" {
+rankdir=BT
+charset="utf-8"
+"auth_tests.test_signals.SignalTestCase" [color="black", fontcolor="black", label=<{SignalTestCase|fixtures : list<br ALIGN="LEFT"/>logged_in : list<br ALIGN="LEFT"/>logged_out : list<br ALIGN="LEFT"/>login_failed : list<br ALIGN="LEFT"/>|listener_login(user)<br ALIGN="LEFT"/>listener_login_failed(sender, credentials)<br ALIGN="LEFT"/>listener_logout(user)<br ALIGN="LEFT"/>setUp()<br ALIGN="LEFT"/>tearDown()<br ALIGN="LEFT"/>test_login()<br ALIGN="LEFT"/>test_logout()<br ALIGN="LEFT"/>test_logout_anonymous()<br ALIGN="LEFT"/>test_update_last_login()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

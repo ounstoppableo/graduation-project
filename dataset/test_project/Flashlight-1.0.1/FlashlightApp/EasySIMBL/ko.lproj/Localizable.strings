@@ -1,0 +1,92 @@
+/* No comment provided by engineer. */
+"Your plugin will be selected when you search Spotlight for anything that's close to one of these examples." = "선택된 플러그인들은 스폿라이트에서 검색하실때 예시중 하나로 등장합니다.";
+
+/* No comment provided by engineer. */
+"Art" = "예술";
+
+/* No comment provided by engineer. */
+"As a precaution, plugins won't run on unsupported versions of Spotlight, even if you enable them. (You have Spotlight v%@)" = "미리 주의를 드리자면, 현재 Flashlight 플러그인을 허용하시더라도 플러그인이 동작 안할수 있습니다. (지금 스폿라이트 v%@ 을 사용하고 있습니다)";
+
+/* No comment provided by engineer. */
+"Automator workflow:" = "오토메이터 워크플로:";
+
+/* No comment provided by engineer. */
+"Couldn't install plugin." = "플러그인을 설치할 수 없습니다.";
+
+/* No comment provided by engineer. */
+"Couldn't load the online plugin directory." = "온라인 플러그인 디렉터리를 불러올수 없습니다.";
+
+/* No comment provided by engineer. */
+"Delete Plugin" = "플러그인 삭제";
+
+/* No comment provided by engineer. */
+"Description:" = "설명:";
+
+/* No comment provided by engineer. */
+"Developer" = "개발자";
+
+/* No comment provided by engineer. */
+"Edit Plugin" = "플러그인 편집";
+
+/* No comment provided by engineer. */
+"Edit Workflow" = "워크플로 편집";
+
+/* No comment provided by engineer. */
+"Enable Spotlight Plugins" = "스폿라이트 플러그인 허용";
+
+/* No comment provided by engineer. */
+"Featured" = "여러 플러그인들";
+
+/* No comment provided by engineer. */
+"Flashlight: the missing plugin system for Spotlight." = "Flashlight: 스폿라이트에서 놓친 플러그인 시스템.";
+
+/* No comment provided by engineer. */
+"Information" = "정보";
+
+/* No comment provided by engineer. */
+"Installed" = "설치됨";
+
+/* No comment provided by engineer. */
+"Language" = "언어";
+
+/* No comment provided by engineer. */
+"New Automator Plugin..." = "새 오토메이터 플러그인...";
+
+/* No comment provided by engineer. */
+"News" = "뉴스";
+
+/* No comment provided by engineer. */
+"Okay" = "확인";
+
+/* No comment provided by engineer. */
+"Search" = "검색";
+
+/* No comment provided by engineer. */
+"System" = "시스템";
+
+/* No comment provided by engineer. */
+"This plugin has no additional options." = "이 플러그인에는 다른 옵션이 없습니다.";
+
+/* No comment provided by engineer. */
+"Title:" = "제목:";
+
+/* No comment provided by engineer. */
+"Try again" = "다시 시도하기";
+
+/* No comment provided by engineer. */
+"Unknown" = "불분명한 주제";
+
+/* No comment provided by engineer. */
+"Usage examples:" = "사용 예시:";
+
+/* No comment provided by engineer. */
+"Utilities" = "유틸리티";
+
+/* No comment provided by engineer. */
+"Weather" = "날씨";
+
+/* No comment provided by engineer. */
+"Media" = "미디어";
+
+/* No comment provided by engineer. */
+"Your plugin will be selected when you search Spotlight for anything that's close to one of these examples." = "선택된 플러그인들은 스폿라이트에서 검색하실때 예시중 하나로 등장합니다.";

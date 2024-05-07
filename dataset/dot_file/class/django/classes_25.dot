@@ -1,0 +1,12 @@
+digraph "classes_25" {
+rankdir=BT
+charset="utf-8"
+"generic_inline_admin.models.Category" [color="black", fontcolor="black", label=<{Category|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.Contact" [color="black", fontcolor="black", label=<{Contact|name<br ALIGN="LEFT"/>phone_numbers<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.Episode" [color="black", fontcolor="black", label=<{Episode|author<br ALIGN="LEFT"/>length<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.EpisodePermanent" [color="black", fontcolor="black", label=<{EpisodePermanent|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.Media" [color="black", fontcolor="black", label=<{Media|content_object<br ALIGN="LEFT"/>content_type<br ALIGN="LEFT"/>description<br ALIGN="LEFT"/>keywords<br ALIGN="LEFT"/>object_id<br ALIGN="LEFT"/>url<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.PhoneNumber.Meta" [color="black", fontcolor="black", label=<{Meta|unique_together : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.PhoneNumber" [color="black", fontcolor="black", label=<{PhoneNumber|category<br ALIGN="LEFT"/>content_object<br ALIGN="LEFT"/>content_type<br ALIGN="LEFT"/>object_id<br ALIGN="LEFT"/>phone_number<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"generic_inline_admin.models.EpisodePermanent" -> "generic_inline_admin.models.Episode" [arrowhead="empty", arrowtail="none"];
+}

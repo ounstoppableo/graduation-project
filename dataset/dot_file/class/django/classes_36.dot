@@ -1,0 +1,7 @@
+digraph "classes_36" {
+rankdir=BT
+charset="utf-8"
+"migrations2.test_migrations_2.0001_initial.Migration" [color="black", fontcolor="black", label=<{Migration|dependencies : list<br ALIGN="LEFT"/>operations : list<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"migrations2.test_migrations_2_first.0001_initial.Migration" [color="black", fontcolor="black", label=<{Migration|dependencies : list<br ALIGN="LEFT"/>operations : list<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"migrations2.test_migrations_2_first.0002_second.Migration" [color="black", fontcolor="black", label=<{Migration|dependencies : list<br ALIGN="LEFT"/>operations : list<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

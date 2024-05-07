@@ -1,0 +1,129 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_dccf9ab7 [label="923: f1()" name="test_optimize::TestBrute.f1" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c0574e03 [label="928: f2()" name="test_optimize::TestBrute.f2" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9c1b826b [label="933: f3()" name="test_optimize::TestBrute.f3" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_fa4f69ab [label="938: func()" name="test_optimize::TestBrute.func" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3776aa11 [label="941: test_brute()" name="test_optimize::TestBrute.test_brute" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3c888f16 [label="626: fj()" name="test_optimize::TestLBFGSBBounds.fj" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_64f65aa6 [label="620: fun()" name="test_optimize::TestLBFGSBBounds.fun" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_78f813c0 [label="623: jac()" name="test_optimize::TestLBFGSBBounds.jac" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_28771c24 [label="62: func()" name="test_optimize::TestOptimize.func" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cb229592 [label="72: grad()" name="test_optimize::TestOptimize.grad" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_411ef759 [label="79: hess()" name="test_optimize::TestOptimize.hess" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6b88cce6 [label="86: hessp()" name="test_optimize::TestOptimize.hessp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6a49fe03 [label="52: setUp()" name="test_optimize::TestOptimize.setUp" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ae5cf1d7 [label="121: test_bfgs()" name="test_optimize::TestOptimize.test_bfgs" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_36e495f2 [label="175: test_bfgs_infinite()" name="test_optimize::TestOptimize.test_bfgs_infinite" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_abd1e771 [label="163: test_bfgs_numerical_jacobian()" name="test_optimize::TestOptimize.test_bfgs_numerical_jacobian" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_38bfa62c [label="89: test_cg()" name="test_optimize::TestOptimize.test_cg" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3d1cc22b [label="453: test_custom()" name="test_optimize::TestOptimize.test_custom" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c873b673 [label="374: test_l_bfgs_b()" name="test_optimize::TestOptimize.test_l_bfgs_b" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_58f3057c [label="407: test_l_bfgs_b_funjac()" name="test_optimize::TestOptimize.test_l_bfgs_b_funjac" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6f58b065 [label="396: test_l_bfgs_b_numjac()" name="test_optimize::TestOptimize.test_l_bfgs_b_numjac" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fbea39b2 [label="491: test_minimize()" name="test_optimize::TestOptimize.test_minimize" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bc631275 [label="420: test_minimize_l_bfgs_b()" name="test_optimize::TestOptimize.test_minimize_l_bfgs_b" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_733cccbb [label="436: test_minimize_l_bfgs_b_ftol()" name="test_optimize::TestOptimize.test_minimize_l_bfgs_b_ftol" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_390e2f57 [label="273: test_ncg()" name="test_optimize::TestOptimize.test_ncg" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6a180798 [label="306: test_ncg_hess()" name="test_optimize::TestOptimize.test_ncg_hess" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d2f94f55 [label="340: test_ncg_hessp()" name="test_optimize::TestOptimize.test_ncg_hessp" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_315b899a [label="242: test_neldermead()" name="test_optimize::TestOptimize.test_neldermead" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_9e19af56 [label="201: test_powell()" name="test_optimize::TestOptimize.test_powell" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_fa4f69ab -> node_dccf9ab7 [color="#009E73" penwidth="2"];
+node_fa4f69ab -> node_c0574e03 [color="#009E73" penwidth="2"];
+node_fa4f69ab -> node_9c1b826b [color="#009E73" penwidth="2"];
+node_3776aa11 -> node_fa4f69ab [color="#E69F00" penwidth="2"];
+node_3776aa11 -> node_fa4f69ab [color="#E69F00" penwidth="2"];
+node_3c888f16 -> node_64f65aa6 [color="#D55E00" penwidth="2"];
+node_3c888f16 -> node_78f813c0 [color="#D55E00" penwidth="2"];
+node_6b88cce6 -> node_411ef759 [color="#D55E00" penwidth="2"];
+node_ae5cf1d7 -> node_28771c24 [color="#CC79A7" penwidth="2"];
+node_ae5cf1d7 -> node_28771c24 [color="#CC79A7" penwidth="2"];
+node_abd1e771 -> node_28771c24 [color="#E69F00" penwidth="2"];
+node_abd1e771 -> node_28771c24 [color="#E69F00" penwidth="2"];
+node_38bfa62c -> node_28771c24 [color="#F0E442" penwidth="2"];
+node_38bfa62c -> node_28771c24 [color="#F0E442" penwidth="2"];
+node_c873b673 -> node_28771c24 [color="#009E73" penwidth="2"];
+node_c873b673 -> node_28771c24 [color="#009E73" penwidth="2"];
+node_58f3057c -> node_28771c24 [color="#F0E442" penwidth="2"];
+node_58f3057c -> node_28771c24 [color="#F0E442" penwidth="2"];
+node_58f3057c -> node_28771c24 [color="#F0E442" penwidth="2"];
+node_58f3057c -> node_cb229592 [color="#F0E442" penwidth="2"];
+node_6f58b065 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_6f58b065 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a49fe03 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_ae5cf1d7 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_36e495f2 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_38bfa62c [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_3d1cc22b [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_390e2f57 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_6a180798 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_d2f94f55 [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_315b899a [color="#56B4E9" penwidth="2"];
+node_fbea39b2 -> node_9e19af56 [color="#56B4E9" penwidth="2"];
+node_bc631275 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_bc631275 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_bc631275 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_bc631275 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_733cccbb -> node_28771c24 [color="#009E73" penwidth="2"];
+node_733cccbb -> node_28771c24 [color="#009E73" penwidth="2"];
+node_390e2f57 -> node_28771c24 [color="#CC79A7" penwidth="2"];
+node_390e2f57 -> node_28771c24 [color="#CC79A7" penwidth="2"];
+node_6a180798 -> node_28771c24 [color="#000000" penwidth="2"];
+node_6a180798 -> node_28771c24 [color="#000000" penwidth="2"];
+node_d2f94f55 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_d2f94f55 -> node_28771c24 [color="#0072B2" penwidth="2"];
+node_315b899a -> node_28771c24 [color="#56B4E9" penwidth="2"];
+node_315b899a -> node_28771c24 [color="#56B4E9" penwidth="2"];
+node_9e19af56 -> node_28771c24 [color="#D55E00" penwidth="2"];
+node_9e19af56 -> node_28771c24 [color="#D55E00" penwidth="2"];
+subgraph cluster_55abffb3 {
+    label="File: test_optimize";
+    name="test_optimize";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_75b5e1a6 {
+        node_6a49fe03 node_28771c24 node_cb229592 node_411ef759 node_6b88cce6 node_38bfa62c node_ae5cf1d7 node_abd1e771 node_36e495f2 node_9e19af56 node_315b899a node_390e2f57 node_6a180798 node_d2f94f55 node_c873b673 node_6f58b065 node_58f3057c node_bc631275 node_733cccbb node_3d1cc22b node_fbea39b2;
+        label="Class: TestOptimize";
+        name="TestOptimize";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8f207617 {
+        node_64f65aa6 node_78f813c0 node_3c888f16;
+        label="Class: TestLBFGSBBounds";
+        name="TestLBFGSBBounds";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9e62a649 {
+        node_dccf9ab7 node_c0574e03 node_9c1b826b node_fa4f69ab node_3776aa11;
+        label="Class: TestBrute";
+        name="TestBrute";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

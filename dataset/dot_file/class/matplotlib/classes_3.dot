@@ -1,0 +1,6 @@
+digraph "classes_3" {
+rankdir=BT
+charset="utf-8"
+"matplotlib.table.Cell" [color="black", fontcolor="black", label=<{Cell|PAD : float<br ALIGN="LEFT"/>|auto_set_font_size(renderer)<br ALIGN="LEFT"/>draw(renderer)<br ALIGN="LEFT"/>get_fontsize()<br ALIGN="LEFT"/>get_required_width(renderer)<br ALIGN="LEFT"/>get_text()<br ALIGN="LEFT"/>get_text_bounds(renderer)<br ALIGN="LEFT"/>set_figure(fig)<br ALIGN="LEFT"/>set_fontsize(size)<br ALIGN="LEFT"/>set_text_props()<br ALIGN="LEFT"/>set_transform(trans)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"matplotlib.table.Table" [color="black", fontcolor="black", label=<{Table|AXESPAD : float<br ALIGN="LEFT"/>FONTSIZE : int<br ALIGN="LEFT"/>codes : dict<br ALIGN="LEFT"/>get_child_artists<br ALIGN="LEFT"/>|add_cell(row, col)<br ALIGN="LEFT"/>auto_set_column_width(col)<br ALIGN="LEFT"/>auto_set_font_size(value)<br ALIGN="LEFT"/>contains(mouseevent)<br ALIGN="LEFT"/>draw(renderer)<br ALIGN="LEFT"/>get_celld()<br ALIGN="LEFT"/>get_children()<br ALIGN="LEFT"/>get_window_extent(renderer)<br ALIGN="LEFT"/>scale(xscale, yscale)<br ALIGN="LEFT"/>set_fontsize(size)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

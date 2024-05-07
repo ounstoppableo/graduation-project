@@ -1,0 +1,107 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_26d8fdba [label="206: test_complex_return()" name="test_c_spec::ComplexConverter.test_complex_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e0c87a40 [label="182: test_complex_var_in()" name="test_c_spec::ComplexConverter.test_complex_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a387d482 [label="617: test_return()" name="test_c_spec::DictConverter.test_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e9a1351c [label="593: test_var_in()" name="test_c_spec::DictConverter.test_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8b52c14f [label="139: test_float_return()" name="test_c_spec::FloatConverter.test_float_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_11275bb3 [label="115: test_float_var_in()" name="test_c_spec::FloatConverter.test_float_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2a2e00dc [label="72: test_int_return()" name="test_c_spec::IntConverter.test_int_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a81e522e [label="48: test_var_in()" name="test_c_spec::IntConverter.test_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_66015e4b [label="431: test_return()" name="test_c_spec::ListConverter.test_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e60d23dd [label="450: test_speed()" name="test_c_spec::ListConverter.test_speed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1fcc3c92 [label="407: test_var_in()" name="test_c_spec::ListConverter.test_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bc0aa760 [label="372: test_return()" name="test_c_spec::StringConverter.test_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_110f508b [label="347: test_var_in()" name="test_c_spec::StringConverter.test_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dd9263ea [label="551: test_return()" name="test_c_spec::TupleConverter.test_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7ec75e12 [label="527: test_var_in()" name="test_c_spec::TupleConverter.test_var_in" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_00506ca8 [label="655: setUpModule()" name="test_c_spec::setUpModule" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e9cfb056 [label="646: setup_location()" name="test_c_spec::setup_location" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5b12b087 [label="18: unique_mod()" name="test_c_spec::unique_mod" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_26d8fdba -> node_5b12b087 [color="#56B4E9" penwidth="2"];
+node_e0c87a40 -> node_5b12b087 [color="#000000" penwidth="2"];
+node_a387d482 -> node_5b12b087 [color="#56B4E9" penwidth="2"];
+node_e9a1351c -> node_5b12b087 [color="#F0E442" penwidth="2"];
+node_8b52c14f -> node_5b12b087 [color="#CC79A7" penwidth="2"];
+node_11275bb3 -> node_5b12b087 [color="#009E73" penwidth="2"];
+node_2a2e00dc -> node_5b12b087 [color="#F0E442" penwidth="2"];
+node_a81e522e -> node_5b12b087 [color="#D55E00" penwidth="2"];
+node_66015e4b -> node_5b12b087 [color="#009E73" penwidth="2"];
+node_e60d23dd -> node_5b12b087 [color="#0072B2" penwidth="2"];
+node_1fcc3c92 -> node_5b12b087 [color="#56B4E9" penwidth="2"];
+node_bc0aa760 -> node_5b12b087 [color="#000000" penwidth="2"];
+node_110f508b -> node_5b12b087 [color="#009E73" penwidth="2"];
+node_dd9263ea -> node_5b12b087 [color="#56B4E9" penwidth="2"];
+node_7ec75e12 -> node_5b12b087 [color="#56B4E9" penwidth="2"];
+node_00506ca8 -> node_e9cfb056 [color="#000000" penwidth="2"];
+subgraph cluster_aad0d02a {
+    node_5b12b087 node_e9cfb056 node_00506ca8;
+    label="File: test_c_spec";
+    name="test_c_spec";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_3df828dc {
+        node_a81e522e node_2a2e00dc;
+        label="Class: IntConverter";
+        name="IntConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_082d0245 {
+        node_11275bb3 node_8b52c14f;
+        label="Class: FloatConverter";
+        name="FloatConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_3162e30f {
+        node_e0c87a40 node_26d8fdba;
+        label="Class: ComplexConverter";
+        name="ComplexConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f6861d9f {
+        node_110f508b node_bc0aa760;
+        label="Class: StringConverter";
+        name="StringConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_1d6a5432 {
+        node_1fcc3c92 node_66015e4b node_e60d23dd;
+        label="Class: ListConverter";
+        name="ListConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8c8e3f00 {
+        node_7ec75e12 node_dd9263ea;
+        label="Class: TupleConverter";
+        name="TupleConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9f1c3093 {
+        node_e9a1351c node_a387d482;
+        label="Class: DictConverter";
+        name="DictConverter";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

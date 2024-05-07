@@ -1,0 +1,102 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_65e061e3 [label="19: iter_indices()" name="test_nditer::iter_indices" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_737cb8c2 [label="26: iter_iterindices()" name="test_nditer::iter_iterindices" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f8ef1671 [label="12: iter_multi_index()" name="test_nditer::iter_multi_index" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ca8bb90b [label="262: test_iter_best_order_c_index_1d()" name="test_nditer::test_iter_best_order_c_index_1d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_366a18ec [label="273: test_iter_best_order_c_index_2d()" name="test_nditer::test_iter_best_order_c_index_2d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e719f3de [label="302: test_iter_best_order_c_index_3d()" name="test_nditer::test_iter_best_order_c_index_3d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7d46ff02 [label="339: test_iter_best_order_f_index_1d()" name="test_nditer::test_iter_best_order_f_index_1d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4e83f350 [label="350: test_iter_best_order_f_index_2d()" name="test_nditer::test_iter_best_order_f_index_2d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c16f853a [label="379: test_iter_best_order_f_index_3d()" name="test_nditer::test_iter_best_order_f_index_3d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_28061510 [label="180: test_iter_best_order_multi_index_1d()" name="test_nditer::test_iter_best_order_multi_index_1d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_df201277 [label="191: test_iter_best_order_multi_index_2d()" name="test_nditer::test_iter_best_order_multi_index_2d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ed92d3f3 [label="218: test_iter_best_order_multi_index_3d()" name="test_nditer::test_iter_best_order_multi_index_3d" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_25f15074 [label="1433: test_iter_iterindex()" name="test_nditer::test_iter_iterindex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ca8bb90b -> node_65e061e3 [color="#009E73" penwidth="2"];
+node_ca8bb90b -> node_65e061e3 [color="#009E73" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_366a18ec -> node_65e061e3 [color="#F0E442" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_e719f3de -> node_65e061e3 [color="#D55E00" penwidth="2"];
+node_7d46ff02 -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_7d46ff02 -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_4e83f350 -> node_65e061e3 [color="#000000" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_c16f853a -> node_65e061e3 [color="#56B4E9" penwidth="2"];
+node_28061510 -> node_f8ef1671 [color="#000000" penwidth="2"];
+node_28061510 -> node_f8ef1671 [color="#000000" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_df201277 -> node_f8ef1671 [color="#CC79A7" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_ed92d3f3 -> node_f8ef1671 [color="#009E73" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+node_25f15074 -> node_737cb8c2 [color="#F0E442" penwidth="2"];
+subgraph cluster_4d5e670b {
+    node_f8ef1671 node_65e061e3 node_737cb8c2 node_28061510 node_df201277 node_ed92d3f3 node_ca8bb90b node_366a18ec node_e719f3de node_7d46ff02 node_4e83f350 node_c16f853a node_25f15074;
+    label="File: test_nditer";
+    name="test_nditer";
+    style="filled";
+    graph[style=dotted];
+};
+}

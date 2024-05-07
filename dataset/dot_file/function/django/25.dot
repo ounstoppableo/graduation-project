@@ -1,0 +1,43 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_37854ba4 [label="307: save()" name="serializers_regress.models::ModifyingSaveData.save" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_7fdc2d80 [label="494: naturalKeySerializerTest()" name="serializers_regress.tests::naturalKeySerializerTest" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_14ff61b6 [label="460: serializerTest()" name="serializers_regress.tests::serializerTest" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_37854ba4 -> node_37854ba4 [color="#F0E442" penwidth="2"];
+node_7fdc2d80 -> node_37854ba4 [color="#000000" penwidth="2"];
+node_14ff61b6 -> node_37854ba4 [color="#D55E00" penwidth="2"];
+subgraph cluster_0b1dfc65 {
+    label="File: serializers_regress.models";
+    name="serializers_regress.models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_4594a4cb {
+        node_37854ba4;
+        label="Class: ModifyingSaveData";
+        name="ModifyingSaveData";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_869dc222 {
+    node_14ff61b6 node_7fdc2d80;
+    label="File: serializers_regress.tests";
+    name="serializers_regress.tests";
+    style="filled";
+    graph[style=dotted];
+};
+}

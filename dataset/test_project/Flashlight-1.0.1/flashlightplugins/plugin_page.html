@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>
+"{{ plugin.displayName}}" for Spotlight — Flashlight
+</title>
+{% endblock %}
+
+{% block opengraph %}
+
+<meta property="og:title" content="{{ plugin.displayName }}" />
+<meta property="og:description" content="{{ plugin.description }}" />
+{% if plugin.model.screenshot_url %}
+   <meta property="og:image" content="{{ plugin.model.screenshot_url }}" />
+{% else %}
+   <meta property="og:image" content="http://flashlight.nateparrott.com/static/images/simple-screenshot.png" />
+{% endif %}
+
+   <meta property="og:site_name" content="Flashlight" />
+   <meta property="og:type" content="website" />
+
+{% endblock %}
+
+{% block meta_description %}
+   <meta name="Description" content="{{ plugin.description }}"/>
+{% endblock %}
+
+{% block head %}
+
+<link rel='stylesheet' href='/static/plugin_page.css' />
+{{ super() }}
+
+{% endblock %}
+
+{% block outside_content %}
+
+<div id='splash'>
+	<div>
+	    <h1>
+	       {% if plugin.model.icon_url %}
+	          <img id='icon' src='{{ plugin.model.icon_url }}'/>
+	 		{% elif localhost %}
+	 			<img id='icon' src='https://storage.googleapis.com/flashlightplugins.appspot.com/dd247777295147bba0e12446281300ee'/>
+	       {% endif %}
+	       {{ plugin.displayName }} <span id='hint'>plugin for Spotlight</span>
+	    </h1>
+	    {% if plugin.model.screenshot_url %}
+	    <p>
+	       <img id='screenshot' src='{{ plugin.model.screenshot_url }}'/>
+	    </p>
+	 	{% elif localhost %}
+	    <p id='screenshot-p'>
+	       <img id='screenshot' src='https://storage.googleapis.com/flashlightplugins.appspot.com/86bccdc7b821467c8b2b8b3118933e52'/>
+	    </p>
+	    {% endif %}
+	    <p id='description'>
+	       {{ plugin.description }}
+		   <span id='creator'>
+		       {% if plugin.creator_name and plugin.creator_url %}
+		       By <a href='{{ plugin.creator_url }}'>{{ plugin.creator_name }}</a>.
+		       {% elif plugin.creator_name %}
+		       By {{ plugin.creator_name }}.
+		       {% elif plugin.creator_url %}
+		       By <a href='{{ plugin.creator_url }}'>{{ plugin.creator_url }}</a>.
+		       {% endif %}
+		   </span>
+	    </p>
+		
+	    <ul id='examples'>
+			<li><h6>Example Searches</h6></li>
+	       {% for example in plugin.examples %}
+	       <li class='example'>{{ example }}</li>
+	       {% endfor %}
+	    </ul>
+		
+	    <div id='show'>
+	       <a id='show-button' href='flashlight-show://{{ plugin.name }}'>Show in Flashlight</a>
+	 		<div id='reqs-flashlight'>
+	 			<a href='/latest_download'>Download Flashlight</a> first to run this plugin inside Spotlight.
+	 		</div>
+	    </div>
+		
+	</div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+<div id='bottom'>
+   
+   {% if plugin.creator_url or plugin.creator_name %}
+   <div id='creator'>
+      <h6>Created by</h6>
+      <p>
+      {% if plugin.creator_name and plugin.creator_url %}
+      <a href='{{ plugin.creator_url }}'>{{ plugin.creator_name }}</a>
+      {% elif plugin.creator_name %}
+      {{ plugin.creator_name }}
+      {% else %}
+      <a href='{{ plugin.creator_url }}'>{{ plugin.creator_url }}</a>
+      {% endif %}
+      </p>
+   </div>
+   {% endif %}
+   
+   <div id='social'>
+      <div id='downloads'>{{plugin.model.downloads}} downloads</div>
+            
+      <div>
+         <div id="fb-root"></div>
+         <script>(function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=385205984962960&version=v2.0";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));</script>
+         <div class="fb-like" data-href="http://flashlight.nateparrott.com/plugin/{{ plugin.name }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+      </div>
+      
+      <div>
+         <a href="https://twitter.com/share" class="twitter-share-button" data-related="nateparrott">Tweet</a>
+         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </div>
+   </div>
+   
+   <p id='info'>
+      <a href='/'>Flashlight</a> is an app that lets you install plugins like this, which let you do all sorts of things with OS X's Spotlight search feature. To install "{{ plugin.displayName }}", you'll need to <a href='/latest_download'>download Flashlight</a> first.
+   </p>
+</div>
+
+{% endblock %}

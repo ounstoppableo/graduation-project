@@ -1,0 +1,55 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_da8d4ab1 [label="317: setUp()" name="util::F2PyTest.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f03fd56c [label="172: _get_compiler_status()" name="util::_get_compiler_status" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ac26a18b [label="148: build_code()" name="util::build_code" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0b752f93 [label="90: build_module()" name="util::build_module" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_8eb6eb93 [label="237: build_module_distutils()" name="util::build_module_distutils" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_858a8633 [label="49: get_module_dir()" name="util::get_module_dir" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a7d53eaf [label="58: get_temp_module_name()" name="util::get_temp_module_name" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_04f79c58 [label="223: has_c_compiler()" name="util::has_c_compiler" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0d01180c [label="226: has_f77_compiler()" name="util::has_f77_compiler" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b77130ff [label="229: has_f90_compiler()" name="util::has_f90_compiler" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_da8d4ab1 -> node_ac26a18b [color="#E69F00" penwidth="2"];
+node_da8d4ab1 -> node_0b752f93 [color="#E69F00" penwidth="2"];
+node_da8d4ab1 -> node_04f79c58 [color="#E69F00" penwidth="2"];
+node_da8d4ab1 -> node_0d01180c [color="#E69F00" penwidth="2"];
+node_da8d4ab1 -> node_b77130ff [color="#E69F00" penwidth="2"];
+node_ac26a18b -> node_0b752f93 [color="#009E73" penwidth="2"];
+node_0b752f93 -> node_858a8633 [color="#009E73" penwidth="2"];
+node_0b752f93 -> node_a7d53eaf [color="#009E73" penwidth="2"];
+node_8eb6eb93 -> node_858a8633 [color="#009E73" penwidth="2"];
+node_8eb6eb93 -> node_a7d53eaf [color="#009E73" penwidth="2"];
+node_a7d53eaf -> node_858a8633 [color="#CC79A7" penwidth="2"];
+node_04f79c58 -> node_f03fd56c [color="#000000" penwidth="2"];
+node_0d01180c -> node_f03fd56c [color="#F0E442" penwidth="2"];
+node_b77130ff -> node_f03fd56c [color="#CC79A7" penwidth="2"];
+subgraph cluster_4fe19b16 {
+    node_858a8633 node_a7d53eaf node_0b752f93 node_ac26a18b node_f03fd56c node_04f79c58 node_0d01180c node_b77130ff node_8eb6eb93;
+    label="File: util";
+    name="util";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a9723994 {
+        node_da8d4ab1;
+        label="Class: F2PyTest";
+        name="F2PyTest";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

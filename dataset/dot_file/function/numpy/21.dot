@@ -1,0 +1,104 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_e62e3840 [label="285: test_complex()" name="test_utils::TestAlmostEqual.test_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8c6f3637 [label="277: test_complex_item()" name="test_utils::TestAlmostEqual.test_complex_item" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_714d94b9 [label="274: test_simple_item()" name="test_utils::TestAlmostEqual.test_simple_item" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_409f45c7 [label="63: test_generic_rank1()" name="test_utils::TestArrayEqual.test_generic_rank1" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5771611c [label="82: test_generic_rank3()" name="test_utils::TestArrayEqual.test_generic_rank3" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6201f71e [label="101: test_nan_array()" name="test_utils::TestArrayEqual.test_nan_array" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8e956ecd [label="122: test_recarrays()" name="test_utils::TestArrayEqual.test_recarrays" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0a33d906 [label="111: test_string_arrays()" name="test_utils::TestArrayEqual.test_string_arrays" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7f048cd2 [label="209: test_complex()" name="test_utils::TestEqual.test_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_76c502e4 [label="199: test_complex_item()" name="test_utils::TestEqual.test_complex_item" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_63ef4030 [label="190: test_inf_items()" name="test_utils::TestEqual.test_inf_items" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_14d51edf [label="184: test_nan_items()" name="test_utils::TestEqual.test_nan_items" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_011c99fd [label="206: test_negative_zero()" name="test_utils::TestEqual.test_negative_zero" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_90efa37a [label="195: test_non_numeric()" name="test_utils::TestEqual.test_non_numeric" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_72257601 [label="11: _test_equal()" name="test_utils::_GenericTest._test_equal" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_445a1052 [label="14: _test_not_equal()" name="test_utils::_GenericTest._test_not_equal" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8164650d [label="44: test_array_diffshape()" name="test_utils::_GenericTest.test_array_diffshape" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_707a06dd [label="56: test_array_likes()" name="test_utils::_GenericTest.test_array_likes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_44d5c57c [label="23: test_array_rank1_eq()" name="test_utils::_GenericTest.test_array_rank1_eq" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_738ee47d [label="30: test_array_rank1_noteq()" name="test_utils::_GenericTest.test_array_rank1_noteq" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2af52407 [label="37: test_array_rank2_eq()" name="test_utils::_GenericTest.test_array_rank2_eq" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9d1c5142 [label="51: test_objarray()" name="test_utils::_GenericTest.test_objarray" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e62e3840 -> node_445a1052 [color="#000000" penwidth="2"];
+node_e62e3840 -> node_445a1052 [color="#000000" penwidth="2"];
+node_8c6f3637 -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_8c6f3637 -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_8c6f3637 -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_714d94b9 -> node_445a1052 [color="#E69F00" penwidth="2"];
+node_409f45c7 -> node_72257601 [color="#CC79A7" penwidth="2"];
+node_409f45c7 -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_5771611c -> node_72257601 [color="#F0E442" penwidth="2"];
+node_5771611c -> node_445a1052 [color="#F0E442" penwidth="2"];
+node_6201f71e -> node_72257601 [color="#D55E00" penwidth="2"];
+node_6201f71e -> node_445a1052 [color="#D55E00" penwidth="2"];
+node_8e956ecd -> node_72257601 [color="#0072B2" penwidth="2"];
+node_8e956ecd -> node_445a1052 [color="#0072B2" penwidth="2"];
+node_0a33d906 -> node_72257601 [color="#D55E00" penwidth="2"];
+node_0a33d906 -> node_445a1052 [color="#D55E00" penwidth="2"];
+node_7f048cd2 -> node_445a1052 [color="#56B4E9" penwidth="2"];
+node_76c502e4 -> node_445a1052 [color="#F0E442" penwidth="2"];
+node_76c502e4 -> node_445a1052 [color="#F0E442" penwidth="2"];
+node_76c502e4 -> node_445a1052 [color="#F0E442" penwidth="2"];
+node_63ef4030 -> node_445a1052 [color="#000000" penwidth="2"];
+node_14d51edf -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_14d51edf -> node_445a1052 [color="#CC79A7" penwidth="2"];
+node_011c99fd -> node_445a1052 [color="#0072B2" penwidth="2"];
+node_90efa37a -> node_445a1052 [color="#56B4E9" penwidth="2"];
+node_8164650d -> node_445a1052 [color="#0072B2" penwidth="2"];
+node_707a06dd -> node_72257601 [color="#0072B2" penwidth="2"];
+node_44d5c57c -> node_72257601 [color="#F0E442" penwidth="2"];
+node_738ee47d -> node_445a1052 [color="#0072B2" penwidth="2"];
+node_2af52407 -> node_72257601 [color="#CC79A7" penwidth="2"];
+node_9d1c5142 -> node_72257601 [color="#56B4E9" penwidth="2"];
+subgraph cluster_b6f78914 {
+    label="File: test_utils";
+    name="test_utils";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_75d28356 {
+        node_72257601 node_445a1052 node_44d5c57c node_738ee47d node_2af52407 node_8164650d node_9d1c5142 node_707a06dd;
+        label="Class: _GenericTest";
+        name="_GenericTest";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6d3f157f {
+        node_409f45c7 node_5771611c node_6201f71e node_0a33d906 node_8e956ecd;
+        label="Class: TestArrayEqual";
+        name="TestArrayEqual";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8906dbc4 {
+        node_14d51edf node_63ef4030 node_90efa37a node_76c502e4 node_011c99fd node_7f048cd2;
+        label="Class: TestEqual";
+        name="TestEqual";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_b0d3d8b7 {
+        node_714d94b9 node_8c6f3637 node_e62e3840;
+        label="Class: TestAlmostEqual";
+        name="TestAlmostEqual";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

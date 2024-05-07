@@ -1,0 +1,49 @@
+digraph "classes_39" {
+rankdir=BT
+charset="utf-8"
+"model_meta.models.AbstractPerson" [color="black", fontcolor="black", label=<{AbstractPerson|content_object_abstract<br ALIGN="LEFT"/>content_type_abstract<br ALIGN="LEFT"/>data_abstract<br ALIGN="LEFT"/>data_not_concrete_abstract<br ALIGN="LEFT"/>fk_abstract<br ALIGN="LEFT"/>following_abstract<br ALIGN="LEFT"/>friends_abstract<br ALIGN="LEFT"/>generic_relation_abstract<br ALIGN="LEFT"/>m2m_abstract<br ALIGN="LEFT"/>object_id_abstract<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.BasePerson" [color="black", fontcolor="black", label=<{BasePerson|content_object_base<br ALIGN="LEFT"/>content_type_base<br ALIGN="LEFT"/>data_base<br ALIGN="LEFT"/>data_not_concrete_base<br ALIGN="LEFT"/>fk_base<br ALIGN="LEFT"/>following_base<br ALIGN="LEFT"/>friends_base<br ALIGN="LEFT"/>generic_relation_base<br ALIGN="LEFT"/>m2m_base<br ALIGN="LEFT"/>object_id_base<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.Child" [color="black", fontcolor="black", label=<{Child|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.CommonAncestor" [color="black", fontcolor="black", label=<{CommonAncestor|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.tests.DataTests" [color="black", fontcolor="black", label=<{DataTests|<br ALIGN="LEFT"/>|test_fields()<br ALIGN="LEFT"/>test_local_concrete_fields()<br ALIGN="LEFT"/>test_local_fields()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.FirstParent" [color="black", fontcolor="black", label=<{FirstParent|first_ancestor<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.test_legacy.GetAllFieldNamesTestCase" [color="black", fontcolor="black", label=<{GetAllFieldNamesTestCase|<br ALIGN="LEFT"/>|test_get_all_field_names()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.tests.GetFieldByNameTests" [color="black", fontcolor="black", label=<{GetFieldByNameTests|<br ALIGN="LEFT"/>|test_get_data_field()<br ALIGN="LEFT"/>test_get_fields_only_searches_forward_on_apps_not_ready()<br ALIGN="LEFT"/>test_get_generic_relation()<br ALIGN="LEFT"/>test_get_m2m_field()<br ALIGN="LEFT"/>test_get_related_m2m()<br ALIGN="LEFT"/>test_get_related_object()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.test_legacy.GetFieldByNameTests" [color="black", fontcolor="black", label=<{GetFieldByNameTests|<br ALIGN="LEFT"/>|test_get_data_field()<br ALIGN="LEFT"/>test_get_generic_relation()<br ALIGN="LEFT"/>test_get_m2m_field()<br ALIGN="LEFT"/>test_get_m2m_field_invalid()<br ALIGN="LEFT"/>test_get_related_m2m()<br ALIGN="LEFT"/>test_get_related_object()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.tests.GetFieldsTests" [color="black", fontcolor="black", label=<{GetFieldsTests|<br ALIGN="LEFT"/>|test_get_fields_is_immutable()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.tests.M2MTests" [color="black", fontcolor="black", label=<{M2MTests|<br ALIGN="LEFT"/>|test_many_to_many()<br ALIGN="LEFT"/>test_many_to_many_with_model()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.test_legacy.M2MTests" [color="black", fontcolor="black", label=<{M2MTests|<br ALIGN="LEFT"/>|test_many_to_many_with_model()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.AbstractPerson.Meta" [color="black", fontcolor="black", label=<{Meta|abstract : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.ProxyPerson.Meta" [color="black", fontcolor="black", label=<{Meta|proxy : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.tests.OptionsBaseTests" [color="black", fontcolor="black", label=<{OptionsBaseTests|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.test_legacy.OptionsBaseTests" [color="black", fontcolor="black", label=<{OptionsBaseTests|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.tests.ParentListTests" [color="black", fontcolor="black", label=<{ParentListTests|<br ALIGN="LEFT"/>|test_get_parent_list()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.Person" [color="black", fontcolor="black", label=<{Person|content_object_concrete<br ALIGN="LEFT"/>content_type_concrete<br ALIGN="LEFT"/>data_inherited<br ALIGN="LEFT"/>data_not_concrete_inherited<br ALIGN="LEFT"/>fk_inherited<br ALIGN="LEFT"/>following_inherited<br ALIGN="LEFT"/>friends_inherited<br ALIGN="LEFT"/>generic_relation_concrete<br ALIGN="LEFT"/>m2m_inherited<br ALIGN="LEFT"/>object_id_concrete<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.ProxyPerson" [color="black", fontcolor="black", label=<{ProxyPerson|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.test_legacy.RelatedM2MTests" [color="black", fontcolor="black", label=<{RelatedM2MTests|<br ALIGN="LEFT"/>|test_related_m2m_asymmetrical()<br ALIGN="LEFT"/>test_related_m2m_local_only()<br ALIGN="LEFT"/>test_related_m2m_symmetrical()<br ALIGN="LEFT"/>test_related_m2m_with_model()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.tests.RelatedObjectsTests" [color="black", fontcolor="black", label=<{RelatedObjectsTests|key_name<br ALIGN="LEFT"/>|test_related_objects()<br ALIGN="LEFT"/>test_related_objects_include_hidden()<br ALIGN="LEFT"/>test_related_objects_include_hidden_local_only()<br ALIGN="LEFT"/>test_related_objects_local()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.test_legacy.RelatedObjectsTests" [color="black", fontcolor="black", label=<{RelatedObjectsTests|key_name<br ALIGN="LEFT"/>|test_related_objects()<br ALIGN="LEFT"/>test_related_objects_include_hidden()<br ALIGN="LEFT"/>test_related_objects_include_hidden_local_only()<br ALIGN="LEFT"/>test_related_objects_local()<br ALIGN="LEFT"/>test_related_objects_proxy()<br ALIGN="LEFT"/>test_related_objects_proxy_hidden()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.Relating" [color="black", fontcolor="black", label=<{Relating|basepeople<br ALIGN="LEFT"/>basepeople_hidden<br ALIGN="LEFT"/>baseperson<br ALIGN="LEFT"/>baseperson_hidden<br ALIGN="LEFT"/>people<br ALIGN="LEFT"/>people_hidden<br ALIGN="LEFT"/>person<br ALIGN="LEFT"/>person_hidden<br ALIGN="LEFT"/>proxyperson<br ALIGN="LEFT"/>proxyperson_hidden<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.models.Relation" [color="black", fontcolor="black", label=<{Relation|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.tests.RelationTreeTests" [color="black", fontcolor="black", label=<{RelationTreeTests|all_models : tuple<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_clear_cache_clears_relation_tree()<br ALIGN="LEFT"/>test_first_relation_tree_access_populates_all()<br ALIGN="LEFT"/>test_relations_related_objects()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.SecondParent" [color="black", fontcolor="black", label=<{SecondParent|second_ancestor<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"model_meta.tests.VirtualFieldsTests" [color="black", fontcolor="black", label=<{VirtualFieldsTests|<br ALIGN="LEFT"/>|test_virtual_fields()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"model_meta.models.BasePerson" -> "model_meta.models.AbstractPerson" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.Child" -> "model_meta.models.FirstParent" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.Child" -> "model_meta.models.SecondParent" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.FirstParent" -> "model_meta.models.CommonAncestor" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.Person" -> "model_meta.models.BasePerson" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.ProxyPerson" -> "model_meta.models.Person" [arrowhead="empty", arrowtail="none"];
+"model_meta.models.SecondParent" -> "model_meta.models.CommonAncestor" [arrowhead="empty", arrowtail="none"];
+"model_meta.test_legacy.GetAllFieldNamesTestCase" -> "model_meta.test_legacy.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.test_legacy.GetFieldByNameTests" -> "model_meta.test_legacy.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.test_legacy.M2MTests" -> "model_meta.test_legacy.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.test_legacy.RelatedM2MTests" -> "model_meta.test_legacy.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.test_legacy.RelatedObjectsTests" -> "model_meta.test_legacy.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.DataTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.GetFieldByNameTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.GetFieldsTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.M2MTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.RelatedObjectsTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+"model_meta.tests.VirtualFieldsTests" -> "model_meta.tests.OptionsBaseTests" [arrowhead="empty", arrowtail="none"];
+}

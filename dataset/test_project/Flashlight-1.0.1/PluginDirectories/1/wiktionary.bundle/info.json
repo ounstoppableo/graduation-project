@@ -1,0 +1,14 @@
+{
+    "name": "wiktionary",
+    "displayName": "Wiktionary (EN)",
+    "displayName_de": "Wiktionary (DE)",
+
+    "description": "Search the Wiktionary.",
+    "description_de": "Durchsuche Wiktionary",
+
+    "examples": ["wiktionary COB", "wiktionary ASAP", "wiktionary Flashlight"],
+    "examples_de": ["wiktionary COB", "wiktionary ASAP", "wiktionary Taschenlampe"],
+    "categories": ["Information", "Language"],
+	"creator_name": "Toni Hoffmann (xremix)",
+	"creator_url": "http://xremix.de"
+}

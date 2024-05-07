@@ -1,0 +1,9 @@
+digraph "classes_2" {
+rankdir=BT
+charset="utf-8"
+"djangodocs.DjangoHTMLTranslator" [color="black", fontcolor="black", label=<{DjangoHTMLTranslator|compact_p : bool<br ALIGN="LEFT"/>first_param : int<br ALIGN="LEFT"/>no_smarty<br ALIGN="LEFT"/>optional_param_level : int<br ALIGN="LEFT"/>param_separator<br ALIGN="LEFT"/>required_params_left<br ALIGN="LEFT"/>version_text : dict<br ALIGN="LEFT"/>|depart_desc_parameterlist(node)<br ALIGN="LEFT"/>depart_literal_block(node)<br ALIGN="LEFT"/>depart_table(node)<br ALIGN="LEFT"/>depart_versionmodified(node)<br ALIGN="LEFT"/>visit_desc_parameterlist(node)<br ALIGN="LEFT"/>visit_literal_block(node)<br ALIGN="LEFT"/>visit_section(node)<br ALIGN="LEFT"/>visit_table(node)<br ALIGN="LEFT"/>visit_versionmodified(node)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"djangodocs.DjangoStandaloneHTMLBuilder" [color="black", fontcolor="black", label=<{DjangoStandaloneHTMLBuilder|name : str<br ALIGN="LEFT"/>|finish()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"djangodocs.SnippetWithFilename" [color="black", fontcolor="black", label=<{SnippetWithFilename|has_content : bool<br ALIGN="LEFT"/>option_spec : dict<br ALIGN="LEFT"/>optional_arguments : int<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"djangodocs.VersionDirective" [color="black", fontcolor="black", label=<{VersionDirective|final_argument_whitespace : bool<br ALIGN="LEFT"/>has_content : bool<br ALIGN="LEFT"/>option_spec : dict<br ALIGN="LEFT"/>optional_arguments : int<br ALIGN="LEFT"/>required_arguments : int<br ALIGN="LEFT"/>|run()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"djangodocs.snippet_with_filename" [color="black", fontcolor="black", label=<{snippet_with_filename|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

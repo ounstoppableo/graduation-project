@@ -1,0 +1,125 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_36c52ce0 [label="714: __init__()" name="test_arpack::CheckingLinearOperator.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d9b3a5cf [label="274: __init__()" name="test_arpack::DictWithRepr.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9d84e7bc [label="333: __init__()" name="test_arpack::NonSymmetricParams.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_1e443c74 [label="282: __init__()" name="test_arpack::SymmetricParams.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_4a93164a [label="642: _check_svds()" name="test_arpack::_check_svds" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_995e6368 [label="46: _get_test_tolerance()" name="test_arpack::_get_test_tolerance" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_58de894a [label="135: argsort_which()" name="test_arpack::argsort_which" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_3fb1b0ee [label="127: assert_allclose_cc()" name="test_arpack::assert_allclose_cc" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f7cba0d3 [label="181: eval_evec()" name="test_arpack::eval_evec" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fbc07f34 [label="88: generate_matrix()" name="test_arpack::generate_matrix" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_3b7ae854 [label="539: sorted_svd()" name="test_arpack::sorted_svd" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_11011318 [label="555: svd_estimate()" name="test_arpack::svd_estimate" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_62daee1d [label="450: test_complex_nonsymmetric_modes()" name="test_arpack::test_complex_nonsymmetric_modes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e9d2baf6 [label="476: test_general_nonsymmetric_starting_vector()" name="test_arpack::test_general_nonsymmetric_starting_vector" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3ed6dbbe [label="396: test_hermitian_modes()" name="test_arpack::test_hermitian_modes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_55ae53ee [label="436: test_real_nonsymmetric_modes()" name="test_arpack::test_real_nonsymmetric_modes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2bd85712 [label="489: test_standard_nonsymmetric_no_convergence()" name="test_arpack::test_standard_nonsymmetric_no_convergence" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6f939850 [label="463: test_standard_nonsymmetric_starting_vector()" name="test_arpack::test_standard_nonsymmetric_starting_vector" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_677aa85a [label="666: test_svd_LM_ones_matrix()" name="test_arpack::test_svd_LM_ones_matrix" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_468bf08f [label="683: test_svd_LM_zeros_matrix()" name="test_arpack::test_svd_LM_zeros_matrix" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a1aa1e12 [label="698: test_svd_LM_zeros_matrix_gh_3452()" name="test_arpack::test_svd_LM_zeros_matrix_gh_3452" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_01c9a5ac [label="728: test_svd_linop()" name="test_arpack::test_svd_linop" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_308df9c0 [label="614: test_svd_return()" name="test_arpack::test_svd_return" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5c12d939 [label="581: test_svd_simple_complex()" name="test_arpack::test_svd_simple_complex" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8073f7b0 [label="559: test_svd_simple_real()" name="test_arpack::test_svd_simple_real" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_03e113a4 [label="622: test_svd_which()" name="test_arpack::test_svd_which" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d55c4170 [label="382: test_symmetric_modes()" name="test_arpack::test_symmetric_modes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d15ef597 [label="421: test_symmetric_no_convergence()" name="test_arpack::test_symmetric_no_convergence" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_afb1adbf [label="411: test_symmetric_starting_vector()" name="test_arpack::test_symmetric_starting_vector" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9d84e7bc -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_9d84e7bc -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_d9b3a5cf [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_1e443c74 -> node_fbc07f34 [color="#F0E442" penwidth="2"];
+node_f7cba0d3 -> node_995e6368 [color="#009E73" penwidth="2"];
+node_f7cba0d3 -> node_58de894a [color="#009E73" penwidth="2"];
+node_f7cba0d3 -> node_58de894a [color="#009E73" penwidth="2"];
+node_f7cba0d3 -> node_3fb1b0ee [color="#009E73" penwidth="2"];
+node_f7cba0d3 -> node_3fb1b0ee [color="#009E73" penwidth="2"];
+node_62daee1d -> node_9d84e7bc [color="#0072B2" penwidth="2"];
+node_e9d2baf6 -> node_9d84e7bc [color="#D55E00" penwidth="2"];
+node_3ed6dbbe -> node_1e443c74 [color="#D55E00" penwidth="2"];
+node_55ae53ee -> node_9d84e7bc [color="#D55E00" penwidth="2"];
+node_2bd85712 -> node_995e6368 [color="#56B4E9" penwidth="2"];
+node_2bd85712 -> node_fbc07f34 [color="#56B4E9" penwidth="2"];
+node_6f939850 -> node_9d84e7bc [color="#000000" penwidth="2"];
+node_677aa85a -> node_4a93164a [color="#56B4E9" penwidth="2"];
+node_468bf08f -> node_4a93164a [color="#CC79A7" penwidth="2"];
+node_a1aa1e12 -> node_4a93164a [color="#56B4E9" penwidth="2"];
+node_01c9a5ac -> node_36c52ce0 [color="#F0E442" penwidth="2"];
+node_01c9a5ac -> node_36c52ce0 [color="#F0E442" penwidth="2"];
+node_01c9a5ac -> node_36c52ce0 [color="#F0E442" penwidth="2"];
+node_308df9c0 -> node_3b7ae854 [color="#000000" penwidth="2"];
+node_5c12d939 -> node_3b7ae854 [color="#E69F00" penwidth="2"];
+node_5c12d939 -> node_11011318 [color="#E69F00" penwidth="2"];
+node_5c12d939 -> node_11011318 [color="#E69F00" penwidth="2"];
+node_8073f7b0 -> node_3b7ae854 [color="#000000" penwidth="2"];
+node_8073f7b0 -> node_11011318 [color="#000000" penwidth="2"];
+node_8073f7b0 -> node_11011318 [color="#000000" penwidth="2"];
+node_03e113a4 -> node_3b7ae854 [color="#F0E442" penwidth="2"];
+node_d55c4170 -> node_1e443c74 [color="#000000" penwidth="2"];
+node_d15ef597 -> node_995e6368 [color="#CC79A7" penwidth="2"];
+node_d15ef597 -> node_fbc07f34 [color="#CC79A7" penwidth="2"];
+node_afb1adbf -> node_1e443c74 [color="#CC79A7" penwidth="2"];
+subgraph cluster_df4fcfd0 {
+    node_995e6368 node_fbc07f34 node_3fb1b0ee node_58de894a node_f7cba0d3 node_d55c4170 node_3ed6dbbe node_afb1adbf node_d15ef597 node_55ae53ee node_62daee1d node_6f939850 node_e9d2baf6 node_2bd85712 node_3b7ae854 node_11011318 node_8073f7b0 node_5c12d939 node_308df9c0 node_03e113a4 node_4a93164a node_677aa85a node_468bf08f node_a1aa1e12 node_01c9a5ac;
+    label="File: test_arpack";
+    name="test_arpack";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_e291c575 {
+        node_d9b3a5cf;
+        label="Class: DictWithRepr";
+        name="DictWithRepr";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_2cb8395c {
+        node_1e443c74;
+        label="Class: SymmetricParams";
+        name="SymmetricParams";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_891d2b09 {
+        node_9d84e7bc;
+        label="Class: NonSymmetricParams";
+        name="NonSymmetricParams";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_5237bd17 {
+        node_36c52ce0;
+        label="Class: CheckingLinearOperator";
+        name="CheckingLinearOperator";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

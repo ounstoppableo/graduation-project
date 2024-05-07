@@ -1,0 +1,288 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_f94b141f [label="200: test_blocktrans_trimmed()" name="i18n.test_extraction::BasicExtractorTests.test_blocktrans_trimmed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_83cf2089 [label="401: test_po_file_encoding_when_updating()" name="i18n.test_extraction::BasicExtractorTests.test_po_file_encoding_when_updating" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_76169678 [label="293: test_template_comments()" name="i18n.test_extraction::BasicExtractorTests.test_template_comments" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_26548f9f [label="248: test_template_message_context_extractor()" name="i18n.test_extraction::BasicExtractorTests.test_template_message_context_extractor" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1b396408 [label="189: test_templatize_blocktrans_tag()" name="i18n.test_extraction::BasicExtractorTests.test_templatize_blocktrans_tag" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dd454aba [label="173: test_templatize_trans_tag()" name="i18n.test_extraction::BasicExtractorTests.test_templatize_trans_tag" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d1a66519 [label="533: tearDown()" name="i18n.test_extraction::CopyPluralFormsExtractorTests.tearDown" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_98827b08 [label="727: test_project_locale_paths()" name="i18n.test_extraction::CustomLayoutExtractionTests.test_project_locale_paths" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ddb7915a [label="663: _set_times_for_all_po_files()" name="i18n.test_extraction::ExcludedLocaleExtractionTests._set_times_for_all_po_files" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9154c992 [label="670: setUp()" name="i18n.test_extraction::ExcludedLocaleExtractionTests.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a6fb6631 [label="691: test_multiple_locales_excluded()" name="i18n.test_extraction::ExcludedLocaleExtractionTests.test_multiple_locales_excluded" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6529fadb [label="703: test_multiple_locales_excluded_with_locale()" name="i18n.test_extraction::ExcludedLocaleExtractionTests.test_multiple_locales_excluded_with_locale" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_de7ddb88 [label="685: test_one_locale_excluded()" name="i18n.test_extraction::ExcludedLocaleExtractionTests.test_one_locale_excluded" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_95cc911f [label="697: test_one_locale_excluded_with_locale()" name="i18n.test_extraction::ExcludedLocaleExtractionTests.test_one_locale_excluded_with_locale" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_19859383 [label="70: _assertPoKeyword()" name="i18n.test_extraction::ExtractorTests._assertPoKeyword" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_82ac28cd [label="92: _assertPoLocComment()" name="i18n.test_extraction::ExtractorTests._assertPoLocComment" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e2830ed6 [label="42: _rmrf()" name="i18n.test_extraction::ExtractorTests._rmrf" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2033d3ed [label="59: _run_makemessages()" name="i18n.test_extraction::ExtractorTests._run_makemessages" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_902fdc78 [label="125: assertLocationCommentNotPresent()" name="i18n.test_extraction::ExtractorTests.assertLocationCommentNotPresent" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_8f728f5c [label="111: assertLocationCommentPresent()" name="i18n.test_extraction::ExtractorTests.assertLocationCommentPresent" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_1dca9042 [label="80: assertMsgId()" name="i18n.test_extraction::ExtractorTests.assertMsgId" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_fcd89e11 [label="83: assertMsgStr()" name="i18n.test_extraction::ExtractorTests.assertMsgStr" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_c9fda705 [label="86: assertNotMsgId()" name="i18n.test_extraction::ExtractorTests.assertNotMsgId" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_15321d78 [label="136: assertNotRecentlyModified()" name="i18n.test_extraction::ExtractorTests.assertNotRecentlyModified" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0b54c30d [label="129: assertRecentlyModified()" name="i18n.test_extraction::ExtractorTests.assertRecentlyModified" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_fe770ada [label="51: tearDown()" name="i18n.test_extraction::ExtractorTests.tearDown" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_22bbe5a8 [label="458: test_ignore_directory()" name="i18n.test_extraction::IgnoredExtractorTests.test_ignore_directory" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1d79ff9f [label="474: test_ignore_file_patterns()" name="i18n.test_extraction::IgnoredExtractorTests.test_ignore_file_patterns" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_54e72383 [label="466: test_ignore_subdirectory()" name="i18n.test_extraction::IgnoredExtractorTests.test_ignore_subdirectory" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3895f76c [label="484: test_media_static_dirs_ignored()" name="i18n.test_extraction::IgnoredExtractorTests.test_media_static_dirs_ignored" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_eef72425 [label="448: test_default_root_settings()" name="i18n.test_extraction::JavascriptExtractorTests.test_default_root_settings" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e7fea0e4 [label="418: test_javascript_literals()" name="i18n.test_extraction::JavascriptExtractorTests.test_javascript_literals" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2fcaf867 [label="439: test_media_static_dirs_ignored()" name="i18n.test_extraction::JavascriptExtractorTests.test_media_static_dirs_ignored" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_af67dcf9 [label="589: test_no_location_disabled()" name="i18n.test_extraction::LocationCommentsTests.test_no_location_disabled" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_728fc9cc [label="582: test_no_location_enabled()" name="i18n.test_extraction::LocationCommentsTests.test_no_location_enabled" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f63f9467 [label="640: tearDown()" name="i18n.test_extraction::MultipleLocaleExtractionTests.tearDown" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0bec9a1e [label="571: test_no_wrap_disabled()" name="i18n.test_extraction::NoWrapExtractorTests.test_no_wrap_disabled" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a4d17392 [label="563: test_no_wrap_enabled()" name="i18n.test_extraction::NoWrapExtractorTests.test_no_wrap_enabled" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cc942e8f [label="505: test_symlink()" name="i18n.test_extraction::SymlinkExtractorTests.test_symlink" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_eb7c76ed [label="1188: test_app_translation()" name="i18n.tests::AppResolutionOrderI18NTests.test_app_translation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e65be5ec [label="574: test_false_like_locale_formats()" name="i18n.tests::FormattingTests.test_false_like_locale_formats" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2e0d4898 [label="788: test_sanitize_separators()" name="i18n.tests::FormattingTests.test_sanitize_separators" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e46790c8 [label="1214: test_locale_paths_override_app_translation()" name="i18n.tests::LocalePathsResolutionOrderI18NTests.test_locale_paths_override_app_translation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_00a37b43 [label="1211: test_locale_paths_translation()" name="i18n.tests::LocalePathsResolutionOrderI18NTests.test_locale_paths_translation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3ca7e74b [label="1179: assertUgettext()" name="i18n.tests::ResolutionOrderI18NTests.assertUgettext" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ae527cbb [label="1493: patchGettextFind()" name="i18n.tests::TranslationFilesMissing.patchGettextFind" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b6765a98 [label="1496: test_failure_finding_default_mo_files()" name="i18n.tests::TranslationFilesMissing.test_failure_finding_default_mo_files" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_16d70427 [label="45: patch_formats()" name="i18n.tests::patch_formats" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f94b141f -> node_8f728f5c [color="#CC79A7" penwidth="2"];
+node_f94b141f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_f94b141f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_f94b141f -> node_c9fda705 [color="#CC79A7" penwidth="2"];
+node_83cf2089 -> node_fcd89e11 [color="#E69F00" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_76169678 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_26548f9f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_1b396408 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_1b396408 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_1b396408 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_dd454aba -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_d1a66519 -> node_e2830ed6 [color="#E69F00" penwidth="2"];
+node_98827b08 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_98827b08 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_98827b08 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_9154c992 -> node_ddb7915a [color="#56B4E9" penwidth="2"];
+node_a6fb6631 -> node_15321d78 [color="#E69F00" penwidth="2"];
+node_a6fb6631 -> node_15321d78 [color="#E69F00" penwidth="2"];
+node_a6fb6631 -> node_0b54c30d [color="#E69F00" penwidth="2"];
+node_6529fadb -> node_15321d78 [color="#009E73" penwidth="2"];
+node_6529fadb -> node_15321d78 [color="#009E73" penwidth="2"];
+node_6529fadb -> node_0b54c30d [color="#009E73" penwidth="2"];
+node_de7ddb88 -> node_15321d78 [color="#000000" penwidth="2"];
+node_de7ddb88 -> node_0b54c30d [color="#000000" penwidth="2"];
+node_de7ddb88 -> node_0b54c30d [color="#000000" penwidth="2"];
+node_95cc911f -> node_15321d78 [color="#CC79A7" penwidth="2"];
+node_95cc911f -> node_15321d78 [color="#CC79A7" penwidth="2"];
+node_95cc911f -> node_0b54c30d [color="#CC79A7" penwidth="2"];
+node_902fdc78 -> node_82ac28cd [color="#000000" penwidth="2"];
+node_8f728f5c -> node_82ac28cd [color="#F0E442" penwidth="2"];
+node_1dca9042 -> node_19859383 [color="#56B4E9" penwidth="2"];
+node_fcd89e11 -> node_19859383 [color="#E69F00" penwidth="2"];
+node_fe770ada -> node_e2830ed6 [color="#56B4E9" penwidth="2"];
+node_22bbe5a8 -> node_2033d3ed [color="#000000" penwidth="2"];
+node_22bbe5a8 -> node_1dca9042 [color="#000000" penwidth="2"];
+node_22bbe5a8 -> node_c9fda705 [color="#000000" penwidth="2"];
+node_1d79ff9f -> node_2033d3ed [color="#CC79A7" penwidth="2"];
+node_1d79ff9f -> node_c9fda705 [color="#CC79A7" penwidth="2"];
+node_54e72383 -> node_2033d3ed [color="#009E73" penwidth="2"];
+node_54e72383 -> node_c9fda705 [color="#009E73" penwidth="2"];
+node_3895f76c -> node_2033d3ed [color="#F0E442" penwidth="2"];
+node_eef72425 -> node_2033d3ed [color="#0072B2" penwidth="2"];
+node_eef72425 -> node_1dca9042 [color="#0072B2" penwidth="2"];
+node_e7fea0e4 -> node_2033d3ed [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_e7fea0e4 -> node_1dca9042 [color="#F0E442" penwidth="2"];
+node_2fcaf867 -> node_2033d3ed [color="#CC79A7" penwidth="2"];
+node_2fcaf867 -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_2fcaf867 -> node_c9fda705 [color="#CC79A7" penwidth="2"];
+node_af67dcf9 -> node_902fdc78 [color="#E69F00" penwidth="2"];
+node_af67dcf9 -> node_8f728f5c [color="#E69F00" penwidth="2"];
+node_728fc9cc -> node_902fdc78 [color="#F0E442" penwidth="2"];
+node_f63f9467 -> node_e2830ed6 [color="#CC79A7" penwidth="2"];
+node_0bec9a1e -> node_1dca9042 [color="#D55E00" penwidth="2"];
+node_a4d17392 -> node_1dca9042 [color="#56B4E9" penwidth="2"];
+node_cc942e8f -> node_1dca9042 [color="#CC79A7" penwidth="2"];
+node_eb7c76ed -> node_3ca7e74b [color="#0072B2" penwidth="2"];
+node_eb7c76ed -> node_3ca7e74b [color="#0072B2" penwidth="2"];
+node_eb7c76ed -> node_3ca7e74b [color="#0072B2" penwidth="2"];
+node_e65be5ec -> node_16d70427 [color="#F0E442" penwidth="2"];
+node_2e0d4898 -> node_16d70427 [color="#000000" penwidth="2"];
+node_e46790c8 -> node_3ca7e74b [color="#000000" penwidth="2"];
+node_00a37b43 -> node_3ca7e74b [color="#009E73" penwidth="2"];
+node_b6765a98 -> node_ae527cbb [color="#000000" penwidth="2"];
+subgraph cluster_4c587e1c {
+    label="File: i18n.test_extraction";
+    name="i18n.test_extraction";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_651712d6 {
+        node_e2830ed6 node_fe770ada node_2033d3ed node_19859383 node_1dca9042 node_fcd89e11 node_c9fda705 node_82ac28cd node_8f728f5c node_902fdc78 node_0b54c30d node_15321d78;
+        label="Class: ExtractorTests";
+        name="ExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_648f5005 {
+        node_dd454aba node_1b396408 node_f94b141f node_26548f9f node_76169678 node_83cf2089;
+        label="Class: BasicExtractorTests";
+        name="BasicExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_2948d41e {
+        node_e7fea0e4 node_2fcaf867 node_eef72425;
+        label="Class: JavascriptExtractorTests";
+        name="JavascriptExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_b24ca2e6 {
+        node_22bbe5a8 node_54e72383 node_1d79ff9f node_3895f76c;
+        label="Class: IgnoredExtractorTests";
+        name="IgnoredExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6fab1e92 {
+        node_cc942e8f;
+        label="Class: SymlinkExtractorTests";
+        name="SymlinkExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_5503f7f4 {
+        node_d1a66519;
+        label="Class: CopyPluralFormsExtractorTests";
+        name="CopyPluralFormsExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e1881bb3 {
+        node_a4d17392 node_0bec9a1e;
+        label="Class: NoWrapExtractorTests";
+        name="NoWrapExtractorTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ade968ed {
+        node_728fc9cc node_af67dcf9;
+        label="Class: LocationCommentsTests";
+        name="LocationCommentsTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6ee4e179 {
+        node_f63f9467;
+        label="Class: MultipleLocaleExtractionTests";
+        name="MultipleLocaleExtractionTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_79d23646 {
+        node_ddb7915a node_9154c992 node_de7ddb88 node_a6fb6631 node_95cc911f node_6529fadb;
+        label="Class: ExcludedLocaleExtractionTests";
+        name="ExcludedLocaleExtractionTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_505c57fa {
+        node_98827b08;
+        label="Class: CustomLayoutExtractionTests";
+        name="CustomLayoutExtractionTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_4f4b37d6 {
+    node_16d70427;
+    label="File: i18n.tests";
+    name="i18n.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_77cff4c8 {
+        node_e65be5ec node_2e0d4898;
+        label="Class: FormattingTests";
+        name="FormattingTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8b04eb43 {
+        node_3ca7e74b;
+        label="Class: ResolutionOrderI18NTests";
+        name="ResolutionOrderI18NTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_69625def {
+        node_eb7c76ed;
+        label="Class: AppResolutionOrderI18NTests";
+        name="AppResolutionOrderI18NTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_4149b7aa {
+        node_00a37b43 node_e46790c8;
+        label="Class: LocalePathsResolutionOrderI18NTests";
+        name="LocalePathsResolutionOrderI18NTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_138d0b74 {
+        node_ae527cbb node_b6765a98;
+        label="Class: TranslationFilesMissing";
+        name="TranslationFilesMissing";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

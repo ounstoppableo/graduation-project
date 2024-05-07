@@ -1,0 +1,65 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_4fedaa8c [label="85: __init__()" name="IPython.lib.display::Audio.__init__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bde5b394 [label="114: _make_wav()" name="IPython.lib.display::Audio._make_wav" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8db861a5 [label="172: _repr_html_()" name="IPython.lib.display::Audio._repr_html_" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ce4a4447 [label="192: autoplay_attr()" name="IPython.lib.display::Audio.autoplay_attr" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_81cee174 [label="101: reload()" name="IPython.lib.display::Audio.reload" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_29a14120 [label="181: src_attr()" name="IPython.lib.display::Audio.src_attr" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5194b2aa [label="329: _format_path()" name="IPython.lib.display::FileLink._format_path" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ed9b734b [label="335: _repr_html_()" name="IPython.lib.display::FileLink._repr_html_" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_92c6ed57 [label="364: __init__()" name="IPython.lib.display::FileLinks.__init__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b818168a [label="429: _get_display_formatter()" name="IPython.lib.display::FileLinks._get_display_formatter" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d66d55d2 [label="485: _get_notebook_display_formatter()" name="IPython.lib.display::FileLinks._get_notebook_display_formatter" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_9007c452 [label="510: _get_terminal_display_formatter()" name="IPython.lib.display::FileLinks._get_terminal_display_formatter" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_4fedaa8c -> node_bde5b394 [color="#F0E442" penwidth="2"];
+node_8db861a5 -> node_ce4a4447 [color="#0072B2" penwidth="2"];
+node_8db861a5 -> node_29a14120 [color="#0072B2" penwidth="2"];
+node_81cee174 -> node_81cee174 [color="#F0E442" penwidth="2"];
+node_ed9b734b -> node_5194b2aa [color="#009E73" penwidth="2"];
+node_92c6ed57 -> node_d66d55d2 [color="#CC79A7" penwidth="2"];
+node_92c6ed57 -> node_9007c452 [color="#CC79A7" penwidth="2"];
+node_d66d55d2 -> node_b818168a [color="#56B4E9" penwidth="2"];
+node_9007c452 -> node_b818168a [color="#56B4E9" penwidth="2"];
+subgraph cluster_76b7a4de {
+    label="File: IPython.lib.display";
+    name="IPython.lib.display";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_962ca18a {
+        node_4fedaa8c node_81cee174 node_bde5b394 node_8db861a5 node_29a14120 node_ce4a4447;
+        label="Class: Audio";
+        name="Audio";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e8f31814 {
+        node_5194b2aa node_ed9b734b;
+        label="Class: FileLink";
+        name="FileLink";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9e0c8340 {
+        node_92c6ed57 node_b818168a node_d66d55d2 node_9007c452;
+        label="Class: FileLinks";
+        name="FileLinks";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

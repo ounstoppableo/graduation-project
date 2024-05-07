@@ -1,0 +1,129 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_12c70884 [label="274: as_tuple()" name="dictconfig::BaseConfigurator.as_tuple" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_48637efb [label="260: configure_custom()" name="dictconfig::BaseConfigurator.configure_custom" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cd877353 [label="232: convert()" name="dictconfig::BaseConfigurator.convert" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6df43c5f [label="194: ext_convert()" name="dictconfig::BaseConfigurator.ext_convert" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_763c1fe2 [label="171: resolve()" name="dictconfig::BaseConfigurator.resolve" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_3f02044d [label="75: __getitem__()" name="dictconfig::ConvertingDict.__getitem__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_35c6fd63 [label="87: get()" name="dictconfig::ConvertingDict.get" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_24b2e3af [label="99: pop()" name="dictconfig::ConvertingDict.pop" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_540956ae [label="112: __getitem__()" name="dictconfig::ConvertingList.__getitem__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_10588028 [label="124: pop()" name="dictconfig::ConvertingList.pop" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8506d552 [label="136: __getitem__()" name="dictconfig::ConvertingTuple.__getitem__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_20b59341 [label="464: add_filters()" name="dictconfig::DictConfigurator.add_filters" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_92bc1613 [label="525: add_handlers()" name="dictconfig::DictConfigurator.add_handlers" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_03595bad [label="533: common_logger_config()" name="dictconfig::DictConfigurator.common_logger_config" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d9e601d0 [label="287: configure()" name="dictconfig::DictConfigurator.configure" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_af4ceb02 [label="455: configure_filter()" name="dictconfig::DictConfigurator.configure_filter" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5cb8d391 [label="433: configure_formatter()" name="dictconfig::DictConfigurator.configure_formatter" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_59dd27cf [label="472: configure_handler()" name="dictconfig::DictConfigurator.configure_handler" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_507a821d [label="551: configure_logger()" name="dictconfig::DictConfigurator.configure_logger" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b1644515 [label="559: configure_root()" name="dictconfig::DictConfigurator.configure_root" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_04da41a9 [label="567: dictConfig()" name="dictconfig::dictConfig" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0782804d [label="38: valid_ident()" name="dictconfig::valid_ident" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_48637efb -> node_763c1fe2 [color="#009E73" penwidth="2"];
+node_48637efb -> node_0782804d [color="#009E73" penwidth="2"];
+node_cd877353 -> node_35c6fd63 [color="#009E73" penwidth="2"];
+node_6df43c5f -> node_763c1fe2 [color="#CC79A7" penwidth="2"];
+node_3f02044d -> node_cd877353 [color="#0072B2" penwidth="2"];
+node_35c6fd63 -> node_cd877353 [color="#009E73" penwidth="2"];
+node_35c6fd63 -> node_35c6fd63 [color="#009E73" penwidth="2"];
+node_24b2e3af -> node_cd877353 [color="#CC79A7" penwidth="2"];
+node_540956ae -> node_cd877353 [color="#D55E00" penwidth="2"];
+node_10588028 -> node_cd877353 [color="#000000" penwidth="2"];
+node_8506d552 -> node_cd877353 [color="#56B4E9" penwidth="2"];
+node_03595bad -> node_35c6fd63 [color="#0072B2" penwidth="2"];
+node_03595bad -> node_35c6fd63 [color="#0072B2" penwidth="2"];
+node_03595bad -> node_35c6fd63 [color="#0072B2" penwidth="2"];
+node_03595bad -> node_20b59341 [color="#0072B2" penwidth="2"];
+node_03595bad -> node_92bc1613 [color="#0072B2" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_35c6fd63 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_af4ceb02 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_5cb8d391 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_59dd27cf [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_507a821d [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_507a821d [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_b1644515 [color="#000000" penwidth="2"];
+node_d9e601d0 -> node_b1644515 [color="#000000" penwidth="2"];
+node_af4ceb02 -> node_48637efb [color="#56B4E9" penwidth="2"];
+node_af4ceb02 -> node_35c6fd63 [color="#56B4E9" penwidth="2"];
+node_5cb8d391 -> node_48637efb [color="#E69F00" penwidth="2"];
+node_5cb8d391 -> node_48637efb [color="#E69F00" penwidth="2"];
+node_5cb8d391 -> node_35c6fd63 [color="#E69F00" penwidth="2"];
+node_5cb8d391 -> node_35c6fd63 [color="#E69F00" penwidth="2"];
+node_59dd27cf -> node_12c70884 [color="#CC79A7" penwidth="2"];
+node_59dd27cf -> node_12c70884 [color="#CC79A7" penwidth="2"];
+node_59dd27cf -> node_763c1fe2 [color="#CC79A7" penwidth="2"];
+node_59dd27cf -> node_763c1fe2 [color="#CC79A7" penwidth="2"];
+node_59dd27cf -> node_20b59341 [color="#CC79A7" penwidth="2"];
+node_59dd27cf -> node_0782804d [color="#CC79A7" penwidth="2"];
+node_507a821d -> node_35c6fd63 [color="#0072B2" penwidth="2"];
+node_507a821d -> node_03595bad [color="#0072B2" penwidth="2"];
+node_b1644515 -> node_03595bad [color="#0072B2" penwidth="2"];
+node_04da41a9 -> node_d9e601d0 [color="#E69F00" penwidth="2"];
+subgraph cluster_79b58213 {
+    node_0782804d node_04da41a9;
+    label="File: dictconfig";
+    name="dictconfig";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_abe82e23 {
+        node_3f02044d node_35c6fd63 node_24b2e3af;
+        label="Class: ConvertingDict";
+        name="ConvertingDict";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_78d79de3 {
+        node_540956ae node_10588028;
+        label="Class: ConvertingList";
+        name="ConvertingList";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_899d130e {
+        node_8506d552;
+        label="Class: ConvertingTuple";
+        name="ConvertingTuple";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_dc56b849 {
+        node_763c1fe2 node_6df43c5f node_cd877353 node_48637efb node_12c70884;
+        label="Class: BaseConfigurator";
+        name="BaseConfigurator";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_5143937d {
+        node_d9e601d0 node_5cb8d391 node_af4ceb02 node_20b59341 node_59dd27cf node_92bc1613 node_03595bad node_507a821d node_b1644515;
+        label="Class: DictConfigurator";
+        name="DictConfigurator";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

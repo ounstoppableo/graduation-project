@@ -1,0 +1,5 @@
+digraph "classes_2" {
+rankdir=BT
+charset="utf-8"
+"path_editor.PathInteractor" [color="black", fontcolor="black", label=<{PathInteractor|ax<br ALIGN="LEFT"/>background<br ALIGN="LEFT"/>canvas<br ALIGN="LEFT"/>epsilon : int<br ALIGN="LEFT"/>line<br ALIGN="LEFT"/>pathpatch<br ALIGN="LEFT"/>showverts : bool<br ALIGN="LEFT"/>|button_press_callback(event)<br ALIGN="LEFT"/>button_release_callback(event)<br ALIGN="LEFT"/>draw_callback(event)<br ALIGN="LEFT"/>get_ind_under_point(event)<br ALIGN="LEFT"/>key_press_callback(event)<br ALIGN="LEFT"/>motion_notify_callback(event)<br ALIGN="LEFT"/>pathpatch_changed(pathpatch)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

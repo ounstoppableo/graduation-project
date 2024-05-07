@@ -1,0 +1,44 @@
+digraph "classes_34" {
+rankdir=BT
+charset="utf-8"
+"managers_regress.models.AbstractBase1" [color="black", fontcolor="black", label=<{AbstractBase1|manager1<br ALIGN="LEFT"/>manager2<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>objects<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.AbstractBase2" [color="black", fontcolor="black", label=<{AbstractBase2|restricted<br ALIGN="LEFT"/>value<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.AbstractBase3" [color="black", fontcolor="black", label=<{AbstractBase3|comment<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child1" [color="black", fontcolor="black", label=<{Child1|data<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child2" [color="black", fontcolor="black", label=<{Child2|data<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child3" [color="black", fontcolor="black", label=<{Child3|data<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child4" [color="black", fontcolor="black", label=<{Child4|data<br ALIGN="LEFT"/>default<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child5" [color="black", fontcolor="black", label=<{Child5|default<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>objects<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child6" [color="black", fontcolor="black", label=<{Child6|value<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Child7" [color="black", fontcolor="black", label=<{Child7|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests" [color="black", fontcolor="black", label=<{ManagersRegressionTests|<br ALIGN="LEFT"/>|test_abstract_manager()<br ALIGN="LEFT"/>test_custom_abstract_manager()<br ALIGN="LEFT"/>test_custom_swappable_manager()<br ALIGN="LEFT"/>test_explicit_abstract_manager()<br ALIGN="LEFT"/>test_explicit_swappable_manager()<br ALIGN="LEFT"/>test_field_can_be_called_exact()<br ALIGN="LEFT"/>test_managers()<br ALIGN="LEFT"/>test_regress_3871()<br ALIGN="LEFT"/>test_swappable_manager()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"managers_regress.models.AbstractBase1.Meta" [color="black", fontcolor="black", label=<{Meta|abstract : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.AbstractBase2.Meta" [color="black", fontcolor="black", label=<{Meta|abstract : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.AbstractBase3.Meta" [color="black", fontcolor="black", label=<{Meta|abstract : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_swappable_manager.SwappableModel.Meta" [color="black", fontcolor="black", label=<{Meta|swappable : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_custom_swappable_manager.SwappableModel.Meta" [color="black", fontcolor="black", label=<{Meta|swappable : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_explicit_swappable_manager.SwappableModel.Meta" [color="black", fontcolor="black", label=<{Meta|swappable : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.OnlyBarney" [color="black", fontcolor="black", label=<{OnlyBarney|<br ALIGN="LEFT"/>|get_queryset()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"managers_regress.models.OnlyFred" [color="black", fontcolor="black", label=<{OnlyFred|<br ALIGN="LEFT"/>|get_queryset()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"managers_regress.models.Parent" [color="black", fontcolor="black", label=<{Parent|manager<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.RelatedModel" [color="black", fontcolor="black", label=<{RelatedModel|exact<br ALIGN="LEFT"/>test_gfk<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.RelationModel" [color="black", fontcolor="black", label=<{RelationModel|fk<br ALIGN="LEFT"/>gfk<br ALIGN="LEFT"/>gfk_ctype<br ALIGN="LEFT"/>gfk_id<br ALIGN="LEFT"/>m2m<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_swappable_manager.SwappableModel" [color="black", fontcolor="black", label=<{SwappableModel|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_custom_swappable_manager.SwappableModel" [color="black", fontcolor="black", label=<{SwappableModel|stuff<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.tests.ManagersRegressionTests.test_explicit_swappable_manager.SwappableModel" [color="black", fontcolor="black", label=<{SwappableModel|objects<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"managers_regress.models.Value42" [color="black", fontcolor="black", label=<{Value42|<br ALIGN="LEFT"/>|get_queryset()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"managers_regress.models.Child1" -> "managers_regress.models.AbstractBase1" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child2" -> "managers_regress.models.AbstractBase1" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child2" -> "managers_regress.models.AbstractBase2" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child3" -> "managers_regress.models.AbstractBase1" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child3" -> "managers_regress.models.AbstractBase3" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child4" -> "managers_regress.models.AbstractBase1" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child5" -> "managers_regress.models.AbstractBase3" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child6" -> "managers_regress.models.Child4" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.Child7" -> "managers_regress.models.Parent" [arrowhead="empty", arrowtail="none"];
+"managers_regress.models.OnlyBarney" -> "managers_regress.models.AbstractBase1" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="manager2", style="solid"];
+"managers_regress.models.OnlyFred" -> "managers_regress.models.AbstractBase1" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="manager1", style="solid"];
+"managers_regress.models.OnlyFred" -> "managers_regress.models.Child5" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="default", style="solid"];
+"managers_regress.models.OnlyFred" -> "managers_regress.models.Parent" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="manager", style="solid"];
+"managers_regress.models.Value42" -> "managers_regress.models.AbstractBase2" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="restricted", style="solid"];
+}

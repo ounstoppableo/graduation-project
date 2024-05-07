@@ -1,0 +1,37 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_4b389b78 [label="0: (global)()" name="fixtures_regress.tests::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2e7c5713 [label="173: test_relative_path()" name="fixtures_regress.tests::TestFixtures.test_relative_path" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2120e2a9 [label="188: test_relative_path_in_fixture_dirs()" name="fixtures_regress.tests::TestFixtures.test_relative_path_in_fixture_dirs" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_946f0570 [label="39: is_ascii()" name="fixtures_regress.tests::is_ascii" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4b389b78 -> node_946f0570 [color="#000000" penwidth="2"];
+node_2120e2a9 -> node_2e7c5713 [color="#E69F00" penwidth="2"];
+subgraph cluster_294fa459 {
+    node_946f0570 node_4b389b78;
+    label="File: fixtures_regress.tests";
+    name="fixtures_regress.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a04fcb51 {
+        node_2e7c5713 node_2120e2a9;
+        label="Class: TestFixtures";
+        name="TestFixtures";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

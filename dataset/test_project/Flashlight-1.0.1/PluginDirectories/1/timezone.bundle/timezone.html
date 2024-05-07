@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<style>
+		html, body, body > div {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial;
+			line-height: 1.2;
+		}
+		body > div {
+			display: table;
+		}
+		body > div > div {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			font-size: x-large;
+		}
+		body > div > div {
+			margin: 20px;
+		}
+		#map-canvas{
+			display: none;
+		}
+		#placeholder{
+			font-size: 24px;
+		}
+		#offset{
+			font-size:16px;
+		}
+		#color-setting{
+			display: none;
+		}
+		.dark-mode{
+		    -webkit-filter: invert(100%);
+		    filter: invert(100%);
+		}
+
+
+		.spinner {
+		  margin: 10px auto;
+		  width: 50px;
+		  height: 30px;
+		  text-align: center;
+		  font-size: 10px;
+		}
+
+		.spinner > div {
+		  background-color: #333;
+		  height: 100%;
+		  width: 6px;
+		  display: inline-block;
+		  
+		  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+		  animation: stretchdelay 1.2s infinite ease-in-out;
+		}
+		.spinner .rect2 {
+		  -webkit-animation-delay: -1.1s;
+		  animation-delay: -1.1s;
+		}
+
+		.spinner .rect3 {
+		  -webkit-animation-delay: -1.0s;
+		  animation-delay: -1.0s;
+		}
+
+		.spinner .rect4 {
+		  -webkit-animation-delay: -0.9s;
+		  animation-delay: -0.9s;
+		}
+
+		.spinner .rect5 {
+		  -webkit-animation-delay: -0.8s;
+		  animation-delay: -0.8s;
+		}
+
+		@-webkit-keyframes stretchdelay {
+		  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+		  20% { -webkit-transform: scaleY(1.0) }
+		}
+
+		@keyframes stretchdelay {
+		  0%, 40%, 100% { 
+		    transform: scaleY(0.4);
+		    -webkit-transform: scaleY(0.4);
+		  }  20% { 
+		    transform: scaleY(1.0);
+		    -webkit-transform: scaleY(1.0);
+		  }
+		}
+	</style>
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+</head>
+<body class="light-mode">
+	<div id="map-canvas"></div>
+	<div>
+		<div>
+			<div id="placeholder">[PLACEHOLDER]</div>
+			<div id="results">		
+				<div class="spinner">
+					<div class="rect1"></div>
+					<div class="rect2"></div>
+					<div class="rect3"></div>
+					<div class="rect4"></div>
+					<div class="rect5"></div>
+				</div>
+			</div>
+			<div>
+				<img src="Icon.png" style="max-width:128px; max-height:128px;">
+			</div>
+			<div id="offset"></div>
+		</div>
+	</div>
+
+	<script>
+		var geocoder;
+		var map;
+
+		function showError(){
+			document.getElementById("results").innerText = "No result :(";
+		};
+
+		function showResult(title, time, offset){
+			document.getElementById("results").innerText = time;
+			document.getElementById("placeholder").innerText = title;
+			document.getElementById("offset").innerText = 'UTC Offset ' + offset;
+		};
+
+		function initializeGoogleAPI() {
+			geocoder = new google.maps.Geocoder();
+			map = new google.maps.Map(document.getElementById('map-canvas'));
+		}
+
+		function parseDateFromResponse(ts, response){
+			// We pretend that the date is UTC, to avoid having to set a timezone
+			// As the date is only used within this scope, thie should be fine.
+			var utc_seconds = (ts + response.rawOffset + response.dstOffset);
+			var date = new Date(0);
+			date.setUTCSeconds(utc_seconds);
+			var hour = date.getUTCHours();
+			var minute = date.getUTCMinutes();
+			if (hour < 10) { hour = "0" + hour};
+			if (minute<10) { minute = "0" + minute};
+			return hour + ":" + minute;
+		};
+
+		function parseOffsetFromResponse(response){
+			//This rounds to 1DP, but only if we need to as most offsets are whole hours.
+			return Math.round((response.rawOffset + response.dstOffset) / 360) / 10;
+		};
+
+		function getCoordinateFromAddress(address) {
+			geocoder.geocode( { 'address': address}, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+					var coorinates = results[0].geometry.location;
+					var addressTitle = results[0].formatted_address;
+					getTimeZoneFromCoordinates(coorinates.lat(), coorinates.lng(), addressTitle);
+				} else {
+					showError();
+				}
+			});
+		}
+
+		function getTimeZoneFromCoordinates(lat, long, title){
+			var ts = Math.round(Date.now() / 1000); //Seconds since Epoch
+			var url = "https://maps.googleapis.com/maps/api/timezone/json?location=" + lat + "," + long + "&timestamp=" + ts;
+			var xhr = new XMLHttpRequest();
+			xhr.onload=function(e){
+				var resp = JSON.parse(this.responseText);
+				if (resp.status==="OK") {
+					showResult(title, parseDateFromResponse(ts, resp), parseOffsetFromResponse(resp));
+				} else {
+					showError();
+				}
+			}
+			xhr.open("GET",url,true);
+			xhr.send();
+		}
+
+		setTimeout(function() {
+			initializeGoogleAPI();
+			getCoordinateFromAddress(document.getElementById('placeholder').innerText);
+		}, 400);
+	</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+digraph "classes_22" {
+rankdir=BT
+charset="utf-8"
+"flatpages_tests.test_csrf.FlatpageCSRFTests" [color="black", fontcolor="black", label=<{FlatpageCSRFTests|client<br ALIGN="LEFT"/>fixtures : list<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_fallback_flatpage()<br ALIGN="LEFT"/>test_fallback_non_existent_flatpage()<br ALIGN="LEFT"/>test_post_fallback_flatpage()<br ALIGN="LEFT"/>test_post_unknown_page()<br ALIGN="LEFT"/>test_post_view_flatpage()<br ALIGN="LEFT"/>test_view_authenticated_flatpage()<br ALIGN="LEFT"/>test_view_flatpage()<br ALIGN="LEFT"/>test_view_non_existent_flatpage()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

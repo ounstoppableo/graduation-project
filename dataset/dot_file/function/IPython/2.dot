@@ -1,0 +1,173 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_ec44a8b1 [label="0: (global)()" name="IPython.core.ultratb::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_02a2e586 [label="1210: __call__()" name="IPython.core.ultratb::AutoFormattedTB.__call__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_24beb776 [label="1234: structured_traceback()" name="IPython.core.ultratb::AutoFormattedTB.structured_traceback" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ced725ac [label="1249: __init__()" name="IPython.core.ultratb::ColorTB.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_eaec6d92 [label="1116: __init__()" name="IPython.core.ultratb::FormattedTB.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b367ce7b [label="1136: _extract_tb()" name="IPython.core.ultratb::FormattedTB._extract_tb" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_94ec967d [label="1188: context()" name="IPython.core.ultratb::FormattedTB.context" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ec5bba1b [label="1185: plain()" name="IPython.core.ultratb::FormattedTB.plain" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2b732783 [label="1165: set_mode()" name="IPython.core.ultratb::FormattedTB.set_mode" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4f369273 [label="1142: structured_traceback()" name="IPython.core.ultratb::FormattedTB.structured_traceback" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6bf16147 [label="1191: verbose()" name="IPython.core.ultratb::FormattedTB.verbose" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7277ad94 [label="468: __call__()" name="IPython.core.ultratb::ListTB.__call__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_999b5086 [label="464: __init__()" name="IPython.core.ultratb::ListTB.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5711dc8e [label="563: _format_exception_only()" name="IPython.core.ultratb::ListTB._format_exception_only" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_93d11fcd [label="526: _format_list()" name="IPython.core.ultratb::ListTB._format_list" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_032a879f [label="660: _some_str()" name="IPython.core.ultratb::ListTB._some_str" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8853f6d5 [label="635: get_exception_only()" name="IPython.core.ultratb::ListTB.get_exception_only" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f87fec67 [label="645: show_exception_only()" name="IPython.core.ultratb::ListTB.show_exception_only" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b7d31455 [label="473: structured_traceback()" name="IPython.core.ultratb::ListTB.structured_traceback" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d0f42d41 [label="1261: __call__()" name="IPython.core.ultratb::SyntaxTB.__call__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_958fcee0 [label="1257: __init__()" name="IPython.core.ultratb::SyntaxTB.__init__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b30adecb [label="356: __init__()" name="IPython.core.ultratb::TBTools.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d528b7c5 [label="400: set_colors()" name="IPython.core.ultratb::TBTools.set_colors" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_88c137f4 [label="422: stb2text()" name="IPython.core.ultratb::TBTools.stb2text" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_45003c12 [label="435: structured_traceback()" name="IPython.core.ultratb::TBTools.structured_traceback" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_591e8cd2 [label="426: text()" name="IPython.core.ultratb::TBTools.text" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_864a96b0 [label="1091: __call__()" name="IPython.core.ultratb::VerboseTB.__call__" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2f9f7d57 [label="677: __init__()" name="IPython.core.ultratb::VerboseTB.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_a8a8f002 [label="1036: debugger()" name="IPython.core.ultratb::VerboseTB.debugger" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_3f3bb1b4 [label="906: format_exception()" name="IPython.core.ultratb::VerboseTB.format_exception" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6c2283a8 [label="940: format_exception_as_a_whole()" name="IPython.core.ultratb::VerboseTB.format_exception_as_a_whole" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b999327d [label="700: format_records()" name="IPython.core.ultratb::VerboseTB.format_records" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_deb00541 [label="983: get_parts_of_chained_exception()" name="IPython.core.ultratb::VerboseTB.get_parts_of_chained_exception" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1314b17d [label="965: get_records()" name="IPython.core.ultratb::VerboseTB.get_records" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_a819f109 [label="1080: handler()" name="IPython.core.ultratb::VerboseTB.handler" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6877d7f1 [label="875: prepare_chained_exception_message()" name="IPython.core.ultratb::VerboseTB.prepare_chained_exception_message" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7e52411f [label="885: prepare_header()" name="IPython.core.ultratb::VerboseTB.prepare_header" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a516c317 [label="995: structured_traceback()" name="IPython.core.ultratb::VerboseTB.structured_traceback" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_c5879bf2 [label="264: _fixed_getinnerframes()" name="IPython.core.ultratb::_fixed_getinnerframes" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_d21b0f70 [label="301: _format_traceback_lines()" name="IPython.core.ultratb::_format_traceback_lines" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d1407f75 [label="1343: eggs()" name="IPython.core.ultratb::eggs" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e63cb3aa [label="240: fix_frame_records_filenames()" name="IPython.core.ultratb::fix_frame_records_filenames" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2c44421a [label="1340: foo()" name="IPython.core.ultratb::foo" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_31bff0b8 [label="136: inspect_error()" name="IPython.core.ultratb::inspect_error" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8a993eb3 [label="1334: spam()" name="IPython.core.ultratb::spam" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_1a221826 [label="1293: text_repr()" name="IPython.core.ultratb::text_repr" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ec44a8b1 -> node_ced725ac [color="#E69F00" penwidth="2"];
+node_ec44a8b1 -> node_2f9f7d57 [color="#E69F00" penwidth="2"];
+node_ec44a8b1 -> node_8a993eb3 [color="#E69F00" penwidth="2"];
+node_ec44a8b1 -> node_8a993eb3 [color="#E69F00" penwidth="2"];
+node_ec44a8b1 -> node_8a993eb3 [color="#E69F00" penwidth="2"];
+node_02a2e586 -> node_591e8cd2 [color="#D55E00" penwidth="2"];
+node_02a2e586 -> node_a8a8f002 [color="#D55E00" penwidth="2"];
+node_24beb776 -> node_4f369273 [color="#D55E00" penwidth="2"];
+node_ced725ac -> node_eaec6d92 [color="#F0E442" penwidth="2"];
+node_eaec6d92 -> node_2b732783 [color="#56B4E9" penwidth="2"];
+node_eaec6d92 -> node_2f9f7d57 [color="#56B4E9" penwidth="2"];
+node_94ec967d -> node_2b732783 [color="#0072B2" penwidth="2"];
+node_ec5bba1b -> node_2b732783 [color="#009E73" penwidth="2"];
+node_4f369273 -> node_b367ce7b [color="#009E73" penwidth="2"];
+node_4f369273 -> node_b7d31455 [color="#009E73" penwidth="2"];
+node_4f369273 -> node_a516c317 [color="#009E73" penwidth="2"];
+node_6bf16147 -> node_2b732783 [color="#CC79A7" penwidth="2"];
+node_7277ad94 -> node_591e8cd2 [color="#F0E442" penwidth="2"];
+node_999b5086 -> node_b30adecb [color="#D55E00" penwidth="2"];
+node_5711dc8e -> node_032a879f [color="#D55E00" penwidth="2"];
+node_8853f6d5 -> node_b7d31455 [color="#0072B2" penwidth="2"];
+node_f87fec67 -> node_8853f6d5 [color="#CC79A7" penwidth="2"];
+node_b7d31455 -> node_5711dc8e [color="#0072B2" penwidth="2"];
+node_b7d31455 -> node_93d11fcd [color="#0072B2" penwidth="2"];
+node_d0f42d41 -> node_7277ad94 [color="#E69F00" penwidth="2"];
+node_958fcee0 -> node_999b5086 [color="#000000" penwidth="2"];
+node_b30adecb -> node_d528b7c5 [color="#009E73" penwidth="2"];
+node_d528b7c5 -> node_d528b7c5 [color="#0072B2" penwidth="2"];
+node_591e8cd2 -> node_88c137f4 [color="#56B4E9" penwidth="2"];
+node_591e8cd2 -> node_45003c12 [color="#56B4E9" penwidth="2"];
+node_864a96b0 -> node_a8a8f002 [color="#000000" penwidth="2"];
+node_864a96b0 -> node_a819f109 [color="#000000" penwidth="2"];
+node_864a96b0 -> node_a819f109 [color="#000000" penwidth="2"];
+node_2f9f7d57 -> node_b30adecb [color="#CC79A7" penwidth="2"];
+node_3f3bb1b4 -> node_1a221826 [color="#F0E442" penwidth="2"];
+node_6c2283a8 -> node_3f3bb1b4 [color="#000000" penwidth="2"];
+node_6c2283a8 -> node_b999327d [color="#000000" penwidth="2"];
+node_6c2283a8 -> node_1314b17d [color="#000000" penwidth="2"];
+node_6c2283a8 -> node_7e52411f [color="#000000" penwidth="2"];
+node_b999327d -> node_d21b0f70 [color="#0072B2" penwidth="2"];
+node_1314b17d -> node_c5879bf2 [color="#0072B2" penwidth="2"];
+node_1314b17d -> node_31bff0b8 [color="#0072B2" penwidth="2"];
+node_a819f109 -> node_591e8cd2 [color="#E69F00" penwidth="2"];
+node_a516c317 -> node_6c2283a8 [color="#CC79A7" penwidth="2"];
+node_a516c317 -> node_6c2283a8 [color="#CC79A7" penwidth="2"];
+node_a516c317 -> node_deb00541 [color="#CC79A7" penwidth="2"];
+node_a516c317 -> node_deb00541 [color="#CC79A7" penwidth="2"];
+node_a516c317 -> node_6877d7f1 [color="#CC79A7" penwidth="2"];
+node_a516c317 -> node_6877d7f1 [color="#CC79A7" penwidth="2"];
+node_c5879bf2 -> node_e63cb3aa [color="#56B4E9" penwidth="2"];
+node_2c44421a -> node_d1407f75 [color="#56B4E9" penwidth="2"];
+node_8a993eb3 -> node_2c44421a [color="#009E73" penwidth="2"];
+node_1a221826 -> node_1a221826 [color="#D55E00" penwidth="2"];
+node_1a221826 -> node_1a221826 [color="#D55E00" penwidth="2"];
+subgraph cluster_68ad7899 {
+    node_31bff0b8 node_e63cb3aa node_c5879bf2 node_d21b0f70 node_1a221826 node_8a993eb3 node_2c44421a node_d1407f75 node_ec44a8b1;
+    label="File: IPython.core.ultratb";
+    name="IPython.core.ultratb";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_16329003 {
+        node_b30adecb node_d528b7c5 node_88c137f4 node_591e8cd2 node_45003c12;
+        label="Class: TBTools";
+        name="TBTools";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_0370a0d8 {
+        node_999b5086 node_7277ad94 node_b7d31455 node_93d11fcd node_5711dc8e node_8853f6d5 node_f87fec67 node_032a879f;
+        label="Class: ListTB";
+        name="ListTB";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_872a0d59 {
+        node_2f9f7d57 node_b999327d node_6877d7f1 node_7e52411f node_3f3bb1b4 node_6c2283a8 node_1314b17d node_deb00541 node_a516c317 node_a8a8f002 node_a819f109 node_864a96b0;
+        label="Class: VerboseTB";
+        name="VerboseTB";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9b0148ba {
+        node_eaec6d92 node_b367ce7b node_4f369273 node_2b732783 node_ec5bba1b node_94ec967d node_6bf16147;
+        label="Class: FormattedTB";
+        name="FormattedTB";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_b158d808 {
+        node_02a2e586 node_24beb776;
+        label="Class: AutoFormattedTB";
+        name="AutoFormattedTB";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7c95360b {
+        node_ced725ac;
+        label="Class: ColorTB";
+        name="ColorTB";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_5413a449 {
+        node_958fcee0 node_d0f42d41;
+        label="Class: SyntaxTB";
+        name="SyntaxTB";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

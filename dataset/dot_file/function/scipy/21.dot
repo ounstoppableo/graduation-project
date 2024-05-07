@@ -1,0 +1,38 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_1af6a475 [label="91: setUp()" name="test_sparsetools::TestInt32Overflow.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_af2e7b4f [label="261: check_free_memory()" name="test_sparsetools::check_free_memory" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_e6957a9e [label="268: get_mem_info_linux()" name="test_sparsetools::get_mem_info_linux" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_85facc09 [label="244: test_csr_matmat_int64_overflow()" name="test_sparsetools::test_csr_matmat_int64_overflow" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1af6a475 -> node_af2e7b4f [color="#0072B2" penwidth="2"];
+node_af2e7b4f -> node_e6957a9e [color="#CC79A7" penwidth="2"];
+node_85facc09 -> node_af2e7b4f [color="#E69F00" penwidth="2"];
+subgraph cluster_babe5a1f {
+    node_85facc09 node_af2e7b4f node_e6957a9e;
+    label="File: test_sparsetools";
+    name="test_sparsetools";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_6fa5402a {
+        node_1af6a475;
+        label="Class: TestInt32Overflow";
+        name="TestInt32Overflow";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

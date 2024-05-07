@@ -1,0 +1,8 @@
+digraph "classes_49" {
+rankdir=BT
+charset="utf-8"
+"swappable_models.models.AlternateArticle" [color="black", fontcolor="black", label=<{AlternateArticle|byline<br ALIGN="LEFT"/>publication_date<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"swappable_models.models.Article" [color="black", fontcolor="black", label=<{Article|publication_date<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"swappable_models.models.Article.Meta" [color="black", fontcolor="black", label=<{Meta|swappable : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"swappable_models.tests.SwappableModelTests" [color="black", fontcolor="black", label=<{SwappableModelTests|available_apps : list<br ALIGN="LEFT"/>|test_case_insensitive()<br ALIGN="LEFT"/>test_generated_data()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

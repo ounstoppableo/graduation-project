@@ -1,0 +1,38 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_139c2e6f [label="441: test_gauss03()" name="test_ndimage::TestNdimage.test_gauss03" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_80865488 [label="455: test_gauss04()" name="test_ndimage::TestNdimage.test_gauss04" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0f442a71 [label="465: test_gauss05()" name="test_ndimage::TestNdimage.test_gauss05" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a1990190 [label="48: sumsq()" name="test_ndimage::sumsq" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_139c2e6f -> node_a1990190 [color="#CC79A7" penwidth="2"];
+node_80865488 -> node_a1990190 [color="#000000" penwidth="2"];
+node_0f442a71 -> node_a1990190 [color="#E69F00" penwidth="2"];
+subgraph cluster_3c908e04 {
+    node_a1990190;
+    label="File: test_ndimage";
+    name="test_ndimage";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_b608a30d {
+        node_139c2e6f node_80865488 node_0f442a71;
+        label="Class: TestNdimage";
+        name="TestNdimage";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

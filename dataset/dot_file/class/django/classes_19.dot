@@ -1,0 +1,11 @@
+digraph "classes_19" {
+rankdir=BT
+charset="utf-8"
+"expressions.models.Company" [color="black", fontcolor="black", label=<{Company|ceo<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>num_chairs<br ALIGN="LEFT"/>num_employees<br ALIGN="LEFT"/>point_of_contact<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"expressions.models.Employee" [color="black", fontcolor="black", label=<{Employee|firstname<br ALIGN="LEFT"/>lastname<br ALIGN="LEFT"/>salary<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"expressions.models.Experiment" [color="black", fontcolor="black", label=<{Experiment|assigned<br ALIGN="LEFT"/>completed<br ALIGN="LEFT"/>end<br ALIGN="LEFT"/>estimated_time<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>start<br ALIGN="LEFT"/>|duration()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"expressions.models.Experiment.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"expressions.models.Number" [color="black", fontcolor="black", label=<{Number|float<br ALIGN="LEFT"/>integer<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"expressions.models.Time" [color="black", fontcolor="black", label=<{Time|time<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"expressions.models.UUID" [color="black", fontcolor="black", label=<{UUID|uuid<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

@@ -1,0 +1,273 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_9d2dcd88 [label="49: dispatch()" name="generic_views.test_base::DecoratedDispatchView.dispatch" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3ec17cf9 [label="33: post()" name="generic_views.test_base::PostOnlyView.post" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9af1a2de [label="468: test_deprecation_warning_init()" name="generic_views.test_base::RedirectViewDeprecationTest.test_deprecation_warning_init" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3887ba3c [label="453: test_direct_instantiation()" name="generic_views.test_base::RedirectViewTest.test_direct_instantiation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ceeb25ea [label="411: test_redirect_POST()" name="generic_views.test_base::RedirectViewTest.test_redirect_POST" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bbb3bea6 [label="252: _assert_about()" name="generic_views.test_base::TemplateViewTest._assert_about" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_dc3cb4ec [label="257: test_get()" name="generic_views.test_base::TemplateViewTest.test_get" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a27fab53 [label="277: test_get_generic_template()" name="generic_views.test_base::TemplateViewTest.test_get_generic_template" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_26da7cf5 [label="270: test_get_template_attribute()" name="generic_views.test_base::TemplateViewTest.test_get_template_attribute" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_eb146a74 [label="221: _assert_allows()" name="generic_views.test_base::ViewTest._assert_allows" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_fe291594 [label="77: _assert_simple()" name="generic_views.test_base::ViewTest._assert_simple" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f601ead3 [label="237: test_direct_instantiation()" name="generic_views.test_base::ViewTest.test_direct_instantiation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_82f025ba [label="119: test_get_and_head()" name="generic_views.test_base::ViewTest.test_get_and_head" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a7007d12 [label="134: test_get_and_post()" name="generic_views.test_base::ViewTest.test_get_and_post" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_393905b5 [label="109: test_get_only()" name="generic_views.test_base::ViewTest.test_get_only" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f047732c [label="203: test_options_for_get_and_post_view()" name="generic_views.test_base::ViewTest.test_options_for_get_and_post_view" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_85ad3884 [label="194: test_options_for_get_view()" name="generic_views.test_base::ViewTest.test_options_for_get_view" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d873c6f9 [label="212: test_options_for_post_view()" name="generic_views.test_base::ViewTest.test_options_for_post_view" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d8fd5eb9 [label="116: test_date_list_order()" name="generic_views.test_dates::ArchiveIndexViewTests.test_date_list_order" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e365a0d0 [label="75: test_paginated_archive_view()" name="generic_views.test_dates::ArchiveIndexViewTests.test_paginated_archive_view" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c6101ff9 [label="88: test_paginated_archive_view_does_not_load_entire_table()" name="generic_views.test_dates::ArchiveIndexViewTests.test_paginated_archive_view_does_not_load_entire_table" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5bbf2fc6 [label="365: test_date_list_order()" name="generic_views.test_dates::MonthArchiveViewTests.test_date_list_order" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a9dbcc1f [label="238: test_date_list_order()" name="generic_views.test_dates::YearArchiveViewTests.test_date_list_order" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e5e98a62 [label="13: _make_books()" name="generic_views.test_dates::_make_books" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c8339331 [label="88: test_post_data()" name="generic_views.test_edit::BasicFormTests.test_post_data" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aa882354 [label="108: test_create()" name="generic_views.test_edit::CreateViewTests.test_create" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ef9a9d30 [label="123: test_create_invalid()" name="generic_views.test_edit::CreateViewTests.test_create_invalid" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_35b02cdd [label="188: test_create_restricted()" name="generic_views.test_edit::CreateViewTests.test_create_restricted" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_702ae967 [label="147: test_create_with_interpolated_redirect()" name="generic_views.test_edit::CreateViewTests.test_create_with_interpolated_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_008fd60b [label="131: test_create_with_object_url()" name="generic_views.test_edit::CreateViewTests.test_create_with_object_url" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3217b528 [label="139: test_create_with_redirect()" name="generic_views.test_edit::CreateViewTests.test_create_with_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e41e9822 [label="165: test_create_with_special_properties()" name="generic_views.test_edit::CreateViewTests.test_create_with_special_properties" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4b526613 [label="180: test_create_without_redirect()" name="generic_views.test_edit::CreateViewTests.test_create_without_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b0f7ad04 [label="364: test_delete_by_post()" name="generic_views.test_edit::DeleteViewTests.test_delete_by_post" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a7d2ef2b [label="394: test_delete_with_interpolated_redirect()" name="generic_views.test_edit::DeleteViewTests.test_delete_with_interpolated_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6726513a [label="386: test_delete_with_redirect()" name="generic_views.test_edit::DeleteViewTests.test_delete_with_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4aef70e1 [label="406: test_delete_with_special_properties()" name="generic_views.test_edit::DeleteViewTests.test_delete_with_special_properties" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0efb5d35 [label="420: test_delete_without_redirect()" name="generic_views.test_edit::DeleteViewTests.test_delete_without_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_10bc6d9a [label="339: test_update_get_object()" name="generic_views.test_edit::UpdateViewTests.test_update_get_object" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d4de7822 [label="255: test_update_invalid()" name="generic_views.test_edit::UpdateViewTests.test_update_invalid" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_61f739f9 [label="236: test_update_post()" name="generic_views.test_edit::UpdateViewTests.test_update_post" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2108bfa4 [label="287: test_update_with_interpolated_redirect()" name="generic_views.test_edit::UpdateViewTests.test_update_with_interpolated_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8a07a102 [label="267: test_update_with_object_url()" name="generic_views.test_edit::UpdateViewTests.test_update_with_object_url" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1b5802dd [label="275: test_update_with_redirect()" name="generic_views.test_edit::UpdateViewTests.test_update_with_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d55c19a2 [label="309: test_update_with_special_properties()" name="generic_views.test_edit::UpdateViewTests.test_update_with_special_properties" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8b56721f [label="328: test_update_without_redirect()" name="generic_views.test_edit::UpdateViewTests.test_update_without_redirect" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_83bf6fba [label="229: _make_authors()" name="generic_views.test_list::ListViewTests._make_authors" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5f7f329c [label="105: test_paginated_custom_page_kwarg()" name="generic_views.test_list::ListViewTests.test_paginated_custom_page_kwarg" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ceb67fc1 [label="97: test_paginated_custom_paginator_class()" name="generic_views.test_list::ListViewTests.test_paginated_custom_paginator_class" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4fa7687e [label="115: test_paginated_custom_paginator_constructor()" name="generic_views.test_list::ListViewTests.test_paginated_custom_paginator_constructor" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f6bf1fc9 [label="68: test_paginated_get_last_page_by_query_string()" name="generic_views.test_list::ListViewTests.test_paginated_get_last_page_by_query_string" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bbb218f6 [label="58: test_paginated_get_page_by_query_string()" name="generic_views.test_list::ListViewTests.test_paginated_get_page_by_query_string" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_15a430f8 [label="77: test_paginated_get_page_by_urlvar()" name="generic_views.test_list::ListViewTests.test_paginated_get_page_by_urlvar" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_80c42cff [label="92: test_paginated_invalid_page()" name="generic_views.test_list::ListViewTests.test_paginated_invalid_page" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3a82bd37 [label="195: test_paginated_list_view_does_not_load_entire_table()" name="generic_views.test_list::ListViewTests.test_paginated_list_view_does_not_load_entire_table" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_afe8c69f [label="220: test_paginated_list_view_returns_useful_message_on_invalid_page()" name="generic_views.test_list::ListViewTests.test_paginated_list_view_returns_useful_message_on_invalid_page" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_12f7c582 [label="122: test_paginated_orphaned_queryset()" name="generic_views.test_list::ListViewTests.test_paginated_orphaned_queryset" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ec5d0fe0 [label="87: test_paginated_page_out_of_range()" name="generic_views.test_list::ListViewTests.test_paginated_page_out_of_range" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0989c1b3 [label="34: test_paginated_queryset()" name="generic_views.test_list::ListViewTests.test_paginated_queryset" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d9fdc6fa [label="76: get_paginator()" name="generic_views.views::AuthorListCustomPaginator.get_paginator" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_9d2dcd88 -> node_9d2dcd88 [color="#000000" penwidth="2"];
+node_9af1a2de -> node_9d2dcd88 [color="#D55E00" penwidth="2"];
+node_3887ba3c -> node_9d2dcd88 [color="#F0E442" penwidth="2"];
+node_ceeb25ea -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_dc3cb4ec -> node_bbb3bea6 [color="#F0E442" penwidth="2"];
+node_a27fab53 -> node_bbb3bea6 [color="#009E73" penwidth="2"];
+node_26da7cf5 -> node_bbb3bea6 [color="#0072B2" penwidth="2"];
+node_f601ead3 -> node_9d2dcd88 [color="#009E73" penwidth="2"];
+node_82f025ba -> node_fe291594 [color="#56B4E9" penwidth="2"];
+node_a7007d12 -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_a7007d12 -> node_fe291594 [color="#56B4E9" penwidth="2"];
+node_a7007d12 -> node_fe291594 [color="#56B4E9" penwidth="2"];
+node_393905b5 -> node_3ec17cf9 [color="#0072B2" penwidth="2"];
+node_393905b5 -> node_fe291594 [color="#0072B2" penwidth="2"];
+node_f047732c -> node_eb146a74 [color="#F0E442" penwidth="2"];
+node_85ad3884 -> node_eb146a74 [color="#F0E442" penwidth="2"];
+node_d873c6f9 -> node_eb146a74 [color="#E69F00" penwidth="2"];
+node_d8fd5eb9 -> node_e5e98a62 [color="#E69F00" penwidth="2"];
+node_e365a0d0 -> node_e5e98a62 [color="#000000" penwidth="2"];
+node_c6101ff9 -> node_e5e98a62 [color="#E69F00" penwidth="2"];
+node_5bbf2fc6 -> node_e5e98a62 [color="#D55E00" penwidth="2"];
+node_a9dbcc1f -> node_e5e98a62 [color="#CC79A7" penwidth="2"];
+node_c8339331 -> node_3ec17cf9 [color="#E69F00" penwidth="2"];
+node_aa882354 -> node_3ec17cf9 [color="#F0E442" penwidth="2"];
+node_ef9a9d30 -> node_3ec17cf9 [color="#000000" penwidth="2"];
+node_35b02cdd -> node_3ec17cf9 [color="#0072B2" penwidth="2"];
+node_702ae967 -> node_3ec17cf9 [color="#CC79A7" penwidth="2"];
+node_702ae967 -> node_3ec17cf9 [color="#CC79A7" penwidth="2"];
+node_008fd60b -> node_3ec17cf9 [color="#009E73" penwidth="2"];
+node_3217b528 -> node_3ec17cf9 [color="#000000" penwidth="2"];
+node_e41e9822 -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_4b526613 -> node_3ec17cf9 [color="#009E73" penwidth="2"];
+node_b0f7ad04 -> node_3ec17cf9 [color="#F0E442" penwidth="2"];
+node_a7d2ef2b -> node_3ec17cf9 [color="#009E73" penwidth="2"];
+node_a7d2ef2b -> node_3ec17cf9 [color="#009E73" penwidth="2"];
+node_6726513a -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_4aef70e1 -> node_3ec17cf9 [color="#E69F00" penwidth="2"];
+node_0efb5d35 -> node_3ec17cf9 [color="#0072B2" penwidth="2"];
+node_10bc6d9a -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_d4de7822 -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_61f739f9 -> node_3ec17cf9 [color="#E69F00" penwidth="2"];
+node_2108bfa4 -> node_3ec17cf9 [color="#F0E442" penwidth="2"];
+node_2108bfa4 -> node_3ec17cf9 [color="#F0E442" penwidth="2"];
+node_8a07a102 -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_1b5802dd -> node_3ec17cf9 [color="#0072B2" penwidth="2"];
+node_d55c19a2 -> node_3ec17cf9 [color="#56B4E9" penwidth="2"];
+node_8b56721f -> node_3ec17cf9 [color="#CC79A7" penwidth="2"];
+node_5f7f329c -> node_83bf6fba [color="#F0E442" penwidth="2"];
+node_ceb67fc1 -> node_83bf6fba [color="#E69F00" penwidth="2"];
+node_4fa7687e -> node_83bf6fba [color="#D55E00" penwidth="2"];
+node_f6bf1fc9 -> node_83bf6fba [color="#E69F00" penwidth="2"];
+node_bbb218f6 -> node_83bf6fba [color="#D55E00" penwidth="2"];
+node_15a430f8 -> node_83bf6fba [color="#000000" penwidth="2"];
+node_80c42cff -> node_83bf6fba [color="#CC79A7" penwidth="2"];
+node_3a82bd37 -> node_83bf6fba [color="#CC79A7" penwidth="2"];
+node_afe8c69f -> node_83bf6fba [color="#CC79A7" penwidth="2"];
+node_12f7c582 -> node_83bf6fba [color="#56B4E9" penwidth="2"];
+node_ec5d0fe0 -> node_83bf6fba [color="#000000" penwidth="2"];
+node_0989c1b3 -> node_83bf6fba [color="#009E73" penwidth="2"];
+node_d9fdc6fa -> node_d9fdc6fa [color="#56B4E9" penwidth="2"];
+subgraph cluster_0745db07 {
+    label="File: generic_views.test_base";
+    name="generic_views.test_base";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_e11a4e11 {
+        node_3ec17cf9;
+        label="Class: PostOnlyView";
+        name="PostOnlyView";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e06c2140 {
+        node_9d2dcd88;
+        label="Class: DecoratedDispatchView";
+        name="DecoratedDispatchView";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_15886a6a {
+        node_fe291594 node_393905b5 node_82f025ba node_a7007d12 node_85ad3884 node_f047732c node_d873c6f9 node_eb146a74 node_f601ead3;
+        label="Class: ViewTest";
+        name="ViewTest";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_aa124d10 {
+        node_bbb3bea6 node_dc3cb4ec node_26da7cf5 node_a27fab53;
+        label="Class: TemplateViewTest";
+        name="TemplateViewTest";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_cd36f55a {
+        node_ceeb25ea node_3887ba3c;
+        label="Class: RedirectViewTest";
+        name="RedirectViewTest";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a93968f9 {
+        node_9af1a2de;
+        label="Class: RedirectViewDeprecationTest";
+        name="RedirectViewDeprecationTest";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_e1848736 {
+    node_e5e98a62;
+    label="File: generic_views.test_dates";
+    name="generic_views.test_dates";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_bc318c54 {
+        node_e365a0d0 node_c6101ff9 node_d8fd5eb9;
+        label="Class: ArchiveIndexViewTests";
+        name="ArchiveIndexViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_06e622a3 {
+        node_a9dbcc1f;
+        label="Class: YearArchiveViewTests";
+        name="YearArchiveViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_1234365b {
+        node_5bbf2fc6;
+        label="Class: MonthArchiveViewTests";
+        name="MonthArchiveViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_ae33e8a8 {
+    label="File: generic_views.test_edit";
+    name="generic_views.test_edit";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_6e7d681d {
+        node_c8339331;
+        label="Class: BasicFormTests";
+        name="BasicFormTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ae9320f5 {
+        node_aa882354 node_ef9a9d30 node_008fd60b node_3217b528 node_702ae967 node_e41e9822 node_4b526613 node_35b02cdd;
+        label="Class: CreateViewTests";
+        name="CreateViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ba976ff6 {
+        node_61f739f9 node_d4de7822 node_8a07a102 node_1b5802dd node_2108bfa4 node_d55c19a2 node_8b56721f node_10bc6d9a;
+        label="Class: UpdateViewTests";
+        name="UpdateViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_05b9eab1 {
+        node_b0f7ad04 node_6726513a node_a7d2ef2b node_4aef70e1 node_0efb5d35;
+        label="Class: DeleteViewTests";
+        name="DeleteViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_a1cd686f {
+    label="File: generic_views.test_list";
+    name="generic_views.test_list";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d4682f9f {
+        node_0989c1b3 node_bbb218f6 node_f6bf1fc9 node_15a430f8 node_ec5d0fe0 node_80c42cff node_ceb67fc1 node_5f7f329c node_4fa7687e node_12f7c582 node_3a82bd37 node_afe8c69f node_83bf6fba;
+        label="Class: ListViewTests";
+        name="ListViewTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_ff5cf090 {
+    label="File: generic_views.views";
+    name="generic_views.views";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_fcb89580 {
+        node_d9fdc6fa;
+        label="Class: AuthorListCustomPaginator";
+        name="AuthorListCustomPaginator";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

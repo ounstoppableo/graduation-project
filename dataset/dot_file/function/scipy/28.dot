@@ -1,0 +1,39 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_672b940a [label="1073: test_fit()" name="test_distributions::TestFitMethod.test_fit" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c7f4be01 [label="1096: test_fix_fit()" name="test_distributions::TestFitMethod.test_fix_fit" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2bb66ad3 [label="48: _assert_hasattr()" name="test_distributions::_assert_hasattr" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_161f99eb [label="74: test_all_distributions()" name="test_distributions::test_all_distributions" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f9fc030c [label="54: test_api_regression()" name="test_distributions::test_api_regression" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_672b940a -> node_161f99eb [color="#56B4E9" penwidth="2"];
+node_c7f4be01 -> node_161f99eb [color="#E69F00" penwidth="2"];
+node_f9fc030c -> node_2bb66ad3 [color="#F0E442" penwidth="2"];
+subgraph cluster_6b1ef69e {
+    node_2bb66ad3 node_f9fc030c node_161f99eb;
+    label="File: test_distributions";
+    name="test_distributions";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_b59c4e36 {
+        node_672b940a node_c7f4be01;
+        label="Class: TestFitMethod";
+        name="TestFitMethod";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

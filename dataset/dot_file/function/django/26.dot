@@ -1,0 +1,97 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_854d4f95 [label="161: add_item_elements()" name="syndication_tests.feeds::MyCustomAtom1Feed.add_item_elements" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_88d71346 [label="152: add_root_elements()" name="syndication_tests.feeds::MyCustomAtom1Feed.add_root_elements" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_57a06efb [label="156: item_attributes()" name="syndication_tests.feeds::MyCustomAtom1Feed.item_attributes" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6a1fbdba [label="147: root_attributes()" name="syndication_tests.feeds::MyCustomAtom1Feed.root_attributes" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_8bddd613 [label="114: get_context_data()" name="syndication_tests.feeds::TemplateContextFeed.get_context_data" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_858a72a8 [label="46: assertCategories()" name="syndication_tests.tests::FeedTestCase.assertCategories" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_4396577c [label="41: assertChildNodeContent()" name="syndication_tests.tests::FeedTestCase.assertChildNodeContent" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_45837a4e [label="36: assertChildNodes()" name="syndication_tests.tests::FeedTestCase.assertChildNodes" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0d408b54 [label="60: setUpClass()" name="syndication_tests.tests::SyndicationFeedTest.setUpClass" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6458e2c4 [label="212: test_atom_feed()" name="syndication_tests.tests::SyndicationFeedTest.test_atom_feed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7b8481f1 [label="282: test_custom_feed_generator()" name="syndication_tests.tests::SyndicationFeedTest.test_custom_feed_generator" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_87681d23 [label="167: test_rss091_feed()" name="syndication_tests.tests::SyndicationFeedTest.test_rss091_feed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8cb2999b [label="66: test_rss2_feed()" name="syndication_tests.tests::SyndicationFeedTest.test_rss2_feed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9d446f01 [label="419: test_template_context_feed()" name="syndication_tests.tests::SyndicationFeedTest.test_template_context_feed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0f3e5585 [label="402: test_template_feed()" name="syndication_tests.tests::SyndicationFeedTest.test_template_feed" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_854d4f95 -> node_854d4f95 [color="#0072B2" penwidth="2"];
+node_88d71346 -> node_88d71346 [color="#D55E00" penwidth="2"];
+node_57a06efb -> node_57a06efb [color="#009E73" penwidth="2"];
+node_6a1fbdba -> node_6a1fbdba [color="#56B4E9" penwidth="2"];
+node_8bddd613 -> node_8bddd613 [color="#009E73" penwidth="2"];
+node_0d408b54 -> node_0d408b54 [color="#F0E442" penwidth="2"];
+node_6458e2c4 -> node_45837a4e [color="#F0E442" penwidth="2"];
+node_6458e2c4 -> node_45837a4e [color="#F0E442" penwidth="2"];
+node_7b8481f1 -> node_45837a4e [color="#E69F00" penwidth="2"];
+node_7b8481f1 -> node_45837a4e [color="#E69F00" penwidth="2"];
+node_87681d23 -> node_858a72a8 [color="#009E73" penwidth="2"];
+node_87681d23 -> node_858a72a8 [color="#009E73" penwidth="2"];
+node_87681d23 -> node_4396577c [color="#009E73" penwidth="2"];
+node_87681d23 -> node_4396577c [color="#009E73" penwidth="2"];
+node_87681d23 -> node_45837a4e [color="#009E73" penwidth="2"];
+node_87681d23 -> node_45837a4e [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_858a72a8 [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_858a72a8 [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_4396577c [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_4396577c [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_4396577c [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_45837a4e [color="#009E73" penwidth="2"];
+node_8cb2999b -> node_45837a4e [color="#009E73" penwidth="2"];
+node_9d446f01 -> node_4396577c [color="#E69F00" penwidth="2"];
+node_0f3e5585 -> node_4396577c [color="#0072B2" penwidth="2"];
+subgraph cluster_06959e82 {
+    label="File: syndication_tests.feeds";
+    name="syndication_tests.feeds";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d9b8714c {
+        node_8bddd613;
+        label="Class: TemplateContextFeed";
+        name="TemplateContextFeed";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_66990f43 {
+        node_6a1fbdba node_88d71346 node_57a06efb node_854d4f95;
+        label="Class: MyCustomAtom1Feed";
+        name="MyCustomAtom1Feed";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_32b07182 {
+    label="File: syndication_tests.tests";
+    name="syndication_tests.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_f99ea0ac {
+        node_45837a4e node_4396577c node_858a72a8;
+        label="Class: FeedTestCase";
+        name="FeedTestCase";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_60db24e1 {
+        node_0d408b54 node_8cb2999b node_87681d23 node_6458e2c4 node_7b8481f1 node_0f3e5585 node_9d446f01;
+        label="Class: SyndicationFeedTest";
+        name="SyndicationFeedTest";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

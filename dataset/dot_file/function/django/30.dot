@@ -1,0 +1,304 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_9c7f9caf [label="54: check_files()" name="utils_tests.test_archive::ArchiveTester.check_files" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_495e6d7a [label="41: test_extract_function()" name="utils_tests.test_archive::ArchiveTester.test_extract_function" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_88832804 [label="49: test_extract_function_no_to_path()" name="utils_tests.test_archive::ArchiveTester.test_extract_function_no_to_path" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9238608e [label="45: test_extract_function_with_leadpath()" name="utils_tests.test_archive::ArchiveTester.test_extract_function_with_leadpath" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6ff45ecd [label="30: test_extract_method()" name="utils_tests.test_archive::ArchiveTester.test_extract_method" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_160c526c [label="35: test_extract_method_no_to_path()" name="utils_tests.test_archive::ArchiveTester.test_extract_method_no_to_path" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8eeb7f4f [label="9: check_output()" name="utils_tests.test_checksums::TestUtilsChecksums.check_output" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cd7071df [label="19: test_luhn()" name="utils_tests.test_checksums::TestUtilsChecksums.test_luhn" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_77648ca7 [label="54: test_process_view_middleware()" name="utils_tests.test_decorators::DecoratorFromMiddlewareTests.test_process_view_middleware" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bb042eee [label="16: process_view()" name="utils_tests.test_decorators::process_view" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_45038a53 [label="16: check_output()" name="utils_tests.test_html::TestUtilsHtml.check_output" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_97a4cb02 [label="25: test_escape()" name="utils_tests.test_html::TestUtilsHtml.test_escape" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a3e15ed7 [label="145: test_escapejs()" name="utils_tests.test_html::TestUtilsHtml.test_escapejs" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2783e976 [label="188: test_html_safe()" name="utils_tests.test_html::TestUtilsHtml.test_html_safe" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_454f1d14 [label="203: test_html_safe_subclass()" name="utils_tests.test_html::TestUtilsHtml.test_html_safe_subclass" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_490d9d43 [label="55: test_linebreaks()" name="utils_tests.test_html::TestUtilsHtml.test_linebreaks" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2d15e56a [label="127: test_strip_entities()" name="utils_tests.test_html::TestUtilsHtml.test_strip_entities" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ebf221ab [label="111: test_strip_spaces_between_tags()" name="utils_tests.test_html::TestUtilsHtml.test_strip_spaces_between_tags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_24cebb07 [label="66: test_strip_tags()" name="utils_tests.test_html::TestUtilsHtml.test_strip_tags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_eaf9778d [label="0: (global)()" name="utils_tests.test_jslex::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8f38d8bf [label="214: make_function()" name="utils_tests.test_jslex::make_function" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a6ff9043 [label="23: lazy_wrap()" name="utils_tests.test_lazyobject::LazyObjectTestCase.lazy_wrap" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_abe51628 [label="77: test_bool()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_bool" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7aa0cbb4 [label="69: test_bytes()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_bytes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8758d875 [label="93: test_class()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_class" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_70673458 [label="60: test_cmp()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_cmp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_16961dac [label="108: test_contains()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_contains" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2830c49e [label="183: test_deepcopy()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_deepcopy" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_44ae0e10 [label="196: test_deepcopy_no_evaluation()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_deepcopy_no_evaluation" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cb75d525 [label="52: test_delattr()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_delattr" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f4f9b6ef [label="152: test_delitem()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_delitem" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a6d6f800 [label="84: test_dir()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_dir" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2ef7c22c [label="33: test_getattr()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_getattr" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_df527901 [label="123: test_getitem()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_getitem" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_686837f7 [label="101: test_hash()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_hash" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_301ff626 [label="167: test_iter()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_iter" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c1cf63ac [label="88: test_len()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_len" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_89913829 [label="174: test_pickle()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_pickle" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_968fb004 [label="37: test_setattr()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_setattr" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8b8869c7 [label="44: test_setattr2()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_setattr2" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b0b5bbd5 [label="139: test_setitem()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_setitem" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_193780ac [label="73: test_text()" name="utils_tests.test_lazyobject::LazyObjectTestCase.test_text" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9428b73e [label="213: lazy_wrap()" name="utils_tests.test_lazyobject::SimpleLazyObjectTestCase.lazy_wrap" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1105a667 [label="216: test_repr()" name="utils_tests.test_lazyobject::SimpleLazyObjectTestCase.test_repr" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8361bd11 [label="228: test_trace()" name="utils_tests.test_lazyobject::SimpleLazyObjectTestCase.test_trace" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_03f08478 [label="21: setUp()" name="utils_tests.test_module_loading::DefaultLoader.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d612a712 [label="210: __init__()" name="utils_tests.test_module_loading::ProxyFinder.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2259691b [label="242: find_module()" name="utils_tests.test_module_loading::TestFinder.find_module" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_db4828ff [label="250: __init__()" name="utils_tests.test_module_loading::TestLoader.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b56196f6 [label="253: load_module()" name="utils_tests.test_module_loading::TestLoader.load_module" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_7179cbba [label="24: assertRenderEqual()" name="utils_tests.test_safestring::SafeStringTest.assertRenderEqual" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c19adf0b [label="96: test_add_lazy_safe_text_and_safe_text()" name="utils_tests.test_safestring::SafeStringTest.test_add_lazy_safe_text_and_safe_text" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c8e68d1a [label="66: test_mark_for_escaping()" name="utils_tests.test_safestring::SafeStringTest.test_mark_for_escaping" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9c9e29a7 [label="79: test_mark_for_escaping_lazy()" name="utils_tests.test_safestring::SafeStringTest.test_mark_for_escaping_lazy" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_83371360 [label="71: test_mark_for_escaping_object_implementing_dunder_html()" name="utils_tests.test_safestring::SafeStringTest.test_mark_for_escaping_object_implementing_dunder_html" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_387e471a [label="87: test_mark_for_escaping_object_implementing_dunder_str()" name="utils_tests.test_safestring::SafeStringTest.test_mark_for_escaping_object_implementing_dunder_str" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d8122cf6 [label="29: test_mark_safe()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4ad14161 [label="43: test_mark_safe_lazy()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe_lazy" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_70e039ef [label="63: test_mark_safe_lazy_result_implements_dunder_html()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe_lazy_result_implements_dunder_html" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_129efd23 [label="35: test_mark_safe_object_implementing_dunder_html()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe_object_implementing_dunder_html" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_529aba6c [label="51: test_mark_safe_object_implementing_dunder_str()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe_object_implementing_dunder_str" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dbd303ee [label="60: test_mark_safe_result_implements_dunder_html()" name="utils_tests.test_safestring::SafeStringTest.test_mark_safe_result_implements_dunder_html" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5ceff1cf [label="17: __html__()" name="utils_tests.test_safestring::customescape.__html__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_425f2e93 [label="22: setUpClass()" name="utils_tests.test_tzinfo::TzinfoTests.setUpClass" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_97ba38dc [label="36: tearDownClass()" name="utils_tests.test_tzinfo::TzinfoTests.tearDownClass" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_495e6d7a -> node_9c7f9caf [color="#56B4E9" penwidth="2"];
+node_88832804 -> node_9c7f9caf [color="#F0E442" penwidth="2"];
+node_9238608e -> node_9c7f9caf [color="#D55E00" penwidth="2"];
+node_6ff45ecd -> node_9c7f9caf [color="#0072B2" penwidth="2"];
+node_160c526c -> node_9c7f9caf [color="#F0E442" penwidth="2"];
+node_cd7071df -> node_8eeb7f4f [color="#CC79A7" penwidth="2"];
+node_77648ca7 -> node_bb042eee [color="#CC79A7" penwidth="2"];
+node_97a4cb02 -> node_45038a53 [color="#56B4E9" penwidth="2"];
+node_97a4cb02 -> node_45038a53 [color="#56B4E9" penwidth="2"];
+node_97a4cb02 -> node_45038a53 [color="#56B4E9" penwidth="2"];
+node_a3e15ed7 -> node_45038a53 [color="#CC79A7" penwidth="2"];
+node_2783e976 -> node_5ceff1cf [color="#D55E00" penwidth="2"];
+node_454f1d14 -> node_5ceff1cf [color="#F0E442" penwidth="2"];
+node_490d9d43 -> node_45038a53 [color="#009E73" penwidth="2"];
+node_2d15e56a -> node_45038a53 [color="#56B4E9" penwidth="2"];
+node_2d15e56a -> node_45038a53 [color="#56B4E9" penwidth="2"];
+node_ebf221ab -> node_45038a53 [color="#009E73" penwidth="2"];
+node_ebf221ab -> node_45038a53 [color="#009E73" penwidth="2"];
+node_24cebb07 -> node_45038a53 [color="#CC79A7" penwidth="2"];
+node_eaf9778d -> node_8f38d8bf [color="#0072B2" penwidth="2"];
+node_eaf9778d -> node_8f38d8bf [color="#0072B2" penwidth="2"];
+node_abe51628 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_7aa0cbb4 -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_8758d875 -> node_a6ff9043 [color="#0072B2" penwidth="2"];
+node_8758d875 -> node_a6ff9043 [color="#0072B2" penwidth="2"];
+node_70673458 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_70673458 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_70673458 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_16961dac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_16961dac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_16961dac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_16961dac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_2830c49e -> node_a6ff9043 [color="#D55E00" penwidth="2"];
+node_44ae0e10 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_cb75d525 -> node_a6ff9043 [color="#0072B2" penwidth="2"];
+node_f4f9b6ef -> node_a6ff9043 [color="#CC79A7" penwidth="2"];
+node_f4f9b6ef -> node_a6ff9043 [color="#CC79A7" penwidth="2"];
+node_a6d6f800 -> node_a6ff9043 [color="#000000" penwidth="2"];
+node_2ef7c22c -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_df527901 -> node_a6ff9043 [color="#E69F00" penwidth="2"];
+node_df527901 -> node_a6ff9043 [color="#E69F00" penwidth="2"];
+node_686837f7 -> node_a6ff9043 [color="#CC79A7" penwidth="2"];
+node_301ff626 -> node_a6ff9043 [color="#D55E00" penwidth="2"];
+node_c1cf63ac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_89913829 -> node_a6ff9043 [color="#E69F00" penwidth="2"];
+node_968fb004 -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_8b8869c7 -> node_a6ff9043 [color="#CC79A7" penwidth="2"];
+node_b0b5bbd5 -> node_a6ff9043 [color="#0072B2" penwidth="2"];
+node_b0b5bbd5 -> node_a6ff9043 [color="#0072B2" penwidth="2"];
+node_193780ac -> node_a6ff9043 [color="#F0E442" penwidth="2"];
+node_1105a667 -> node_9428b73e [color="#CC79A7" penwidth="2"];
+node_8361bd11 -> node_9428b73e [color="#E69F00" penwidth="2"];
+node_03f08478 -> node_d612a712 [color="#000000" penwidth="2"];
+node_2259691b -> node_2259691b [color="#009E73" penwidth="2"];
+node_2259691b -> node_db4828ff [color="#009E73" penwidth="2"];
+node_b56196f6 -> node_b56196f6 [color="#D55E00" penwidth="2"];
+node_c19adf0b -> node_7179cbba [color="#009E73" penwidth="2"];
+node_c19adf0b -> node_7179cbba [color="#009E73" penwidth="2"];
+node_c19adf0b -> node_7179cbba [color="#009E73" penwidth="2"];
+node_c8e68d1a -> node_7179cbba [color="#56B4E9" penwidth="2"];
+node_c8e68d1a -> node_7179cbba [color="#56B4E9" penwidth="2"];
+node_9c9e29a7 -> node_7179cbba [color="#CC79A7" penwidth="2"];
+node_83371360 -> node_7179cbba [color="#000000" penwidth="2"];
+node_83371360 -> node_7179cbba [color="#000000" penwidth="2"];
+node_387e471a -> node_7179cbba [color="#56B4E9" penwidth="2"];
+node_d8122cf6 -> node_7179cbba [color="#D55E00" penwidth="2"];
+node_d8122cf6 -> node_7179cbba [color="#D55E00" penwidth="2"];
+node_4ad14161 -> node_7179cbba [color="#E69F00" penwidth="2"];
+node_70e039ef -> node_5ceff1cf [color="#CC79A7" penwidth="2"];
+node_129efd23 -> node_7179cbba [color="#009E73" penwidth="2"];
+node_129efd23 -> node_7179cbba [color="#009E73" penwidth="2"];
+node_529aba6c -> node_7179cbba [color="#F0E442" penwidth="2"];
+node_dbd303ee -> node_5ceff1cf [color="#D55E00" penwidth="2"];
+node_425f2e93 -> node_425f2e93 [color="#009E73" penwidth="2"];
+node_97ba38dc -> node_97ba38dc [color="#F0E442" penwidth="2"];
+subgraph cluster_553a3e4a {
+    label="File: utils_tests.test_archive";
+    name="utils_tests.test_archive";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d91bdc6d {
+        node_6ff45ecd node_160c526c node_495e6d7a node_9238608e node_88832804 node_9c7f9caf;
+        label="Class: ArchiveTester";
+        name="ArchiveTester";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_f0a45b63 {
+    label="File: utils_tests.test_checksums";
+    name="utils_tests.test_checksums";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_5fd3da52 {
+        node_8eeb7f4f node_cd7071df;
+        label="Class: TestUtilsChecksums";
+        name="TestUtilsChecksums";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_a3481953 {
+    node_bb042eee;
+    label="File: utils_tests.test_decorators";
+    name="utils_tests.test_decorators";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_0382e701 {
+        node_77648ca7;
+        label="Class: DecoratorFromMiddlewareTests";
+        name="DecoratorFromMiddlewareTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_25daae11 {
+    label="File: utils_tests.test_html";
+    name="utils_tests.test_html";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_60b02e19 {
+        node_45038a53 node_97a4cb02 node_490d9d43 node_24cebb07 node_ebf221ab node_2d15e56a node_a3e15ed7 node_2783e976 node_454f1d14;
+        label="Class: TestUtilsHtml";
+        name="TestUtilsHtml";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_bd4f6a39 {
+    node_8f38d8bf node_eaf9778d;
+    label="File: utils_tests.test_jslex";
+    name="utils_tests.test_jslex";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_c7fc8e15 {
+    label="File: utils_tests.test_lazyobject";
+    name="utils_tests.test_lazyobject";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_e25d29e9 {
+        node_a6ff9043 node_2ef7c22c node_968fb004 node_8b8869c7 node_cb75d525 node_70673458 node_7aa0cbb4 node_193780ac node_abe51628 node_a6d6f800 node_c1cf63ac node_8758d875 node_686837f7 node_16961dac node_df527901 node_b0b5bbd5 node_f4f9b6ef node_301ff626 node_89913829 node_2830c49e node_44ae0e10;
+        label="Class: LazyObjectTestCase";
+        name="LazyObjectTestCase";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_00a5d6dd {
+        node_9428b73e node_1105a667 node_8361bd11;
+        label="Class: SimpleLazyObjectTestCase";
+        name="SimpleLazyObjectTestCase";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_cee093ba {
+    label="File: utils_tests.test_module_loading";
+    name="utils_tests.test_module_loading";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_824d039a {
+        node_03f08478;
+        label="Class: DefaultLoader";
+        name="DefaultLoader";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_da53b68b {
+        node_d612a712;
+        label="Class: ProxyFinder";
+        name="ProxyFinder";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_87d79ec3 {
+        node_2259691b;
+        label="Class: TestFinder";
+        name="TestFinder";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7c2d6d20 {
+        node_db4828ff node_b56196f6;
+        label="Class: TestLoader";
+        name="TestLoader";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_cd163e0a {
+    label="File: utils_tests.test_safestring";
+    name="utils_tests.test_safestring";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_ce2ab14d {
+        node_5ceff1cf;
+        label="Class: customescape";
+        name="customescape";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_de70a580 {
+        node_7179cbba node_d8122cf6 node_129efd23 node_4ad14161 node_529aba6c node_dbd303ee node_70e039ef node_c8e68d1a node_83371360 node_9c9e29a7 node_387e471a node_c19adf0b;
+        label="Class: SafeStringTest";
+        name="SafeStringTest";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_79bb649f {
+    label="File: utils_tests.test_tzinfo";
+    name="utils_tests.test_tzinfo";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d54105ce {
+        node_425f2e93 node_97ba38dc;
+        label="Class: TzinfoTests";
+        name="TzinfoTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

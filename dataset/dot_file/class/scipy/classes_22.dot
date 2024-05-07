@@ -1,0 +1,5 @@
+digraph "classes_22" {
+rankdir=BT
+charset="utf-8"
+"authors.Cmd" [color="black", fontcolor="black", label=<{Cmd|executable : NoneType<br ALIGN="LEFT"/>|pipe(command)<br ALIGN="LEFT"/>read(command)<br ALIGN="LEFT"/>readlines(command)<br ALIGN="LEFT"/>test(command)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

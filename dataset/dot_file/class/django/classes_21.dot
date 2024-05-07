@@ -1,0 +1,22 @@
+digraph "classes_21" {
+rankdir=BT
+charset="utf-8"
+"fixtures.models.Article" [color="black", fontcolor="black", label=<{Article|headline<br ALIGN="LEFT"/>pub_date<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Blog" [color="black", fontcolor="black", label=<{Blog|articles<br ALIGN="LEFT"/>featured<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Book" [color="black", fontcolor="black", label=<{Book|authors<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Category" [color="black", fontcolor="black", label=<{Category|description<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Category.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Article.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Person.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Book.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Person" [color="black", fontcolor="black", label=<{Person|name<br ALIGN="LEFT"/>objects<br ALIGN="LEFT"/>|natural_key()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"fixtures.models.PersonManager" [color="black", fontcolor="black", label=<{PersonManager|<br ALIGN="LEFT"/>|get_by_natural_key(name)<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"fixtures.models.Spy" [color="black", fontcolor="black", label=<{Spy|cover_blown<br ALIGN="LEFT"/>objects<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.SpyManager" [color="black", fontcolor="black", label=<{SpyManager|<br ALIGN="LEFT"/>|get_queryset()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"fixtures.models.Tag" [color="black", fontcolor="black", label=<{Tag|name<br ALIGN="LEFT"/>tagged<br ALIGN="LEFT"/>tagged_id<br ALIGN="LEFT"/>tagged_type<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Visa" [color="black", fontcolor="black", label=<{Visa|permissions<br ALIGN="LEFT"/>person<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"fixtures.models.Spy" -> "fixtures.models.Person" [arrowhead="empty", arrowtail="none"];
+"fixtures.models.SpyManager" -> "fixtures.models.PersonManager" [arrowhead="empty", arrowtail="none"];
+"fixtures.models.PersonManager" -> "fixtures.models.Person" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="objects", style="solid"];
+"fixtures.models.SpyManager" -> "fixtures.models.Spy" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="objects", style="solid"];
+}

@@ -1,0 +1,73 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_6cbf37a3 [label="58: save()" name="admin_inlines.models::NonAutoPKBook.save" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_c832fa99 [label="31: setUp()" name="admin_inlines.tests::TestInline.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1fa09ae7 [label="380: test_all_inline_media()" name="admin_inlines.tests::TestInlineMedia.test_all_inline_media" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_14af2ab8 [label="364: test_inline_media_only_base()" name="admin_inlines.tests::TestInlineMedia.test_inline_media_only_base" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5c854626 [label="372: test_inline_media_only_inline()" name="admin_inlines.tests::TestInlineMedia.test_inline_media_only_inline" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_66f6b568 [label="473: setUp()" name="admin_inlines.tests::TestInlinePermissions.setUp" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6cbf37a3 -> node_6cbf37a3 [color="#009E73" penwidth="2"];
+node_c832fa99 -> node_6cbf37a3 [color="#E69F00" penwidth="2"];
+node_c832fa99 -> node_6cbf37a3 [color="#E69F00" penwidth="2"];
+node_1fa09ae7 -> node_6cbf37a3 [color="#CC79A7" penwidth="2"];
+node_1fa09ae7 -> node_6cbf37a3 [color="#CC79A7" penwidth="2"];
+node_14af2ab8 -> node_6cbf37a3 [color="#000000" penwidth="2"];
+node_14af2ab8 -> node_6cbf37a3 [color="#000000" penwidth="2"];
+node_5c854626 -> node_6cbf37a3 [color="#D55E00" penwidth="2"];
+node_5c854626 -> node_6cbf37a3 [color="#D55E00" penwidth="2"];
+node_66f6b568 -> node_6cbf37a3 [color="#000000" penwidth="2"];
+subgraph cluster_0b1d3c38 {
+    label="File: admin_inlines.models";
+    name="admin_inlines.models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_a9fea7bb {
+        node_6cbf37a3;
+        label="Class: NonAutoPKBook";
+        name="NonAutoPKBook";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_56012234 {
+    label="File: admin_inlines.tests";
+    name="admin_inlines.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_45ae841a {
+        node_c832fa99;
+        label="Class: TestInline";
+        name="TestInline";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7bfa5c23 {
+        node_14af2ab8 node_5c854626 node_1fa09ae7;
+        label="Class: TestInlineMedia";
+        name="TestInlineMedia";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_2ce7af29 {
+        node_66f6b568;
+        label="Class: TestInlinePermissions";
+        name="TestInlinePermissions";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

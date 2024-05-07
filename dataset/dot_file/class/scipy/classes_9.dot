@@ -1,0 +1,19 @@
+digraph "classes_9" {
+rankdir=BT
+charset="utf-8"
+"test_special_matrices.TestBlockDiag" [color="black", fontcolor="black", label=<{TestBlockDiag|<br ALIGN="LEFT"/>|test_bad_arg()<br ALIGN="LEFT"/>test_basic()<br ALIGN="LEFT"/>test_dtype()<br ALIGN="LEFT"/>test_empty_matrix_arg()<br ALIGN="LEFT"/>test_no_args()<br ALIGN="LEFT"/>test_scalar_and_1d_args()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestCirculant" [color="black", fontcolor="black", label=<{TestCirculant|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestCompanion" [color="black", fontcolor="black", label=<{TestCompanion|<br ALIGN="LEFT"/>|test_bad_shapes()<br ALIGN="LEFT"/>test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestHadamard" [color="black", fontcolor="black", label=<{TestHadamard|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestHankel" [color="black", fontcolor="black", label=<{TestHankel|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestHelmert" [color="black", fontcolor="black", label=<{TestHelmert|<br ALIGN="LEFT"/>|test_orthogonality()<br ALIGN="LEFT"/>test_subspace()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestHilbert" [color="black", fontcolor="black", label=<{TestHilbert|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestInvHilbert" [color="black", fontcolor="black", label=<{TestInvHilbert|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>test_inverse()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestKron" [color="black", fontcolor="black", label=<{TestKron|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestLeslie" [color="black", fontcolor="black", label=<{TestLeslie|<br ALIGN="LEFT"/>|test_bad_shapes()<br ALIGN="LEFT"/>test_basic()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestPascal" [color="black", fontcolor="black", label=<{TestPascal|cases : list<br ALIGN="LEFT"/>|check_case(n, sym, low)<br ALIGN="LEFT"/>test_big()<br ALIGN="LEFT"/>test_cases()<br ALIGN="LEFT"/>test_threshold()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestToeplitz" [color="black", fontcolor="black", label=<{TestToeplitz|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>test_complex_01()<br ALIGN="LEFT"/>test_scalar_00()<br ALIGN="LEFT"/>test_scalar_01()<br ALIGN="LEFT"/>test_scalar_02()<br ALIGN="LEFT"/>test_scalar_03()<br ALIGN="LEFT"/>test_scalar_04()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestTri" [color="black", fontcolor="black", label=<{TestTri|<br ALIGN="LEFT"/>|test_2d()<br ALIGN="LEFT"/>test_basic()<br ALIGN="LEFT"/>test_diag()<br ALIGN="LEFT"/>test_diag2d()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestTril" [color="black", fontcolor="black", label=<{TestTril|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>test_diag()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_special_matrices.TestTriu" [color="black", fontcolor="black", label=<{TestTriu|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>test_diag()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

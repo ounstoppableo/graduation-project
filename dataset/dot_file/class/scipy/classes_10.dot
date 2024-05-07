@@ -1,0 +1,9 @@
+digraph "classes_10" {
+rankdir=BT
+charset="utf-8"
+"test_nonlin.TestJacobianDotSolve" [color="black", fontcolor="black", label=<{TestJacobianDotSolve|A<br ALIGN="LEFT"/>|test_anderson()<br ALIGN="LEFT"/>test_broyden1()<br ALIGN="LEFT"/>test_broyden2()<br ALIGN="LEFT"/>test_diagbroyden()<br ALIGN="LEFT"/>test_excitingmixing()<br ALIGN="LEFT"/>test_krylov()<br ALIGN="LEFT"/>test_linearmixing()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_nonlin.TestLinear" [color="black", fontcolor="black", label=<{TestLinear|<br ALIGN="LEFT"/>|test_anderson()<br ALIGN="LEFT"/>test_broyden1()<br ALIGN="LEFT"/>test_broyden2()<br ALIGN="LEFT"/>test_krylov()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_nonlin.TestNonlin" [color="black", fontcolor="black", label=<{TestNonlin|<br ALIGN="LEFT"/>|test_problem_nonlin()<br ALIGN="LEFT"/>test_problem_root()<br ALIGN="LEFT"/>test_tol_norm_called()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_nonlin.TestNonlinOldTests" [color="black", fontcolor="black", label=<{TestNonlinOldTests|<br ALIGN="LEFT"/>|test_anderson()<br ALIGN="LEFT"/>test_broyden1()<br ALIGN="LEFT"/>test_broyden2()<br ALIGN="LEFT"/>test_diagbroyden()<br ALIGN="LEFT"/>test_exciting()<br ALIGN="LEFT"/>test_linearmixing()<br ALIGN="LEFT"/>test_root_anderson()<br ALIGN="LEFT"/>test_root_broyden1()<br ALIGN="LEFT"/>test_root_broyden2()<br ALIGN="LEFT"/>test_root_diagbroyden()<br ALIGN="LEFT"/>test_root_excitingmixing()<br ALIGN="LEFT"/>test_root_linearmixing()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_nonlin.TestSecant" [color="black", fontcolor="black", label=<{TestSecant|fs<br ALIGN="LEFT"/>xs : list<br ALIGN="LEFT"/>|test_anderson()<br ALIGN="LEFT"/>test_broyden1()<br ALIGN="LEFT"/>test_broyden1_update()<br ALIGN="LEFT"/>test_broyden2()<br ALIGN="LEFT"/>test_broyden2_update()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

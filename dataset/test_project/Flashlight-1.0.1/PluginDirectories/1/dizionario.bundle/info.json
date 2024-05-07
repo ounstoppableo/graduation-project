@@ -1,0 +1,7 @@
+{
+	"name": "dizionario",
+	"displayName": "Dizionario",
+	"examples": ["sinonimi casa", "significato televisione", "d computer"],
+	"categories": ["Search", "Language"],
+  "preferred_locales": ["it"]
+}

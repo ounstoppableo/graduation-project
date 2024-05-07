@@ -1,0 +1,36 @@
+digraph "classes_3" {
+rankdir=BT
+charset="utf-8"
+"test_basic.FakeArray" [color="black", fontcolor="black", label=<{FakeArray|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_basic.FakeArray2" [color="black", fontcolor="black", label=<{FakeArray2|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_basic.TestDoubleFFT" [color="black", fontcolor="black", label=<{TestDoubleFFT|cdt : complex128<br ALIGN="LEFT"/>rdt : float64<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestDoubleIFFT" [color="black", fontcolor="black", label=<{TestDoubleIFFT|cdt : complex128<br ALIGN="LEFT"/>rdt : float64<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestFftn" [color="black", fontcolor="black", label=<{TestFftn|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_axes_argument()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_shape_argument()<br ALIGN="LEFT"/>test_shape_argument_more()<br ALIGN="LEFT"/>test_shape_axes_argument()<br ALIGN="LEFT"/>test_shape_axes_argument2()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestFftnSingle" [color="black", fontcolor="black", label=<{TestFftnSingle|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_size_accuracy()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestIRFFTDouble" [color="black", fontcolor="black", label=<{TestIRFFTDouble|cdt : complex128<br ALIGN="LEFT"/>ndec : int<br ALIGN="LEFT"/>rdt : float64<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestIRFFTSingle" [color="black", fontcolor="black", label=<{TestIRFFTSingle|cdt : complex64<br ALIGN="LEFT"/>ndec : int<br ALIGN="LEFT"/>rdt : float32<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestIfftnDouble" [color="black", fontcolor="black", label=<{TestIfftnDouble|cdtype : complex128<br ALIGN="LEFT"/>dtype : float64<br ALIGN="LEFT"/>maxnlp : int<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_basic.TestIfftnSingle" [color="black", fontcolor="black", label=<{TestIfftnSingle|cdtype : complex64<br ALIGN="LEFT"/>dtype : float32<br ALIGN="LEFT"/>maxnlp : int<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"test_basic.TestLongDoubleFailure" [color="black", fontcolor="black", label=<{TestLongDoubleFailure|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_complex()<br ALIGN="LEFT"/>test_real()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestOverwrite" [color="black", fontcolor="black", label=<{TestOverwrite|dtypes : list<br ALIGN="LEFT"/>real_dtypes : list<br ALIGN="LEFT"/>|test_fft()<br ALIGN="LEFT"/>test_fftn()<br ALIGN="LEFT"/>test_ifft()<br ALIGN="LEFT"/>test_ifftn()<br ALIGN="LEFT"/>test_irfft()<br ALIGN="LEFT"/>test_rfft()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestRFFTDouble" [color="black", fontcolor="black", label=<{TestRFFTDouble|cdt : complex128<br ALIGN="LEFT"/>rdt : float64<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestRFFTSingle" [color="black", fontcolor="black", label=<{TestRFFTSingle|cdt : complex64<br ALIGN="LEFT"/>rdt : float32<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestSingleFFT" [color="black", fontcolor="black", label=<{TestSingleFFT|cdt : complex64<br ALIGN="LEFT"/>rdt : float32<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/><I>test_notice</I>()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestSingleIFFT" [color="black", fontcolor="black", label=<{TestSingleIFFT|cdt : complex64<br ALIGN="LEFT"/>rdt : float32<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.Testfft2" [color="black", fontcolor="black", label=<{Testfft2|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_regression_244()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic._TestFFTBase" [color="black", fontcolor="black", label=<{_TestFFTBase|cdt : NoneType<br ALIGN="LEFT"/>rdt : NoneType<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test__is_safe_size()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_djbfft()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_n_argument_real()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic._TestIFFTBase" [color="black", fontcolor="black", label=<{_TestIFFTBase|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_definition_real()<br ALIGN="LEFT"/>test_djbfft()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_random_complex()<br ALIGN="LEFT"/>test_random_real()<br ALIGN="LEFT"/>test_size_accuracy()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic._TestIRFFTBase" [color="black", fontcolor="black", label=<{_TestIRFFTBase|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_djbfft()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_random_real()<br ALIGN="LEFT"/>test_size_accuracy()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic._TestIfftn" [color="black", fontcolor="black", label=<{_TestIfftn|cdtype : NoneType<br ALIGN="LEFT"/>dtype : NoneType<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>test_random_complex()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic._TestRFFTBase" [color="black", fontcolor="black", label=<{_TestRFFTBase|<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_definition()<br ALIGN="LEFT"/>test_djbfft()<br ALIGN="LEFT"/>test_invalid_sizes()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"test_basic.TestDoubleFFT" -> "test_basic._TestFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestDoubleIFFT" -> "test_basic._TestIFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestIRFFTDouble" -> "test_basic._TestIRFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestIRFFTSingle" -> "test_basic._TestIRFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestIfftnDouble" -> "test_basic._TestIfftn" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestIfftnSingle" -> "test_basic._TestIfftn" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestRFFTDouble" -> "test_basic._TestRFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestRFFTSingle" -> "test_basic._TestRFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestSingleFFT" -> "test_basic._TestFFTBase" [arrowhead="empty", arrowtail="none"];
+"test_basic.TestSingleIFFT" -> "test_basic._TestIFFTBase" [arrowhead="empty", arrowtail="none"];
+}

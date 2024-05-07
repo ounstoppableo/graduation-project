@@ -1,0 +1,36 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_56ef4394 [label="447: test_burkardt_13()" name="test_matfuncs::TestExpM.test_burkardt_13" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a501992b [label="32: _burkardt_13_power()" name="test_matfuncs::_burkardt_13_power" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_56ef4394 -> node_a501992b [color="#F0E442" penwidth="2"];
+node_56ef4394 -> node_a501992b [color="#F0E442" penwidth="2"];
+node_56ef4394 -> node_a501992b [color="#F0E442" penwidth="2"];
+subgraph cluster_d828f1a7 {
+    node_a501992b;
+    label="File: test_matfuncs";
+    name="test_matfuncs";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_89d9afd9 {
+        node_56ef4394;
+        label="Class: TestExpM";
+        name="TestExpM";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

@@ -1,0 +1,97 @@
+# Change Log
+# All notable changes to this project will be documented in this file.
+# This project adheres to [Semantic Versioning](http://semver.org/).
+
+## [0.6.1] 2015-10-24
+### Fixed
+- Make sure to align comments in data literals correctly. Also make sure we
+  don't count a "#." in a string as an i18n comment.
+- Retain proper vertical spacing before comments in a data literal.
+- Make sure that continuations from a compound statement are distinguished from
+  the succeeding line.
+- Ignore preceding comments when calculating what is a "dictonary maker".
+- Add a small penalty for splitting before a closing bracket.
+- Ensure that a space is enforced after we remove a pseudo-paren that's between
+  two names, keywords, numbers, etc.
+- Increase the penalty for splitting after a pseudo-paren. This could lead to
+  less readable code in some circumstances.
+
+## [0.6.0] 2015-10-18
+### Added
+- Add knob to indent the dictionary value if there is a split before it.
+
+### Changed
+- No longer check that a file is a "Python" file unless the '--recursive' flag
+  is specified.
+- No longer allow the user to specify a directory unless the '--recursive' flag
+  is specified.
+
+### Fixed
+- When determining if we should split a dictionary's value to a new line, use
+  the longest entry instead of the total dictionary's length. This allows the
+  formatter to reformat the dictionary in a more consistent manner.
+- Improve how list comprehensions are formatted. Make splitting dependent upon
+  whether the "comp_for" or "comp_if" goes over the column limit.
+- Don't over indent if expression hanging indents if we expect to dedent the
+  closing bracket.
+- Improve splitting heuristic when the first argument to a function call is
+  itself a function call with arguments. In cases like this, the remaining
+  arguments to the function call would look badly aligned, even though they are
+  techincally correct (the best kind of correct!).
+- Improve splitting heuristic more so that if the first argument to a function
+  call is a data literal that will go over the column limit, then we want to
+  split before it.
+- Remove spaces around '**' operator.
+- Retain formatting of comments in the middle of an expression.
+- Don't add a newline to an empty file.
+- Over indent a function's parameter list if it's not distinguished from the
+  body of the function.
+
+## [0.5.0] 2015-10-11
+### Added
+- Add option to exclude files/directories from formatting.
+- Add a knob to control whether import names are split after the first '('.
+
+### Fixed
+- Indent the continuation of an if-then statement when it's not distinguished
+  from the body of the if-then.
+- Allow for sensible splitting of array indices where appropriate.
+- Prefer to not split before the ending bracket of an atom. This produces
+  better code in most cases.
+- Corrected how horizontal spaces were presevered in a disabled region.
+
+## [0.4.0] 2015-10-07
+### Added
+- Support for dedenting closing brackets, "facebook" style.
+
+### Fixed
+- Formatting of tokens after a multiline string didn't retain their horizontal
+  spacing.
+
+## [0.3.1] 2015-09-30
+### Fixed
+- Format closing scope bracket correctly when indentation size changes.
+
+## [0.3.0] 2015-09-20
+### Added
+- Return a 2 if the source changed, 1 on error, and 0 for no change.
+
+### Fixed
+- Make sure we format if the "lines" specified are in the middle of a
+  statement.
+
+## [0.2.9] - 2015-09-13
+### Fixed
+- Formatting of multiple files. It was halting after formatting the first file.
+
+## [0.2.8] - 2015-09-12
+### Added
+- Return a non-zero exit code if the source was changed.
+- Add bitwise operator splitting penalty and prefer to split before bitwise
+  operators.
+
+### Fixed
+- Retain vertical spacing between disabled and enabled lines.
+- Split only at start of named assign.
+- Retain comment position when formatting is disabled.
+- Honor splitting before or after logical ops.

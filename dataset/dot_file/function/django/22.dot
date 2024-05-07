@@ -1,0 +1,74 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_bcfa0500 [label="6: next_page_number()" name="pagination.custom::ValidAdjacentNumsPage.next_page_number" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f66281b3 [label="11: previous_page_number()" name="pagination.custom::ValidAdjacentNumsPage.previous_page_number" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_4adffc3b [label="247: test_first_page()" name="pagination.tests::ModelPaginationTests.test_first_page" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bb789c8b [label="268: test_last_page()" name="pagination.tests::ModelPaginationTests.test_last_page" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_01dc78e2 [label="32: check_attribute()" name="pagination.tests::PaginationTests.check_attribute" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_aa39413a [label="143: check_indexes()" name="pagination.tests::PaginationTests.check_indexes" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_04351ede [label="21: check_paginator()" name="pagination.tests::PaginationTests.check_paginator" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_48a8d1d2 [label="222: test_get_page_hook()" name="pagination.tests::PaginationTests.test_get_page_hook" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6e39e052 [label="163: test_page_indexes()" name="pagination.tests::PaginationTests.test_page_indexes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_26448c4a [label="44: test_paginator()" name="pagination.tests::PaginationTests.test_paginator" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bcfa0500 -> node_bcfa0500 [color="#000000" penwidth="2"];
+node_f66281b3 -> node_f66281b3 [color="#009E73" penwidth="2"];
+node_4adffc3b -> node_bcfa0500 [color="#009E73" penwidth="2"];
+node_bb789c8b -> node_f66281b3 [color="#009E73" penwidth="2"];
+node_04351ede -> node_01dc78e2 [color="#D55E00" penwidth="2"];
+node_04351ede -> node_01dc78e2 [color="#D55E00" penwidth="2"];
+node_04351ede -> node_01dc78e2 [color="#D55E00" penwidth="2"];
+node_48a8d1d2 -> node_bcfa0500 [color="#56B4E9" penwidth="2"];
+node_48a8d1d2 -> node_bcfa0500 [color="#56B4E9" penwidth="2"];
+node_48a8d1d2 -> node_f66281b3 [color="#56B4E9" penwidth="2"];
+node_48a8d1d2 -> node_f66281b3 [color="#56B4E9" penwidth="2"];
+node_6e39e052 -> node_aa39413a [color="#56B4E9" penwidth="2"];
+node_6e39e052 -> node_aa39413a [color="#56B4E9" penwidth="2"];
+node_26448c4a -> node_04351ede [color="#56B4E9" penwidth="2"];
+subgraph cluster_cefe1976 {
+    label="File: pagination.custom";
+    name="pagination.custom";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_e8ec7f20 {
+        node_bcfa0500 node_f66281b3;
+        label="Class: ValidAdjacentNumsPage";
+        name="ValidAdjacentNumsPage";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_a21f5ba0 {
+    label="File: pagination.tests";
+    name="pagination.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_2a705f71 {
+        node_04351ede node_01dc78e2 node_26448c4a node_aa39413a node_6e39e052 node_48a8d1d2;
+        label="Class: PaginationTests";
+        name="PaginationTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f3528c9e {
+        node_4adffc3b node_bb789c8b;
+        label="Class: ModelPaginationTests";
+        name="ModelPaginationTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

@@ -1,0 +1,64 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_1e119aa2 [label="587: assert_json_contains_datetime()" name="timezones.tests::SerializationTests.assert_json_contains_datetime" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cd3f8768 [label="584: assert_python_contains_datetime()" name="timezones.tests::SerializationTests.assert_python_contains_datetime" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ff9d5fed [label="590: assert_xml_contains_datetime()" name="timezones.tests::SerializationTests.assert_xml_contains_datetime" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0331f50c [label="594: assert_yaml_contains_datetime()" name="timezones.tests::SerializationTests.assert_yaml_contains_datetime" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_59aab746 [label="695: test_aware_datetime_in_local_timezone()" name="timezones.tests::SerializationTests.test_aware_datetime_in_local_timezone" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c786491d [label="719: test_aware_datetime_in_other_timezone()" name="timezones.tests::SerializationTests.test_aware_datetime_in_other_timezone" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d93b42aa [label="671: test_aware_datetime_in_utc()" name="timezones.tests::SerializationTests.test_aware_datetime_in_utc" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_af07e558 [label="647: test_aware_datetime_with_microsecond()" name="timezones.tests::SerializationTests.test_aware_datetime_with_microsecond" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0dbc702b [label="599: test_naive_datetime()" name="timezones.tests::SerializationTests.test_naive_datetime" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_467a54ff [label="623: test_naive_datetime_with_microsecond()" name="timezones.tests::SerializationTests.test_naive_datetime_with_microsecond" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_59aab746 -> node_1e119aa2 [color="#D55E00" penwidth="2"];
+node_59aab746 -> node_cd3f8768 [color="#D55E00" penwidth="2"];
+node_59aab746 -> node_ff9d5fed [color="#D55E00" penwidth="2"];
+node_59aab746 -> node_0331f50c [color="#D55E00" penwidth="2"];
+node_c786491d -> node_1e119aa2 [color="#0072B2" penwidth="2"];
+node_c786491d -> node_cd3f8768 [color="#0072B2" penwidth="2"];
+node_c786491d -> node_ff9d5fed [color="#0072B2" penwidth="2"];
+node_c786491d -> node_0331f50c [color="#0072B2" penwidth="2"];
+node_d93b42aa -> node_1e119aa2 [color="#56B4E9" penwidth="2"];
+node_d93b42aa -> node_cd3f8768 [color="#56B4E9" penwidth="2"];
+node_d93b42aa -> node_ff9d5fed [color="#56B4E9" penwidth="2"];
+node_d93b42aa -> node_0331f50c [color="#56B4E9" penwidth="2"];
+node_af07e558 -> node_1e119aa2 [color="#000000" penwidth="2"];
+node_af07e558 -> node_cd3f8768 [color="#000000" penwidth="2"];
+node_af07e558 -> node_ff9d5fed [color="#000000" penwidth="2"];
+node_af07e558 -> node_0331f50c [color="#000000" penwidth="2"];
+node_0dbc702b -> node_1e119aa2 [color="#009E73" penwidth="2"];
+node_0dbc702b -> node_cd3f8768 [color="#009E73" penwidth="2"];
+node_0dbc702b -> node_ff9d5fed [color="#009E73" penwidth="2"];
+node_0dbc702b -> node_0331f50c [color="#009E73" penwidth="2"];
+node_467a54ff -> node_1e119aa2 [color="#CC79A7" penwidth="2"];
+node_467a54ff -> node_cd3f8768 [color="#CC79A7" penwidth="2"];
+node_467a54ff -> node_ff9d5fed [color="#CC79A7" penwidth="2"];
+node_467a54ff -> node_0331f50c [color="#CC79A7" penwidth="2"];
+subgraph cluster_53e5277b {
+    label="File: timezones.tests";
+    name="timezones.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_e8acf8d4 {
+        node_cd3f8768 node_1e119aa2 node_ff9d5fed node_0331f50c node_0dbc702b node_467a54ff node_af07e558 node_d93b42aa node_59aab746 node_c786491d;
+        label="Class: SerializationTests";
+        name="SerializationTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

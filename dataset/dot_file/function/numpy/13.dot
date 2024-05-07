@@ -1,0 +1,50 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_ae5ff30f [label="453: _check_inverse_of_slicing()" name="test_function_base::TestDelete._check_inverse_of_slicing" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b1f0aad4 [label="475: test_fancy()" name="test_function_base::TestDelete.test_fancy" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_80f84968 [label="490: test_single()" name="test_function_base::TestDelete.test_single" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a2800c7f [label="466: test_slices()" name="test_function_base::TestDelete.test_slices" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9b9f253e [label="162: _select()" name="test_function_base::TestSelect._select" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_779657f5 [label="168: test_basic()" name="test_function_base::TestSelect.test_basic" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b1f0aad4 -> node_ae5ff30f [color="#F0E442" penwidth="2"];
+node_b1f0aad4 -> node_ae5ff30f [color="#F0E442" penwidth="2"];
+node_b1f0aad4 -> node_ae5ff30f [color="#F0E442" penwidth="2"];
+node_80f84968 -> node_ae5ff30f [color="#000000" penwidth="2"];
+node_80f84968 -> node_ae5ff30f [color="#000000" penwidth="2"];
+node_a2800c7f -> node_ae5ff30f [color="#CC79A7" penwidth="2"];
+node_779657f5 -> node_9b9f253e [color="#0072B2" penwidth="2"];
+subgraph cluster_2360e516 {
+    label="File: test_function_base";
+    name="test_function_base";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_3392af73 {
+        node_9b9f253e node_779657f5;
+        label="Class: TestSelect";
+        name="TestSelect";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_fe518e77 {
+        node_ae5ff30f node_a2800c7f node_b1f0aad4 node_80f84968;
+        label="Class: TestDelete";
+        name="TestDelete";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

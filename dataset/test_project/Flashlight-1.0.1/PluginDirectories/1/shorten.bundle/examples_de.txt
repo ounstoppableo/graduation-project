@@ -1,0 +1,2 @@
+kürze ~url(http://google.com)
+kürze link ~url(http://google.com)

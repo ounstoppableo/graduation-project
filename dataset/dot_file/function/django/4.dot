@@ -1,0 +1,120 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_8861ae90 [label="45: get_queryset()" name="admin_widgets.models::HiddenInventoryManager.get_queryset" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_feb17d91 [label="41: assertFormfield()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.assertFormfield" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e721ff13 [label="94: test_CharField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_CharField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e1ab41ef [label="76: test_DateField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_DateField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c1db7fd0 [label="79: test_DateTimeField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_DateTimeField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_076ecfa1 [label="97: test_EmailField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_EmailField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_289cb476 [label="100: test_FileField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_FileField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_24919117 [label="103: test_ForeignKey()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_ForeignKey" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_750339f6 [label="91: test_IntegerField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_IntegerField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_16805566 [label="85: test_TextField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_TextField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_529fb46f [label="82: test_TimeField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_TimeField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1a20eb41 [label="88: test_URLField()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_URLField" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0dcfe40f [label="150: test_choices_with_radio_fields()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_choices_with_radio_fields" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c3cbabd4 [label="147: test_field_with_choices()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_field_with_choices" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_40d17586 [label="122: test_filtered_many_to_many()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_filtered_many_to_many" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_c125c749 [label="126: test_formfield_overrides()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_formfield_overrides" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_52cb30fc [label="154: test_inheritance()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_inheritance" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4f5e8125 [label="157: test_m2m_widgets()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_m2m_widgets" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b6880327 [label="115: test_many_to_many()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_many_to_many" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e8eac457 [label="110: test_radio_fields_ForeignKey()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_radio_fields_ForeignKey" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9968ae41 [label="106: test_raw_id_ForeignKey()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_raw_id_ForeignKey" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4564fc6b [label="118: test_raw_id_many_to_many()" name="admin_widgets.tests::AdminFormfieldForDBFieldTests.test_raw_id_many_to_many" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a8dfee53 [label="840: assertActiveButtons()" name="admin_widgets.tests::HorizontalVerticalFilterSeleniumFirefoxTests.assertActiveButtons" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a8f63fc5 [label="852: execute_basic_operations()" name="admin_widgets.tests::HorizontalVerticalFilterSeleniumFirefoxTests.execute_basic_operations" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cd04da3c [label="954: test_basic()" name="admin_widgets.tests::HorizontalVerticalFilterSeleniumFirefoxTests.test_basic" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_027468fe [label="16: formfield_for_foreignkey()" name="admin_widgets.widgetadmin::CarTireAdmin.formfield_for_foreignkey" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_8861ae90 -> node_8861ae90 [color="#000000" penwidth="2"];
+node_e721ff13 -> node_feb17d91 [color="#009E73" penwidth="2"];
+node_e1ab41ef -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_c1db7fd0 -> node_feb17d91 [color="#000000" penwidth="2"];
+node_076ecfa1 -> node_feb17d91 [color="#E69F00" penwidth="2"];
+node_289cb476 -> node_feb17d91 [color="#D55E00" penwidth="2"];
+node_24919117 -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_750339f6 -> node_feb17d91 [color="#D55E00" penwidth="2"];
+node_16805566 -> node_feb17d91 [color="#D55E00" penwidth="2"];
+node_529fb46f -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_1a20eb41 -> node_feb17d91 [color="#E69F00" penwidth="2"];
+node_0dcfe40f -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_c3cbabd4 -> node_feb17d91 [color="#F0E442" penwidth="2"];
+node_40d17586 -> node_feb17d91 [color="#D55E00" penwidth="2"];
+node_c125c749 -> node_feb17d91 [color="#E69F00" penwidth="2"];
+node_52cb30fc -> node_feb17d91 [color="#F0E442" penwidth="2"];
+node_4f5e8125 -> node_feb17d91 [color="#0072B2" penwidth="2"];
+node_b6880327 -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_e8eac457 -> node_feb17d91 [color="#CC79A7" penwidth="2"];
+node_9968ae41 -> node_feb17d91 [color="#E69F00" penwidth="2"];
+node_4564fc6b -> node_feb17d91 [color="#009E73" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_a8f63fc5 -> node_a8dfee53 [color="#0072B2" penwidth="2"];
+node_cd04da3c -> node_a8f63fc5 [color="#F0E442" penwidth="2"];
+node_cd04da3c -> node_a8f63fc5 [color="#F0E442" penwidth="2"];
+node_027468fe -> node_027468fe [color="#D55E00" penwidth="2"];
+subgraph cluster_eac63907 {
+    label="File: admin_widgets.models";
+    name="admin_widgets.models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_5b16c5c0 {
+        node_8861ae90;
+        label="Class: HiddenInventoryManager";
+        name="HiddenInventoryManager";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_e8faa269 {
+    label="File: admin_widgets.tests";
+    name="admin_widgets.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_efad0517 {
+        node_feb17d91 node_e1ab41ef node_c1db7fd0 node_529fb46f node_16805566 node_1a20eb41 node_750339f6 node_e721ff13 node_076ecfa1 node_289cb476 node_24919117 node_9968ae41 node_e8eac457 node_b6880327 node_4564fc6b node_40d17586 node_c125c749 node_c3cbabd4 node_0dcfe40f node_52cb30fc node_4f5e8125;
+        label="Class: AdminFormfieldForDBFieldTests";
+        name="AdminFormfieldForDBFieldTests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_42375f2b {
+        node_a8dfee53 node_a8f63fc5 node_cd04da3c;
+        label="Class: HorizontalVerticalFilterSeleniumFirefoxTests";
+        name="HorizontalVerticalFilterSeleniumFirefoxTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_7cbbe81a {
+    label="File: admin_widgets.widgetadmin";
+    name="admin_widgets.widgetadmin";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_fee3207a {
+        node_027468fe;
+        label="Class: CarTireAdmin";
+        name="CarTireAdmin";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

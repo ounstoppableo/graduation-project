@@ -1,0 +1,383 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_e91844d9 [label="0: (global)()" name="setupext::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2f45a45c [label="1318: get_extension()" name="setupext::BackendAgg.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_452f0fab [label="1667: add_flags()" name="setupext::BackendGtk.add_flags" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_c1e39732 [label="1628: check_requirements()" name="setupext::BackendGtk.check_requirements" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ff30bcb8 [label="1658: get_extension()" name="setupext::BackendGtk.get_extension" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b5eac343 [label="1742: get_extension()" name="setupext::BackendGtkAgg.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ee7fc7d5 [label="1943: get_extension()" name="setupext::BackendMacOSX.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_dd019f90 [label="1986: convert_qt_version()" name="setupext::BackendQtBase.convert_qt_version" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e32ed41a [label="1531: add_flags()" name="setupext::BackendTkAgg.add_flags" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6041849c [label="1338: check_requirements()" name="setupext::BackendTkAgg.check_requirements" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6f697533 [label="1365: get_extension()" name="setupext::BackendTkAgg.get_extension" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0e32aad2 [label="1485: guess_tcl_config()" name="setupext::BackendTkAgg.guess_tcl_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ff8bd58f [label="1524: hardcoded_tcl_config()" name="setupext::BackendTkAgg.hardcoded_tcl_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9c89692f [label="1431: parse_tcl_config()" name="setupext::BackendTkAgg.parse_tcl_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ed98ed37 [label="1378: query_tcltk()" name="setupext::BackendTkAgg.query_tcltk" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8e8c301b [label="879: add_flags()" name="setupext::CXX.add_flags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b5146574 [label="842: check()" name="setupext::CXX.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_64486296 [label="1130: get_extension()" name="setupext::Contour.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_850ad176 [label="1145: get_extension()" name="setupext::Delaunay.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_71c9ba95 [label="739: __init__()" name="setupext::DelayedExtension.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_16055ed7 [label="744: add_hook()" name="setupext::DelayedExtension.add_hook" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b20a19c7 [label="1001: get_extension()" name="setupext::FT2Font.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7c4ccd88 [label="985: add_flags()" name="setupext::FreeType.add_flags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_23cd93af [label="943: check()" name="setupext::FreeType.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2ab6b6b4 [label="963: version_from_header()" name="setupext::FreeType.version_from_header" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5559a85b [label="1116: get_extension()" name="setupext::Image.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_10b0db47 [label="921: add_flags()" name="setupext::LibAgg.add_flags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_261b77e0 [label="912: check()" name="setupext::LibAgg.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_67d53348 [label="554: check()" name="setupext::Matplotlib.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_51d77ce2 [label="824: add_flags()" name="setupext::Numpy.add_flags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_79b7815a [label="810: check()" name="setupext::Numpy.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d928c80d [label="785: include_dirs_hook()" name="setupext::Numpy.include_dirs_hook" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_411c776e [label="477: check()" name="setupext::OptionalPackage.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1e9d2fd5 [label="510: check_requirements()" name="setupext::OptionalPackage.check_requirements" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_77cc2530 [label="466: get_config()" name="setupext::OptionalPackage.get_config" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_79c76953 [label="1099: get_extension()" name="setupext::Path.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fa980298 [label="246: __init__()" name="setupext::PkgConfig.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_9f6f738b [label="323: get_version()" name="setupext::PkgConfig.get_version" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c8d8988e [label="262: set_pkgconfig_path()" name="setupext::PkgConfig.set_pkgconfig_path" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_acf002ee [label="276: setup_extension()" name="setupext::PkgConfig.setup_extension" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cd74573d [label="1016: check()" name="setupext::Png.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6d42616e [label="1036: get_extension()" name="setupext::Png.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8f501eea [label="1285: check()" name="setupext::Pyparsing.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e1b16a23 [label="1308: get_install_requires()" name="setupext::Pyparsing.get_install_requires" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_97bd6ddf [label="1275: is_ok()" name="setupext::Pyparsing.is_ok" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ddb23f1b [label="1070: add_flags()" name="setupext::Qhull.add_flags" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_9a25314e [label="1052: check()" name="setupext::Qhull.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3785d00b [label="1157: get_extension()" name="setupext::QhullWrap.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_31ae0bb2 [label="417: _check_for_pkg_config()" name="setupext::SetupPackage._check_for_pkg_config" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_933460be [label="393: get_extension()" name="setupext::SetupPackage.get_extension" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c0915141 [label="1184: check()" name="setupext::Six.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e0492b32 [label="1082: get_extension()" name="setupext::TTConv.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1b635abb [label="640: check()" name="setupext::Tests.check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ce8e7c04 [label="700: check_requirements()" name="setupext::Toolkits_Tests.check_requirements" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_22e410da [label="1169: get_extension()" name="setupext::Tri.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f0aa7e01 [label="1964: check_requirements()" name="setupext::Windowing.check_requirements" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_88a5082d [label="1972: get_extension()" name="setupext::Windowing.get_extension" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6a0387d9 [label="2038: backend_qt4_internal_check()" name="setupext::backend_qt4_internal_check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_aec07009 [label="2062: backend_qt5_internal_check()" name="setupext::backend_qt5_internal_check" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6887293e [label="130: check_include_file()" name="setupext::check_include_file" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_971bfdd2 [label="105: extract_versions()" name="setupext::extract_versions" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_18a5748d [label="141: get_base_dirs()" name="setupext::get_base_dirs" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_33596cbd [label="159: get_include_dirs()" name="setupext::get_include_dirs" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_69293be0 [label="92: get_win32_compiler()" name="setupext::get_win32_compiler" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_362118f7 [label="117: has_include_file()" name="setupext::has_include_file" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2dcff366 [label="166: is_min_version()" name="setupext::is_min_version" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_11aaaa61 [label="215: make_extension()" name="setupext::make_extension" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_e91844d9 -> node_fa980298 [color="#E69F00" penwidth="2"];
+node_e91844d9 -> node_69293be0 [color="#E69F00" penwidth="2"];
+node_2f45a45c -> node_11aaaa61 [color="#F0E442" penwidth="2"];
+node_452f0fab -> node_acf002ee [color="#009E73" penwidth="2"];
+node_452f0fab -> node_acf002ee [color="#009E73" penwidth="2"];
+node_c1e39732 -> node_452f0fab [color="#56B4E9" penwidth="2"];
+node_c1e39732 -> node_ff30bcb8 [color="#56B4E9" penwidth="2"];
+node_c1e39732 -> node_6887293e [color="#56B4E9" penwidth="2"];
+node_c1e39732 -> node_6887293e [color="#56B4E9" penwidth="2"];
+node_ff30bcb8 -> node_452f0fab [color="#000000" penwidth="2"];
+node_ff30bcb8 -> node_11aaaa61 [color="#000000" penwidth="2"];
+node_b5eac343 -> node_452f0fab [color="#009E73" penwidth="2"];
+node_b5eac343 -> node_11aaaa61 [color="#009E73" penwidth="2"];
+node_ee7fc7d5 -> node_11aaaa61 [color="#0072B2" penwidth="2"];
+node_e32ed41a -> node_0e32aad2 [color="#56B4E9" penwidth="2"];
+node_e32ed41a -> node_ff8bd58f [color="#56B4E9" penwidth="2"];
+node_e32ed41a -> node_ff8bd58f [color="#56B4E9" penwidth="2"];
+node_e32ed41a -> node_9c89692f [color="#56B4E9" penwidth="2"];
+node_e32ed41a -> node_ed98ed37 [color="#56B4E9" penwidth="2"];
+node_6041849c -> node_6f697533 [color="#F0E442" penwidth="2"];
+node_6041849c -> node_6887293e [color="#F0E442" penwidth="2"];
+node_6f697533 -> node_e32ed41a [color="#009E73" penwidth="2"];
+node_6f697533 -> node_11aaaa61 [color="#009E73" penwidth="2"];
+node_8e8c301b -> node_acf002ee [color="#009E73" penwidth="2"];
+node_b5146574 -> node_31ae0bb2 [color="#F0E442" penwidth="2"];
+node_64486296 -> node_11aaaa61 [color="#D55E00" penwidth="2"];
+node_850ad176 -> node_11aaaa61 [color="#D55E00" penwidth="2"];
+node_b20a19c7 -> node_11aaaa61 [color="#CC79A7" penwidth="2"];
+node_7c4ccd88 -> node_acf002ee [color="#000000" penwidth="2"];
+node_23cd93af -> node_2ab6b6b4 [color="#CC79A7" penwidth="2"];
+node_23cd93af -> node_31ae0bb2 [color="#CC79A7" penwidth="2"];
+node_23cd93af -> node_6887293e [color="#CC79A7" penwidth="2"];
+node_23cd93af -> node_33596cbd [color="#CC79A7" penwidth="2"];
+node_2ab6b6b4 -> node_933460be [color="#F0E442" penwidth="2"];
+node_5559a85b -> node_11aaaa61 [color="#009E73" penwidth="2"];
+node_10b0db47 -> node_acf002ee [color="#CC79A7" penwidth="2"];
+node_261b77e0 -> node_31ae0bb2 [color="#000000" penwidth="2"];
+node_67d53348 -> node_971bfdd2 [color="#000000" penwidth="2"];
+node_51d77ce2 -> node_16055ed7 [color="#56B4E9" penwidth="2"];
+node_79b7815a -> node_971bfdd2 [color="#56B4E9" penwidth="2"];
+node_79b7815a -> node_2dcff366 [color="#56B4E9" penwidth="2"];
+node_d928c80d -> node_362118f7 [color="#0072B2" penwidth="2"];
+node_411c776e -> node_1e9d2fd5 [color="#D55E00" penwidth="2"];
+node_411c776e -> node_77cc2530 [color="#D55E00" penwidth="2"];
+node_79c76953 -> node_11aaaa61 [color="#009E73" penwidth="2"];
+node_fa980298 -> node_c8d8988e [color="#000000" penwidth="2"];
+node_acf002ee -> node_18a5748d [color="#D55E00" penwidth="2"];
+node_cd74573d -> node_31ae0bb2 [color="#0072B2" penwidth="2"];
+node_cd74573d -> node_6887293e [color="#0072B2" penwidth="2"];
+node_cd74573d -> node_33596cbd [color="#0072B2" penwidth="2"];
+node_cd74573d -> node_33596cbd [color="#0072B2" penwidth="2"];
+node_cd74573d -> node_362118f7 [color="#0072B2" penwidth="2"];
+node_6d42616e -> node_acf002ee [color="#D55E00" penwidth="2"];
+node_6d42616e -> node_11aaaa61 [color="#D55E00" penwidth="2"];
+node_8f501eea -> node_97bd6ddf [color="#56B4E9" penwidth="2"];
+node_e1b16a23 -> node_97bd6ddf [color="#009E73" penwidth="2"];
+node_ddb23f1b -> node_acf002ee [color="#009E73" penwidth="2"];
+node_9a25314e -> node_31ae0bb2 [color="#D55E00" penwidth="2"];
+node_9a25314e -> node_33596cbd [color="#D55E00" penwidth="2"];
+node_9a25314e -> node_362118f7 [color="#D55E00" penwidth="2"];
+node_3785d00b -> node_11aaaa61 [color="#009E73" penwidth="2"];
+node_31ae0bb2 -> node_9f6f738b [color="#56B4E9" penwidth="2"];
+node_31ae0bb2 -> node_acf002ee [color="#56B4E9" penwidth="2"];
+node_31ae0bb2 -> node_933460be [color="#56B4E9" penwidth="2"];
+node_31ae0bb2 -> node_6887293e [color="#56B4E9" penwidth="2"];
+node_31ae0bb2 -> node_2dcff366 [color="#56B4E9" penwidth="2"];
+node_31ae0bb2 -> node_11aaaa61 [color="#56B4E9" penwidth="2"];
+node_c0915141 -> node_2dcff366 [color="#E69F00" penwidth="2"];
+node_e0492b32 -> node_11aaaa61 [color="#56B4E9" penwidth="2"];
+node_1b635abb -> node_2dcff366 [color="#009E73" penwidth="2"];
+node_ce8e7c04 -> node_77cc2530 [color="#F0E442" penwidth="2"];
+node_ce8e7c04 -> node_77cc2530 [color="#F0E442" penwidth="2"];
+node_ce8e7c04 -> node_77cc2530 [color="#F0E442" penwidth="2"];
+node_22e410da -> node_11aaaa61 [color="#56B4E9" penwidth="2"];
+node_f0aa7e01 -> node_77cc2530 [color="#E69F00" penwidth="2"];
+node_88a5082d -> node_11aaaa61 [color="#0072B2" penwidth="2"];
+node_6a0387d9 -> node_dd019f90 [color="#E69F00" penwidth="2"];
+node_aec07009 -> node_dd019f90 [color="#E69F00" penwidth="2"];
+node_6887293e -> node_362118f7 [color="#D55E00" penwidth="2"];
+node_33596cbd -> node_18a5748d [color="#0072B2" penwidth="2"];
+node_11aaaa61 -> node_71c9ba95 [color="#E69F00" penwidth="2"];
+node_11aaaa61 -> node_18a5748d [color="#E69F00" penwidth="2"];
+subgraph cluster_1b905408 {
+    node_69293be0 node_971bfdd2 node_362118f7 node_6887293e node_18a5748d node_33596cbd node_2dcff366 node_11aaaa61 node_6a0387d9 node_aec07009 node_e91844d9;
+    label="File: setupext";
+    name="setupext";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d34f9b1e {
+        node_fa980298 node_c8d8988e node_acf002ee node_9f6f738b;
+        label="Class: PkgConfig";
+        name="PkgConfig";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e69c2bf0 {
+        node_933460be node_31ae0bb2;
+        label="Class: SetupPackage";
+        name="SetupPackage";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_c1156797 {
+        node_77cc2530 node_411c776e node_1e9d2fd5;
+        label="Class: OptionalPackage";
+        name="OptionalPackage";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_236e8060 {
+        node_67d53348;
+        label="Class: Matplotlib";
+        name="Matplotlib";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_afc8a4f4 {
+        node_1b635abb;
+        label="Class: Tests";
+        name="Tests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9ff8fdb0 {
+        node_ce8e7c04;
+        label="Class: Toolkits_Tests";
+        name="Toolkits_Tests";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_070143e7 {
+        node_71c9ba95 node_16055ed7;
+        label="Class: DelayedExtension";
+        name="DelayedExtension";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_5b551946 {
+        node_d928c80d node_79b7815a node_51d77ce2;
+        label="Class: Numpy";
+        name="Numpy";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_2894910b {
+        node_b5146574 node_8e8c301b;
+        label="Class: CXX";
+        name="CXX";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8f738fc1 {
+        node_261b77e0 node_10b0db47;
+        label="Class: LibAgg";
+        name="LibAgg";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_edcf31bd {
+        node_23cd93af node_2ab6b6b4 node_7c4ccd88;
+        label="Class: FreeType";
+        name="FreeType";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_8cdf34f7 {
+        node_b20a19c7;
+        label="Class: FT2Font";
+        name="FT2Font";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_3e090f13 {
+        node_cd74573d node_6d42616e;
+        label="Class: Png";
+        name="Png";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_fd813d09 {
+        node_9a25314e node_ddb23f1b;
+        label="Class: Qhull";
+        name="Qhull";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_6de2ee5c {
+        node_e0492b32;
+        label="Class: TTConv";
+        name="TTConv";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_1c2880e2 {
+        node_79c76953;
+        label="Class: Path";
+        name="Path";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9545306e {
+        node_5559a85b;
+        label="Class: Image";
+        name="Image";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f0a0657a {
+        node_64486296;
+        label="Class: Contour";
+        name="Contour";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e806e195 {
+        node_850ad176;
+        label="Class: Delaunay";
+        name="Delaunay";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_57804aba {
+        node_3785d00b;
+        label="Class: QhullWrap";
+        name="QhullWrap";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f688f8db {
+        node_22e410da;
+        label="Class: Tri";
+        name="Tri";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_abccce0c {
+        node_c0915141;
+        label="Class: Six";
+        name="Six";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f4bc18fe {
+        node_97bd6ddf node_8f501eea node_e1b16a23;
+        label="Class: Pyparsing";
+        name="Pyparsing";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7235b75c {
+        node_2f45a45c;
+        label="Class: BackendAgg";
+        name="BackendAgg";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_d2e2bde4 {
+        node_6041849c node_6f697533 node_ed98ed37 node_9c89692f node_0e32aad2 node_ff8bd58f node_e32ed41a;
+        label="Class: BackendTkAgg";
+        name="BackendTkAgg";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a7c2fd83 {
+        node_c1e39732 node_ff30bcb8 node_452f0fab;
+        label="Class: BackendGtk";
+        name="BackendGtk";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_2e276000 {
+        node_b5eac343;
+        label="Class: BackendGtkAgg";
+        name="BackendGtkAgg";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_19332a6c {
+        node_ee7fc7d5;
+        label="Class: BackendMacOSX";
+        name="BackendMacOSX";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_d70287af {
+        node_f0aa7e01 node_88a5082d;
+        label="Class: Windowing";
+        name="Windowing";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_82c05561 {
+        node_dd019f90;
+        label="Class: BackendQtBase";
+        name="BackendQtBase";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

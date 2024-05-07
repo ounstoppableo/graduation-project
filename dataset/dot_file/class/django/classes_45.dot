@@ -1,0 +1,19 @@
+digraph "classes_45" {
+rankdir=BT
+charset="utf-8"
+"select_related.models.Bookmark" [color="black", fontcolor="black", label=<{Bookmark|tags<br ALIGN="LEFT"/>url<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Domain" [color="black", fontcolor="black", label=<{Domain|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Family" [color="black", fontcolor="black", label=<{Family|name<br ALIGN="LEFT"/>order<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Genus" [color="black", fontcolor="black", label=<{Genus|family<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.HybridSpecies" [color="black", fontcolor="black", label=<{HybridSpecies|name<br ALIGN="LEFT"/>parent_1<br ALIGN="LEFT"/>parent_2<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Kingdom" [color="black", fontcolor="black", label=<{Kingdom|domain<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Klass" [color="black", fontcolor="black", label=<{Klass|name<br ALIGN="LEFT"/>phylum<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Order" [color="black", fontcolor="black", label=<{Order|klass<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Phylum" [color="black", fontcolor="black", label=<{Phylum|kingdom<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Pizza" [color="black", fontcolor="black", label=<{Pizza|name<br ALIGN="LEFT"/>toppings<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.tests.SelectRelatedTests" [color="black", fontcolor="black", label=<{SelectRelatedTests|<br ALIGN="LEFT"/>|create_tree(stringtree)<br ALIGN="LEFT"/>setUpTestData()<br ALIGN="LEFT"/>test_access_fks_with_select_related()<br ALIGN="LEFT"/>test_access_fks_without_select_related()<br ALIGN="LEFT"/>test_certain_fields()<br ALIGN="LEFT"/>test_chaining()<br ALIGN="LEFT"/>test_depth_fields_fails()<br ALIGN="LEFT"/>test_field_traversal()<br ALIGN="LEFT"/>test_list_with_depth()<br ALIGN="LEFT"/>test_list_with_select_related()<br ALIGN="LEFT"/>test_list_without_select_related()<br ALIGN="LEFT"/>test_more_certain_fields()<br ALIGN="LEFT"/>test_none_clears_list()<br ALIGN="LEFT"/>test_select_related_with_extra()<br ALIGN="LEFT"/>test_single_related_field()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"select_related.tests.SelectRelatedValidationTests" [color="black", fontcolor="black", label=<{SelectRelatedValidationTests|invalid_error : str<br ALIGN="LEFT"/>non_relational_error : str<br ALIGN="LEFT"/>|test_generic_relations()<br ALIGN="LEFT"/>test_invalid_field()<br ALIGN="LEFT"/>test_many_to_many_field()<br ALIGN="LEFT"/>test_non_relational_field()<br ALIGN="LEFT"/>test_reverse_relational_field()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"select_related.models.Species" [color="black", fontcolor="black", label=<{Species|genus<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.TaggedItem" [color="black", fontcolor="black", label=<{TaggedItem|content_object<br ALIGN="LEFT"/>content_type<br ALIGN="LEFT"/>object_id<br ALIGN="LEFT"/>tag<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"select_related.models.Topping" [color="black", fontcolor="black", label=<{Topping|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

@@ -1,0 +1,86 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_c73ec203 [label="62: manager_only()" name="custom_managers.models::BaseCustomManager.manager_only" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0d1cf6a6 [label="47: _optin_private_method()" name="custom_managers.models::CustomQuerySet._optin_private_method" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5043f105 [label="40: _private_method()" name="custom_managers.models::CustomQuerySet._private_method" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9ebf75db [label="43: optout_public_method()" name="custom_managers.models::CustomQuerySet.optout_public_method" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_303f3bc3 [label="37: public_method()" name="custom_managers.models::CustomQuerySet.public_method" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5e13d2cb [label="71: __init__()" name="custom_managers.models::DeconstructibleCustomManager.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_50ed05b0 [label="491: test_deconstruct_from_queryset()" name="custom_managers.tests::CustomManagerTests.test_deconstruct_from_queryset" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e7c8891a [label="85: test_manager_attributes()" name="custom_managers.tests::CustomManagerTests.test_manager_attributes" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2f4f3ef9 [label="55: test_manager_honors_queryset_only()" name="custom_managers.tests::CustomManagerTests.test_manager_honors_queryset_only" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e04e9adf [label="41: test_queryset_copied_to_default()" name="custom_managers.tests::CustomManagerTests.test_queryset_copied_to_default" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_addd1c5c [label="239: test_removal_through_default_fk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_removal_through_default_fk_related_manager" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_57a4377f [label="319: test_removal_through_default_gfk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_removal_through_default_gfk_related_manager" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c0350f3e [label="276: test_removal_through_specified_fk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_removal_through_specified_fk_related_manager" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a0489f11 [label="356: test_removal_through_specified_gfk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_removal_through_specified_gfk_related_manager" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cc1697c2 [label="273: test_slow_removal_through_default_fk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_slow_removal_through_default_fk_related_manager" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bde89444 [label="353: test_slow_removal_through_default_gfk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_slow_removal_through_default_gfk_related_manager" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_89f9c56a [label="316: test_slow_removal_through_specified_fk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_slow_removal_through_specified_fk_related_manager" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7b2f1362 [label="397: test_slow_removal_through_specified_gfk_related_manager()" name="custom_managers.tests::CustomManagerTests.test_slow_removal_through_specified_gfk_related_manager" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_50ed05b0 -> node_5e13d2cb [color="#000000" penwidth="2"];
+node_50ed05b0 -> node_5e13d2cb [color="#000000" penwidth="2"];
+node_e7c8891a -> node_c73ec203 [color="#56B4E9" penwidth="2"];
+node_2f4f3ef9 -> node_0d1cf6a6 [color="#E69F00" penwidth="2"];
+node_2f4f3ef9 -> node_9ebf75db [color="#E69F00" penwidth="2"];
+node_e04e9adf -> node_5043f105 [color="#CC79A7" penwidth="2"];
+node_e04e9adf -> node_303f3bc3 [color="#CC79A7" penwidth="2"];
+node_cc1697c2 -> node_addd1c5c [color="#56B4E9" penwidth="2"];
+node_bde89444 -> node_57a4377f [color="#F0E442" penwidth="2"];
+node_89f9c56a -> node_c0350f3e [color="#56B4E9" penwidth="2"];
+node_7b2f1362 -> node_a0489f11 [color="#56B4E9" penwidth="2"];
+subgraph cluster_b399746d {
+    label="File: custom_managers.models";
+    name="custom_managers.models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_86f10d73 {
+        node_303f3bc3 node_5043f105 node_9ebf75db node_0d1cf6a6;
+        label="Class: CustomQuerySet";
+        name="CustomQuerySet";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_635a3d1b {
+        node_c73ec203;
+        label="Class: BaseCustomManager";
+        name="BaseCustomManager";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_272b1036 {
+        node_5e13d2cb;
+        label="Class: DeconstructibleCustomManager";
+        name="DeconstructibleCustomManager";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_904e96da {
+    label="File: custom_managers.tests";
+    name="custom_managers.tests";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_87bda92a {
+        node_e04e9adf node_2f4f3ef9 node_e7c8891a node_addd1c5c node_cc1697c2 node_c0350f3e node_89f9c56a node_57a4377f node_bde89444 node_a0489f11 node_7b2f1362 node_50ed05b0;
+        label="Class: CustomManagerTests";
+        name="CustomManagerTests";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

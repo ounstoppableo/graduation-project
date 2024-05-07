@@ -1,0 +1,123 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_dc874569 [label="549: _check_solver()" name="test_integrate::ODECheckParameterUse._check_solver" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c1f1aea1 [label="537: _get_solver()" name="test_integrate::ODECheckParameterUse._get_solver" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7e53f3e1 [label="555: test_no_params()" name="test_integrate::ODECheckParameterUse.test_no_params" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3154deaf [label="559: test_one_scalar_param()" name="test_integrate::ODECheckParameterUse.test_one_scalar_param" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_f92cf00e [label="567: test_two_scalar_params()" name="test_integrate::ODECheckParameterUse.test_two_scalar_params" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3533c75b [label="576: test_vector_param()" name="test_integrate::ODECheckParameterUse.test_vector_param" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8989baae [label="203: test_dop853()" name="test_integrate::TestComplexOde.test_dop853" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_af72a092 [label="193: test_dopri5()" name="test_integrate::TestComplexOde.test_dopri5" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fa6550d2 [label="187: test_lsoda()" name="test_integrate::TestComplexOde.test_lsoda" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_2c94b3ac [label="178: test_vode()" name="test_integrate::TestComplexOde.test_vode" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0e1cda37 [label="306: _run_solout_break_test()" name="test_integrate::TestComplexSolout._run_solout_break_test" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2240c5f5 [label="278: _run_solout_test()" name="test_integrate::TestComplexSolout._run_solout_test" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c926b0da [label="302: test_solout()" name="test_integrate::TestComplexSolout.test_solout" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fe39b1db [label="333: test_solout_break()" name="test_integrate::TestComplexSolout.test_solout_break" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_1866c4f7 [label="42: _do_problem()" name="test_integrate::TestODEClass._do_problem" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_82b5880f [label="112: test_dop853()" name="test_integrate::TestOde.test_dop853" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_451e6b42 [label="100: test_dopri5()" name="test_integrate::TestOde.test_dopri5" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_6fb46e24 [label="92: test_lsoda()" name="test_integrate::TestOde.test_lsoda" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_99718f41 [label="74: test_vode()" name="test_integrate::TestOde.test_vode" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d77ccce1 [label="84: test_zvode()" name="test_integrate::TestOde.test_zvode" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_5cf5a437 [label="25: _do_problem()" name="test_integrate::TestOdeint._do_problem" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e201249a [label="30: test_odeint()" name="test_integrate::TestOdeint.test_odeint" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_e439e0e1 [label="244: _run_solout_break_test()" name="test_integrate::TestSolout._run_solout_break_test" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_07c658e7 [label="216: _run_solout_test()" name="test_integrate::TestSolout._run_solout_test" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f31d5523 [label="240: test_solout()" name="test_integrate::TestSolout.test_solout" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_700625a9 [label="271: test_solout_break()" name="test_integrate::TestSolout.test_solout_break" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_7e53f3e1 -> node_dc874569 [color="#E69F00" penwidth="2"];
+node_7e53f3e1 -> node_c1f1aea1 [color="#E69F00" penwidth="2"];
+node_3154deaf -> node_dc874569 [color="#CC79A7" penwidth="2"];
+node_3154deaf -> node_c1f1aea1 [color="#CC79A7" penwidth="2"];
+node_f92cf00e -> node_dc874569 [color="#D55E00" penwidth="2"];
+node_f92cf00e -> node_c1f1aea1 [color="#D55E00" penwidth="2"];
+node_3533c75b -> node_dc874569 [color="#009E73" penwidth="2"];
+node_3533c75b -> node_c1f1aea1 [color="#009E73" penwidth="2"];
+node_8989baae -> node_1866c4f7 [color="#D55E00" penwidth="2"];
+node_af72a092 -> node_1866c4f7 [color="#56B4E9" penwidth="2"];
+node_fa6550d2 -> node_1866c4f7 [color="#56B4E9" penwidth="2"];
+node_2c94b3ac -> node_1866c4f7 [color="#F0E442" penwidth="2"];
+node_2c94b3ac -> node_1866c4f7 [color="#F0E442" penwidth="2"];
+node_c926b0da -> node_2240c5f5 [color="#56B4E9" penwidth="2"];
+node_fe39b1db -> node_0e1cda37 [color="#009E73" penwidth="2"];
+node_82b5880f -> node_1866c4f7 [color="#CC79A7" penwidth="2"];
+node_451e6b42 -> node_1866c4f7 [color="#56B4E9" penwidth="2"];
+node_6fb46e24 -> node_1866c4f7 [color="#F0E442" penwidth="2"];
+node_99718f41 -> node_1866c4f7 [color="#E69F00" penwidth="2"];
+node_99718f41 -> node_1866c4f7 [color="#E69F00" penwidth="2"];
+node_d77ccce1 -> node_1866c4f7 [color="#E69F00" penwidth="2"];
+node_d77ccce1 -> node_1866c4f7 [color="#E69F00" penwidth="2"];
+node_e201249a -> node_5cf5a437 [color="#56B4E9" penwidth="2"];
+node_f31d5523 -> node_07c658e7 [color="#009E73" penwidth="2"];
+node_700625a9 -> node_e439e0e1 [color="#E69F00" penwidth="2"];
+subgraph cluster_ca28f0cf {
+    label="File: test_integrate";
+    name="test_integrate";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_2685b37e {
+        node_5cf5a437 node_e201249a;
+        label="Class: TestOdeint";
+        name="TestOdeint";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_7e3a8188 {
+        node_1866c4f7;
+        label="Class: TestODEClass";
+        name="TestODEClass";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f3ba0734 {
+        node_99718f41 node_d77ccce1 node_6fb46e24 node_451e6b42 node_82b5880f;
+        label="Class: TestOde";
+        name="TestOde";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_833a6747 {
+        node_2c94b3ac node_fa6550d2 node_af72a092 node_8989baae;
+        label="Class: TestComplexOde";
+        name="TestComplexOde";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_dc15ea77 {
+        node_07c658e7 node_f31d5523 node_e439e0e1 node_700625a9;
+        label="Class: TestSolout";
+        name="TestSolout";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_f038c345 {
+        node_2240c5f5 node_c926b0da node_0e1cda37 node_fe39b1db;
+        label="Class: TestComplexSolout";
+        name="TestComplexSolout";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_a65f2429 {
+        node_c1f1aea1 node_dc874569 node_7e53f3e1 node_3154deaf node_f92cf00e node_3533c75b;
+        label="Class: ODECheckParameterUse";
+        name="ODECheckParameterUse";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}

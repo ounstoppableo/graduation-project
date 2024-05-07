@@ -1,0 +1,9 @@
+digraph "classes_3" {
+rankdir=BT
+charset="utf-8"
+"admin_filters.models.Book" [color="black", fontcolor="black", label=<{Book|author<br ALIGN="LEFT"/>contributors<br ALIGN="LEFT"/>date_registered<br ALIGN="LEFT"/>is_best_seller<br ALIGN="LEFT"/>no<br ALIGN="LEFT"/>title<br ALIGN="LEFT"/>year<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_filters.models.Bookmark" [color="black", fontcolor="black", label=<{Bookmark|tags<br ALIGN="LEFT"/>url<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_filters.models.Department" [color="black", fontcolor="black", label=<{Department|code<br ALIGN="LEFT"/>description<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_filters.models.Employee" [color="black", fontcolor="black", label=<{Employee|department<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_filters.models.TaggedItem" [color="black", fontcolor="black", label=<{TaggedItem|content_object<br ALIGN="LEFT"/>content_type<br ALIGN="LEFT"/>object_id<br ALIGN="LEFT"/>tag<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+}

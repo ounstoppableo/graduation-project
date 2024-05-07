@@ -1,0 +1,6 @@
+digraph "classes_17" {
+rankdir=BT
+charset="utf-8"
+"defer_regress.tests.DeferAnnotateSelectRelatedTest" [color="black", fontcolor="black", label=<{DeferAnnotateSelectRelatedTest|<br ALIGN="LEFT"/>|test_defer_annotate_select_related()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"defer_regress.tests.DeferRegressionTest" [color="black", fontcolor="black", label=<{DeferRegressionTest|<br ALIGN="LEFT"/>|test_basic()<br ALIGN="LEFT"/>test_defer_with_select_related()<br ALIGN="LEFT"/>test_deferred_class_factory()<br ALIGN="LEFT"/>test_deferred_class_factory_already_deferred()<br ALIGN="LEFT"/>test_deferred_class_factory_no_attrs()<br ALIGN="LEFT"/>test_only_and_defer_usage_on_proxy_models()<br ALIGN="LEFT"/>test_only_with_select_related()<br ALIGN="LEFT"/>test_proxy_model_defer_with_select_related()<br ALIGN="LEFT"/>test_resolve_columns()<br ALIGN="LEFT"/>test_reverse_one_to_one_relations()<br ALIGN="LEFT"/>test_ticket_11936()<br ALIGN="LEFT"/>test_ticket_12163()<br ALIGN="LEFT"/>test_ticket_16409()<br ALIGN="LEFT"/>test_ticket_23270()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

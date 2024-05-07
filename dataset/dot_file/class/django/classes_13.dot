@@ -1,0 +1,21 @@
+digraph "classes_13" {
+rankdir=BT
+charset="utf-8"
+"backends.models.Article" [color="black", fontcolor="black", label=<{Article|headline<br ALIGN="LEFT"/>pub_date<br ALIGN="LEFT"/>reporter<br ALIGN="LEFT"/>reporter_proxy<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Item" [color="black", fontcolor="black", label=<{Item|date<br ALIGN="LEFT"/>last_modified<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>time<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.VeryLongModelNameZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ.Meta" [color="black", fontcolor="black", label=<{Meta|verbose_name : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Post.Meta" [color="black", fontcolor="black", label=<{Meta|db_table : str<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.ReporterProxy.Meta" [color="black", fontcolor="black", label=<{Meta|proxy : bool<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Object" [color="black", fontcolor="black", label=<{Object|related_objects<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.ObjectReference" [color="black", fontcolor="black", label=<{ObjectReference|obj<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Person" [color="black", fontcolor="black", label=<{Person|first_name<br ALIGN="LEFT"/>last_name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Post" [color="black", fontcolor="black", label=<{Post|name<br ALIGN="LEFT"/>tags<br ALIGN="LEFT"/>text<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.RawData" [color="black", fontcolor="black", label=<{RawData|raw_data<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Reporter" [color="black", fontcolor="black", label=<{Reporter|first_name<br ALIGN="LEFT"/>last_name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.ReporterProxy" [color="black", fontcolor="black", label=<{ReporterProxy|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.SchoolClass" [color="black", fontcolor="black", label=<{SchoolClass|day<br ALIGN="LEFT"/>last_updated<br ALIGN="LEFT"/>year<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Square" [color="black", fontcolor="black", label=<{Square|root<br ALIGN="LEFT"/>square<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.Tag" [color="black", fontcolor="black", label=<{Tag|content_object<br ALIGN="LEFT"/>content_type<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>object_id<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.VeryLongModelNameZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ" [color="black", fontcolor="black", label=<{VeryLongModelNameZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ|charfield_is_quite_long_zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz<br ALIGN="LEFT"/>m2m_also_quite_long_zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz<br ALIGN="LEFT"/>primary_key_is_quite_long_zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"backends.models.ReporterProxy" -> "backends.models.Reporter" [arrowhead="empty", arrowtail="none"];
+}

@@ -1,0 +1,30 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_0380483b [label="0: (global)()" name="six::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a0338b6c [label="67: _add_doc()" name="six::_add_doc" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0380483b -> node_a0338b6c [color="#009E73" penwidth="2"];
+node_0380483b -> node_a0338b6c [color="#009E73" penwidth="2"];
+node_0380483b -> node_a0338b6c [color="#009E73" penwidth="2"];
+node_0380483b -> node_a0338b6c [color="#009E73" penwidth="2"];
+subgraph cluster_55aa9ad9 {
+    node_a0338b6c node_0380483b;
+    label="File: six";
+    name="six";
+    style="filled";
+    graph[style=dotted];
+};
+}

@@ -1,0 +1,20 @@
+digraph "classes_33" {
+rankdir=BT
+charset="utf-8"
+"m2m_through_regress.models.A" [color="black", fontcolor="black", label=<{A|a_text<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.B" [color="black", fontcolor="black", label=<{B|a_list<br ALIGN="LEFT"/>b_text<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Car" [color="black", fontcolor="black", label=<{Car|drivers<br ALIGN="LEFT"/>make<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.CarDriver" [color="black", fontcolor="black", label=<{CarDriver|car<br ALIGN="LEFT"/>driver<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Driver" [color="black", fontcolor="black", label=<{Driver|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Group" [color="black", fontcolor="black", label=<{Group|members<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>user_members<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.tests.M2MThroughTestCase" [color="black", fontcolor="black", label=<{M2MThroughTestCase|<br ALIGN="LEFT"/>|test_everything()<br ALIGN="LEFT"/>test_join_trimming()<br ALIGN="LEFT"/>test_serialization()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"m2m_through_regress.models.Membership" [color="black", fontcolor="black", label=<{Membership|group<br ALIGN="LEFT"/>person<br ALIGN="LEFT"/>price<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Driver.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Person" [color="black", fontcolor="black", label=<{Person|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Through" [color="black", fontcolor="black", label=<{Through|extra<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.ThroughBase" [color="black", fontcolor="black", label=<{ThroughBase|a<br ALIGN="LEFT"/>b<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.tests.ThroughLoadDataTestCase" [color="black", fontcolor="black", label=<{ThroughLoadDataTestCase|fixtures : list<br ALIGN="LEFT"/>|test_sequence_creation()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"m2m_through_regress.tests.ToFieldThroughTests" [color="black", fontcolor="black", label=<{ToFieldThroughTests|car<br ALIGN="LEFT"/>driver<br ALIGN="LEFT"/>unused_car1<br ALIGN="LEFT"/>unused_car2<br ALIGN="LEFT"/>unused_driver<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_add()<br ALIGN="LEFT"/>test_add_null()<br ALIGN="LEFT"/>test_add_null_reverse()<br ALIGN="LEFT"/>test_add_null_reverse_related()<br ALIGN="LEFT"/>test_add_related_null()<br ALIGN="LEFT"/>test_add_reverse()<br ALIGN="LEFT"/>test_remove()<br ALIGN="LEFT"/>test_remove_reverse()<br ALIGN="LEFT"/>test_to_field()<br ALIGN="LEFT"/>test_to_field_clear()<br ALIGN="LEFT"/>test_to_field_clear_reverse()<br ALIGN="LEFT"/>test_to_field_reverse()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"m2m_through_regress.models.UserMembership" [color="black", fontcolor="black", label=<{UserMembership|group<br ALIGN="LEFT"/>id<br ALIGN="LEFT"/>price<br ALIGN="LEFT"/>user<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"m2m_through_regress.models.Through" -> "m2m_through_regress.models.ThroughBase" [arrowhead="empty", arrowtail="none"];
+}

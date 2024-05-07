@@ -1,0 +1,7 @@
+digraph "classes_44" {
+rankdir=BT
+charset="utf-8"
+"redirects_tests.tests.OverriddenRedirectFallbackMiddleware" [color="black", fontcolor="black", label=<{OverriddenRedirectFallbackMiddleware|response_gone_class<br ALIGN="LEFT"/>response_redirect_class<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"redirects_tests.tests.OverriddenRedirectMiddlewareTests" [color="black", fontcolor="black", label=<{OverriddenRedirectMiddlewareTests|site<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_response_gone_class()<br ALIGN="LEFT"/>test_response_redirect_class()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"redirects_tests.tests.RedirectTests" [color="black", fontcolor="black", label=<{RedirectTests|site<br ALIGN="LEFT"/>|setUp()<br ALIGN="LEFT"/>test_model()<br ALIGN="LEFT"/>test_redirect()<br ALIGN="LEFT"/>test_redirect_with_append_slash()<br ALIGN="LEFT"/>test_redirect_with_append_slash_and_query_string()<br ALIGN="LEFT"/>test_response_gone()<br ALIGN="LEFT"/>test_sites_not_installed()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+}

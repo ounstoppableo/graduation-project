@@ -1,0 +1,53 @@
+.card {
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+.fileUploadBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.fileInput {
+    cursor: pointer;
+    padding-left: 80px;
+}
+.warning {
+    color: red;
+    font-size: 14px;
+}
+.success {
+    background-color: #6bcd39;
+}
+.success:hover {
+    background-color: #7ad24d!important;
+    border-color: #7ad24d;
+}
+.success:disabled{
+    background-color: #d9d9d9!important;
+    border-color: #d9d9d9!important;
+}
+
+.detection {
+    background-color: #f5a85b;
+    border-color: #d9d9d9;
+}
+
+.detection:hover {
+    background-color: #f6b573!important;
+    border-color: #f5a85b
+}
+.detection:disabled{
+    background-color: #d9d9d9!important;
+    border-color: #d9d9d9
+}

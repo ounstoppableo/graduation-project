@@ -1,0 +1,24 @@
+digraph "classes_8" {
+rankdir=BT
+charset="utf-8"
+"admin_widgets.models.Advisor" [color="black", fontcolor="black", label=<{Advisor|companies<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Album" [color="black", fontcolor="black", label=<{Album|backside_art<br ALIGN="LEFT"/>band<br ALIGN="LEFT"/>cover_art<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Band" [color="black", fontcolor="black", label=<{Band|members<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>style<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Bee" [color="black", fontcolor="black", label=<{Bee|honeycomb<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Car" [color="black", fontcolor="black", label=<{Car|make<br ALIGN="LEFT"/>model<br ALIGN="LEFT"/>owner<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.CarTire" [color="black", fontcolor="black", label=<{CarTire|car<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Company" [color="black", fontcolor="black", label=<{Company|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Event" [color="black", fontcolor="black", label=<{Event|description<br ALIGN="LEFT"/>link<br ALIGN="LEFT"/>main_band<br ALIGN="LEFT"/>min_age<br ALIGN="LEFT"/>start_date<br ALIGN="LEFT"/>start_time<br ALIGN="LEFT"/>supporting_bands<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.HiddenInventoryManager" [color="black", fontcolor="black", label=<{HiddenInventoryManager|<br ALIGN="LEFT"/>|get_queryset()<br ALIGN="LEFT"/>}>, shape="record", style="solid"];
+"admin_widgets.models.Honeycomb" [color="black", fontcolor="black", label=<{Honeycomb|location<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Individual" [color="black", fontcolor="black", label=<{Individual|name<br ALIGN="LEFT"/>parent<br ALIGN="LEFT"/>soulmate<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Inventory" [color="black", fontcolor="black", label=<{Inventory|barcode<br ALIGN="LEFT"/>default_manager<br ALIGN="LEFT"/>hidden<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>objects<br ALIGN="LEFT"/>parent<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Member" [color="black", fontcolor="black", label=<{Member|birthdate<br ALIGN="LEFT"/>email<br ALIGN="LEFT"/>gender<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Student.Meta" [color="black", fontcolor="black", label=<{Meta|ordering : tuple<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.MyFileField" [color="black", fontcolor="black", label=<{MyFileField|<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Profile" [color="black", fontcolor="black", label=<{Profile|user<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.School" [color="black", fontcolor="black", label=<{School|alumni<br ALIGN="LEFT"/>name<br ALIGN="LEFT"/>students<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.Student" [color="black", fontcolor="black", label=<{Student|name<br ALIGN="LEFT"/>|}>, shape="record", style="solid"];
+"admin_widgets.models.HiddenInventoryManager" -> "admin_widgets.models.Inventory" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="objects", style="solid"];
+"admin_widgets.models.MyFileField" -> "admin_widgets.models.Album" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="backside_art", style="solid"];
+}
