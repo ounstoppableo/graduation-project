@@ -451,10 +451,10 @@ def find_code_bad_smell(path):
     print("1.生成graph_node_metric成功！")
 
     generate_graph_metric_for_class(os.path.join(os.getcwd(),'.\\temp\\dot_file\\class'),os.path.join(os.getcwd(),'.\\temp\\graph_metric\\class\\'),project_name)
-    # delete_directory_contents(os.path.join(os.getcwd(),'.\\temp\\dot_file\\class'))
+    delete_directory_contents(os.path.join(os.getcwd(),'.\\temp\\dot_file\\class'))
 
     generate_graph_metric_for_function(os.path.join(os.getcwd(),'.\\temp\\dot_file\\function'),os.path.join(os.getcwd(),'.\\temp\\graph_metric\\function\\'),project_name)
-    # delete_directory_contents(os.path.join(os.getcwd(),'.\\temp\\dot_file\\function'))
+    delete_directory_contents(os.path.join(os.getcwd(),'.\\temp\\dot_file\\function'))
     print("2.生成graph_metric成功！")
 
     generate_class_smell_tag_dataset(project_name_index_in_path,os.path.join(os.getcwd(),'.\\temp\\smell_metric'),class_graph_metric_file_path=os.path.join(os.getcwd(),'.\\temp\\graph_metric\\class'))
