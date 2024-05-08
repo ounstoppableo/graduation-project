@@ -5,7 +5,7 @@ from sklearn.svm import SVC
 import tensorflow as tf
 from tensorflow import keras
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn.pipeline import make_pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection  import train_test_split
@@ -67,7 +67,7 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     print(f'f-score: {svc_f1_scores.mean()}')
 
     #朴素贝叶斯
-    nb_model =  MultinomialNB()
+    nb_model = GaussianNB()
     nb_model.fit(X_train, Y_train)
     y_nb_pred = nb_model.predict(x_test)
     with open(f'./models/{smell_type}_nb.pkl', 'wb') as file3:
@@ -106,21 +106,21 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     Y_train_for_cnn = Y_train.copy().astype(float)
     y_test_for_cnn = y_test.copy().astype(float)
     cnn_model_1D = keras.Sequential([
-        keras.layers.Conv1D(32, kernel_size=(2), activation='relu', input_shape=(X_train[0].shape[0],1)),
+        keras.layers.Conv1D(16, kernel_size=(2), activation='relu', input_shape=(X_train[0].shape[0],1)),
         keras.layers.MaxPooling1D(pool_size=(1)),
-        keras.layers.Conv1D(64, kernel_size=(2), activation='relu'),
+        keras.layers.Conv1D(32, kernel_size=(2), activation='relu'),
         keras.layers.MaxPooling1D(pool_size=(1)),
         keras.layers.Flatten(),
-        keras.layers.Dense(64, activation='relu'),
+        keras.layers.Dense(32, activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
     cnn_model_2D = keras.Sequential([
-        keras.layers.Conv2D(32, kernel_size=(2, 2), activation='relu', input_shape=(cnn_2d_w, cnn_2d_h, 1)),
+        keras.layers.Conv2D(16, kernel_size=(2, 2), activation='relu', input_shape=(cnn_2d_w, cnn_2d_h, 1)),
         keras.layers.MaxPooling2D(pool_size=(1, 1)),
-        keras.layers.Conv2D(64, kernel_size=(2, 2), activation='relu'),
+        keras.layers.Conv2D(32, kernel_size=(2, 2), activation='relu'),
         keras.layers.MaxPooling2D(pool_size=(1, 1)),
         keras.layers.Flatten(),
-        keras.layers.Dense(64, activation='relu'),
+        keras.layers.Dense(32, activation='relu'),
         keras.layers.Dense(1, activation='sigmoid')
     ])
 
@@ -131,12 +131,12 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     cnn_model_2D.save(f'models/{smell_type}cnn_2D.h5')
 
     #转换成scikit-learn 模型
-    cnn_1D_clf = KerasClassifier(build_fn=cnn_model_1D, epochs=5,verbose=0)
-    cnn_2D_clf = KerasClassifier(build_fn=cnn_model_2D, epochs=5,verbose=0)
+    cnn_1D_clf = KerasClassifier(build_fn=cnn_model_1D, epochs=10,batch_size=10,verbose=0)
+    cnn_2D_clf = KerasClassifier(build_fn=cnn_model_2D, epochs=10,batch_size=10,verbose=0)
 
     #训练
-    cnn_model_1D.fit(X_train, Y_train_for_cnn, epochs=5, validation_data=(x_test, y_test_for_cnn),verbose=0)
-    cnn_model_2D.fit(X_train_for_cnn, Y_train_for_cnn, epochs=5, validation_data=(x_test_for_cnn, y_test_for_cnn),verbose=0)
+    cnn_model_1D.fit(X_train, Y_train_for_cnn, epochs=10,batch_size=10,validation_data=(x_test, y_test_for_cnn),verbose=0)
+    cnn_model_2D.fit(X_train_for_cnn, Y_train_for_cnn, epochs=10,batch_size=10,validation_data=(x_test_for_cnn, y_test_for_cnn),verbose=0)
 
     # 进行预测
     y_cnn_pred_1D = cnn_model_1D.predict(x_test)
