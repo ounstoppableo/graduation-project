@@ -271,79 +271,6 @@ def generate_graph_metric_for_function(directory,target,project_name):
         df = pd.DataFrame(arr,columns=columns)
         df.to_csv(target+f'{dirName}.csv',index=False)
         
-def pdToJson_class(raw):
-    smells = ['large_class']
-    res = {}
-    for smell in smells:
-        res[smell] = {}
-        filePaths = raw.drop_duplicates(subset=['fileName'])['fileName'].to_numpy().tolist()
-        for path in filePaths:
-            res[smell][path] = []
-        for index,row in raw.iterrows():
-            if row[smell] == 1:
-                res[smell][row.loc["fileName"]].append({
-                "class": row.loc["class_name"],
-                "start_line": row.loc["lineno"],
-                "end_line": row.loc["CLOC"] + row.loc["lineno"],
-            })
-    return res
-
-def pdToJson_function(raw):
-    smells = ['long_parameter_list','long_scope_chain','long_method']
-    res = {}
-    for smell in smells:
-        res[smell] = {}
-        filePaths = raw.drop_duplicates(subset=['fileName'])['fileName'].to_numpy().tolist()
-        for path in filePaths:
-            res[smell][path] = []
-        for index,row in raw.iterrows():
-            if row[smell] == 1:
-                res[smell][row.loc["fileName"]].append({
-                "function": row.loc["function_name"],
-                "start_line": row.loc["lineno"],
-                "end_line": row.loc["MLOC"] + row.loc["lineno"],
-            })
-    return res
-
-
-def smell_detection():
-    with open('./model/LargeClass_rf.pkl', 'rb') as f:
-        LargeClass_model = pickle.load(f)
-    with open('./model/LongMethod_rf.pkl', 'rb') as f:
-        LongMethod_model = pickle.load(f)
-    with open('./model/LongParameterList_rf.pkl', 'rb') as f:
-        LongParameterList_model = pickle.load(f)
-    with open('./model/LongScopeChain_rf.pkl', 'rb') as f:
-        LongScopeChain_model = pickle.load(f)
-
-    class_metric = pd.read_csv('./temp/smell_metric/class_smell_metric.csv')
-    function_metric = pd.read_csv('./temp/smell_metric/function_smell_metric.csv')
-    class_metric_for_pred = class_metric.drop(['class_name','fileName','lineno'],axis=1)
-    function_metric_for_pred = function_metric.drop(['function_name','label','fileName','lineno'],axis=1)
-
-    LargeClass_pred_res = LargeClass_model.predict(class_metric_for_pred.to_numpy())
-    class_metric["large_class"] = LargeClass_pred_res.tolist()
-    class_res =  class_metric[class_metric["large_class"]==1]
-
-    LongMethod_pred_res = LongMethod_model.predict(function_metric_for_pred.to_numpy())
-    function_metric["long_method"] = LongMethod_pred_res.tolist()
-
-    LongParameterList_pred_res = LongParameterList_model.predict(function_metric_for_pred.to_numpy())
-    function_metric["long_parameter_list"] = LongParameterList_pred_res.tolist()
-
-    LongScopeChain_pred_res = LongScopeChain_model.predict(function_metric_for_pred.to_numpy())
-    function_metric["long_scope_chain"] = LongScopeChain_pred_res.tolist()
-
-    function_res =  function_metric[(function_metric["long_scope_chain"]==1)|(function_metric["long_method"]==1)|(function_metric["long_parameter_list"]==1)]
-
-    return {
-        "class": pdToJson_class(class_res),
-        "function": pdToJson_function(function_res),
-    }
-
-
-    
-        
 
 def concatGraphMetricFile(op_type,class_graph_metric_file_path='',function_graph_metric_file_path=''):
     graph_metric_arr = []
@@ -376,12 +303,14 @@ def generate_class_smell_tag_dataset(project_name_index_in_path,output_path,clas
         for index,row in train_dataset_arr.iterrows():
             filtered_df = graph_node_metric[graph_node_metric['full_name'].str.contains(row['class_name'])].reset_index(drop=True)
             try:
+                train_dataset_arr.loc[index,'RCLOC'] = filtered_df.loc[0,'RCLOC']
                 train_dataset_arr.loc[index,'CLOC'] = filtered_df.loc[0,'CLOC']
                 train_dataset_arr.loc[index,'NOA'] = filtered_df.loc[0,'NOA']
                 train_dataset_arr.loc[index,'NOM'] = filtered_df.loc[0,'NOM']
                 train_dataset_arr.loc[index,'fileName'] = filtered_df.loc[0,'fileName']
                 train_dataset_arr.loc[index,'lineno'] = filtered_df.loc[0,'lineno']
             except:
+                train_dataset_arr.loc[index,'RCLOC'] = 0
                 train_dataset_arr.loc[index,'CLOC'] = 0
                 train_dataset_arr.loc[index,'NOA'] = 0
                 train_dataset_arr.loc[index,'NOM'] = 0
@@ -408,12 +337,14 @@ def generate_function_smell_tag_dataset(project_name_index_in_path,output_path,f
         for index,row in train_dataset_arr.iterrows():
             filtered_df = graph_node_metric[graph_node_metric['full_name'].str.contains(row['function_name'])].reset_index(drop=True)
             try:
+                train_dataset_arr.loc[index,'RMLOC'] = filtered_df.loc[0,'RMLOC']
                 train_dataset_arr.loc[index,'MLOC'] = filtered_df.loc[0,'MLOC']
                 train_dataset_arr.loc[index,'PAR'] = filtered_df.loc[0,'PAR']
                 train_dataset_arr.loc[index,'DOC'] = filtered_df.loc[0,'DOC']
                 train_dataset_arr.loc[index,'fileName'] = filtered_df.loc[0,'fileName']
                 train_dataset_arr.loc[index,'lineno'] = filtered_df.loc[0,'lineno']
             except:
+                train_dataset_arr.loc[index,'RMLOC'] = 0
                 train_dataset_arr.loc[index,'MLOC'] = 0
                 train_dataset_arr.loc[index,'PAR'] = 0
                 train_dataset_arr.loc[index,'DOC'] = 0
@@ -422,6 +353,76 @@ def generate_function_smell_tag_dataset(project_name_index_in_path,output_path,f
             print(index)
         train_dataset_arr = train_dataset_arr[(train_dataset_arr['fileName'] != -1) & (train_dataset_arr['lineno'] != -1)]
         train_dataset_arr.to_csv(output_path+'/'+filePath,index=False)
+
+def pdToJson_class(raw):
+    smells = ['large_class']
+    res = {}
+    for smell in smells:
+        res[smell] = {}
+        filePaths = raw.drop_duplicates(subset=['fileName'])['fileName'].to_numpy().tolist()
+        for path in filePaths:
+            res[smell][path] = []
+        for index,row in raw.iterrows():
+            if row[smell] == 1:
+                res[smell][row.loc["fileName"]].append({
+                "class": row.loc["class_name"],
+                "start_line": row.loc["lineno"],
+                "end_line": row.loc["RCLOC"] + row.loc["lineno"],
+            })
+    return res
+
+def pdToJson_function(raw):
+    smells = ['long_parameter_list','long_scope_chain','long_method']
+    res = {}
+    for smell in smells:
+        res[smell] = {}
+        filePaths = raw.drop_duplicates(subset=['fileName'])['fileName'].to_numpy().tolist()
+        for path in filePaths:
+            res[smell][path] = []
+        for index,row in raw.iterrows():
+            if row[smell] == 1:
+                res[smell][row.loc["fileName"]].append({
+                "function": row.loc["function_name"],
+                "start_line": row.loc["lineno"],
+                "end_line": row.loc["RMLOC"] + row.loc["lineno"],
+            })
+    return res
+
+def smell_detection():
+    with open('./model/LargeClass_rf.pkl', 'rb') as f:
+        LargeClass_model = pickle.load(f)
+    with open('./model/LongMethod_rf.pkl', 'rb') as f:
+        LongMethod_model = pickle.load(f)
+    with open('./model/LongParameterList_rf.pkl', 'rb') as f:
+        LongParameterList_model = pickle.load(f)
+    with open('./model/LongScopeChain_rf.pkl', 'rb') as f:
+        LongScopeChain_model = pickle.load(f)
+
+    class_metric = pd.read_csv('./temp/smell_metric/class_smell_metric.csv')
+    function_metric = pd.read_csv('./temp/smell_metric/function_smell_metric.csv')
+    class_metric_for_pred = class_metric.drop(['class_name','fileName','lineno','RCLOC'],axis=1)
+    function_metric_for_pred = function_metric.drop(['function_name','label','fileName','lineno','RMLOC'],axis=1)
+    
+
+    LargeClass_pred_res = LargeClass_model.predict(class_metric_for_pred.to_numpy())
+    class_metric["large_class"] = LargeClass_pred_res.tolist()
+    class_res =  class_metric[class_metric["large_class"]==1]
+
+    LongMethod_pred_res = LongMethod_model.predict(function_metric_for_pred.to_numpy())
+    function_metric["long_method"] = LongMethod_pred_res.tolist()
+
+    LongParameterList_pred_res = LongParameterList_model.predict(function_metric_for_pred.to_numpy())
+    function_metric["long_parameter_list"] = LongParameterList_pred_res.tolist()
+
+    LongScopeChain_pred_res = LongScopeChain_model.predict(function_metric_for_pred.to_numpy())
+    function_metric["long_scope_chain"] = LongScopeChain_pred_res.tolist()
+
+    function_res =  function_metric[(function_metric["long_scope_chain"]==1)|(function_metric["long_method"]==1)|(function_metric["long_parameter_list"]==1)]
+
+    return {
+        "class": pdToJson_class(class_res),
+        "function": pdToJson_function(function_res),
+    }
 
 def delete_directory_contents(directory):
     # 遍历目录树中的所有文件和子文件夹

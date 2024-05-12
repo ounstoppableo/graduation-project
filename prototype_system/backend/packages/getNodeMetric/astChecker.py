@@ -74,21 +74,22 @@ class MyAst(ast.NodeVisitor):
         del res[0]
 
       #CLOC
-      # lines = set()
-      # res = [node]
-      # while len(res) >= 1:
-      #   t = res[0]
-      #   for n in ast.iter_child_nodes(t):
-      #     if not hasattr(n,'lineno') or ((isinstance(t,_ast.FunctionDef) or isinstance(t,_ast.ClassDef)) and n == t.body[0] and isinstance(n,_ast.Expr)):
-      #       continue
-      #     lines.add(n.lineno)
-      #     if isinstance(n,_ast.ClassDef) or isinstance(n,_ast.FunctionDef):
-      #       continue
-      #     else:
-      #       res.append(n)
-      #   del res[0]
+      lines = set()
+      res = [node]
+      while len(res) >= 1:
+        t = res[0]
+        for n in ast.iter_child_nodes(t):
+          if not hasattr(n,'lineno') or ((isinstance(t,_ast.FunctionDef) or isinstance(t,_ast.ClassDef)) and n == t.body[0] and isinstance(n,_ast.Expr)):
+            continue
+          lines.add(n.lineno)
+          if isinstance(n,_ast.ClassDef) or isinstance(n,_ast.FunctionDef):
+            continue
+          else:
+            res.append(n)
+        del res[0]
+      self.result.append(('CLOC','CLASS',className,self.fileName,node.lineno,len(lines)))
       end_line = node.body[-1].end_lineno
-      self.result.append(('CLOC','CLASS',className,self.fileName,node.lineno,end_line - node.lineno + 1))
+      self.result.append(('RCLOC','CLASS',className,self.fileName,node.lineno,end_line - node.lineno + 1))
 
       #get NOA and NOM
       NOA = 0
@@ -128,21 +129,23 @@ class MyAst(ast.NodeVisitor):
       if(argsCount!=0):
         self.result.append(('PAR','DEF',funcName,self.fileName,node.lineno,argsCount))
       #function length
-      # lines = set()
-      # res = [node]
-      # while len(res) >= 1:
-      #   t = res[0]
-      #   for n in ast.iter_child_nodes(t):
-      #     if not hasattr(n,'lineno') or ((isinstance(t,_ast.FunctionDef) or isinstance(t,_ast.ClassDef)) and n == t.body[0] and isinstance(n,_ast.Expr)):
-      #       continue
-      #     lines.add(n.lineno)
-      #     if isinstance(n,_ast.ClassDef) or isinstance(n,_ast.FunctionDef):
-      #       continue
-      #     else:
-      #       res.append(n)
-      #   del res[0]
+      lines = set()
+      res = [node]
+      while len(res) >= 1:
+        t = res[0]
+        for n in ast.iter_child_nodes(t):
+          if not hasattr(n,'lineno') or ((isinstance(t,_ast.FunctionDef) or isinstance(t,_ast.ClassDef)) and n == t.body[0] and isinstance(n,_ast.Expr)):
+            continue
+          lines.add(n.lineno)
+          if isinstance(n,_ast.ClassDef) or isinstance(n,_ast.FunctionDef):
+            continue
+          else:
+            res.append(n)
+        del res[0]
+      self.result.append(('MLOC','DEF',funcName,self.fileName,node.lineno,len(lines))) 
+
       end_line = node.body[-1].end_lineno
-      self.result.append(('MLOC','DEF',funcName,self.fileName,node.lineno,end_line - node.lineno + 1)) 
+      self.result.append(('RMLOC','DEF',funcName,self.fileName,node.lineno,end_line - node.lineno + 1)) 
       #nested scope depth
       if node in self.scopenodes:
         self.scopenodes.remove(node)
