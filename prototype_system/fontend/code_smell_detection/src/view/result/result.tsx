@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import styles from './result.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from "react";
