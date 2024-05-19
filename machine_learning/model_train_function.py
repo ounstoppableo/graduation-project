@@ -19,6 +19,7 @@ from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import RandomizedSearchCV
 from scikeras.wrappers import KerasClassifier
 import pickle
+from sklearn.ensemble import VotingClassifier
 
 def np_arr_to_fit_cnn_input(np_arr,a,b,c):
     arr = []
@@ -28,6 +29,9 @@ def np_arr_to_fit_cnn_input(np_arr,a,b,c):
             temp.append(np.reshape(piece,(b,c)).tolist())
         arr.append(temp)
     return np.array(arr)
+
+# def calculateF1(precision,recall):
+#     return 2 * precision * recall / (precision + recall)
 
 def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     X = X.astype(float)
@@ -165,9 +169,28 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     print(f'precision: {cnn_2D_precision_scores.mean()}')
     print(f'recall: {cnn_2D_recall_scores.mean()}')
     print(f'f-score: {cnn_2D_f1_scores.mean()}')
+
+
+    # 构建Bagging模型，添加多个基本模型，并进行交叉验证
+    bagging_model = VotingClassifier(estimators=[('rf',rf_model),('svc',svc_model),('nb',nb_model),('lr',lr_model),('cnn',cnn_1D_clf)], voting='hard')
+    bagging_model.fit(X_train, Y_train)
+    bagging_pred = bagging_model.predict(x_test)
+    with open(f'./models/{smell_type}_bagging.pkl', 'wb') as file7:
+        pickle.dump(bagging_model, file7)
+    bagging_result = np.column_stack((x_test, bagging_pred)).tolist()
+    bagging_precision_scores =  cross_val_score(bagging_model,X,y,cv=rfolds,scoring='precision')
+    bagging_recall_scores =  cross_val_score(bagging_model,X,y,cv=rfolds,scoring='recall')
+    bagging_f1_scores =  cross_val_score(bagging_model,X,y,cv=rfolds,scoring='f1')
+    # 输出分类报告
+    print("-------------------------------------BAGGING----------------------------------------")
+    print(f'precision: {bagging_precision_scores.mean()}')
+    print(f'recall: {bagging_recall_scores.mean()}')
+    print(f'f-score: {bagging_f1_scores.mean()}')
+
     
     df=pd.DataFrame({'RF':rf_precision_scores,'SVC':svc_precision_scores,'NB':nb_precision_scores,'LR':lr_precision_scores
-                ,'CNN_1D':cnn_1D_precision_scores,'CNN_2D':cnn_2D_precision_scores})
+                ,'CNN':cnn_1D_precision_scores,'CNN_2D':cnn_2D_precision_scores,'bagging':bagging_precision_scores})
+    df = df.drop(columns=['CNN_2D'])
     boxplot = sns.boxplot(x="variable", y="value", data=pd.melt(df),palette="Pastel1")
     boxplot.axes.set_title(smell_type, fontsize=14)
     boxplot.set_xlabel("Classifier", fontsize=14)
@@ -175,7 +198,8 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     plt.show()
 
     df2=pd.DataFrame({'RF':rf_recall_scores,'SVC':svc_recall_scores,'NB':nb_recall_scores,'LR':lr_recall_scores
-                ,'CNN_1D':cnn_1D_recall_scores,'CNN_2D':cnn_2D_recall_scores})
+                ,'CNN':cnn_1D_recall_scores,'CNN_2D':cnn_2D_recall_scores,'bagging':bagging_recall_scores})
+    df2 = df2.drop(columns=['CNN_2D'])
     boxplot2 = sns.boxplot(x="variable", y="value", data=pd.melt(df2),palette="Pastel1")
     boxplot2.axes.set_title(smell_type, fontsize=14)
     boxplot2.set_xlabel("Classifier", fontsize=14)
@@ -183,7 +207,8 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
     plt.show()
 
     df3=pd.DataFrame({'RF':rf_f1_scores,'SVC':svc_f1_scores,'NB':nb_f1_scores,'LR':lr_f1_scores
-                ,'CNN_1D':cnn_1D_f1_scores,'CNN_2D':cnn_2D_f1_scores})
+                ,'CNN':cnn_1D_f1_scores,'CNN_2D':cnn_2D_f1_scores,'bagging':bagging_f1_scores})
+    df3 = df3.drop(columns=['CNN_2D'])
     boxplot3 = sns.boxplot(x="variable", y="value", data=pd.melt(df3),palette="Pastel1")
     boxplot3.axes.set_title(smell_type, fontsize=14)
     boxplot3.set_xlabel("Classifier", fontsize=14)
@@ -220,6 +245,11 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
             "precision": cnn_2D_precision_scores.mean(),
             "recall": cnn_2D_recall_scores.mean(),
             "f1": cnn_2D_f1_scores.mean(),
+        },
+        "bagging": {
+            "precision": bagging_precision_scores.mean(),
+            "recall": bagging_recall_scores.mean(),
+            "f1": bagging_f1_scores.mean(),
         }
     },{
         'rf_result':rf_result,
@@ -228,6 +258,7 @@ def model_train_function(smell_type,X,y,cnn_2d_w=4,cnn_2d_h=4):
         'lr_result':lr_result,
         'cnn_1D_result':cnn_1D_result,
         'cnn_2D_result':cnn_2D_result,
+        'bagging_result':bagging_result,
     }
 
 
